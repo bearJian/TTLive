@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import "Reachability.h"
 #import "XJLoginViewController.h"
-@interface AppDelegate ()
+@interface AppDelegate (){
+    Reachability *_reacha;
+    NetworkStates _preStatus;
+}
 
 @end
 
@@ -24,9 +27,51 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
-    NSLog(@"网络状态码:------>%ld",)
+    [self checkNetworkStates];
+    
+    NSLog(@"网络状态码:------>%ld",[XJNetworkingTool getNetworkStates]);
     return YES;
 }
+
+// 实时监控网络状态
+- (void)checkNetworkStates{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:kReachabilityChangedNotification object:nil];
+    _reacha = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
+    [_reacha startNotifier];
+}
+
+- (void)networkChange{
+    NSString *tips;
+    NetworkStates currentStates = [XJNetworkingTool getNetworkStates];
+    if (currentStates == _preStatus) {
+        return;
+    }
+    _preStatus = currentStates;
+    switch (currentStates) {
+        case NetworkStatesNone:
+            tips = @"当前无网络, 请检查您的网络状态";
+            break;
+        case NetworkStates2G:
+            tips = @"切换到了2G网络";
+            break;
+        case NetworkStates3G:
+            tips = @"切换到了3G网络";
+            break;
+        case NetworkStates4G:
+            tips = @"切换到了4G网络";
+            break;
+        case NetworkStatesWifi:
+            tips = nil;
+            break;
+        default:
+            break;
+    }
+    
+    if (tips.length) {
+        [[[UIAlertView alloc] initWithTitle:@"TTLive" message:tips delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -42,8 +87,10 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
+#pragma mark - 应用开始聚焦
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // 给状态栏添加一个按钮可以进行点击, 可以让屏幕上的scrollView滚到最顶部
+    //    [SLTopWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
