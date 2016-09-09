@@ -17,11 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+    // 设置根控制器
     self.window.rootViewController = [[XJLoginViewController alloc] init];
-    
+    // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    NSLog(@"网络状态码:------>%ld",)
     return YES;
 }
 
