@@ -27,7 +27,7 @@ static XJNetworkingTool *_manager;
 // 判断网络类型
 + (NetworkStates)getNetworkStates{
     // iOS 判断当前是2G,3G,4G
-    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKeyPath:@"statusbar"] valueForKeyPath:@"foregroundView"] subviews];
+    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKeyPath:@"statusBar"] valueForKeyPath:@"foregroundView"] subviews];
     // 保存网络状态
     NetworkStates states = NetworkStatesNone;
     // 获取到网络返回码

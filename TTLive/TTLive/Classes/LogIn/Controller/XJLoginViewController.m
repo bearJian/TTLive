@@ -9,7 +9,8 @@
 #import "XJLoginViewController.h"
 
 @interface XJLoginViewController ()
-
+/**player*/
+@property (nonatomic, strong) IJKFFMoviePlayerController *player;
 @end
 
 @implementation XJLoginViewController
@@ -20,19 +21,25 @@
     self.view.backgroundColor = [UIColor blueColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// 懒加载
+// 使用ijkplayer来播放
+- (IJKFFMoviePlayerController *)player{
+    
+    if (!_player) {
+        // 随机播放一组视频
+        NSString *path = arc4random_uniform(10) & 2 ? @"login_video" : @"loginmovie";
+        // 创建,并设置数据源
+        _player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:[[NSBundle mainBundle] pathForResource:path ofType:@".mp4" ] withOptions:[IJKFFOptions optionsByDefault]];
+        // 设置player
+        _player.view.frame = self.view.bounds;
+        // 设置缩放比例
+        _player.scalingMode = IJKMPMovieScalingModeAspectFill;
+        // 设置自动播放
+        _player.shouldAutoplay = NO;
+        // 准备播放
+        [_player prepareToPlay ];
+    }
+    return _player;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

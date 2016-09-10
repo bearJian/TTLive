@@ -11,5 +11,6 @@
 
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "XJNetworkingTool.h"
+#import "UIView+XJExtention.h"
 
 #endif /* PrefixHeader_h */

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Reachability.h"
 #import "XJLoginViewController.h"
+#import "XJToTopView.h"
 @interface AppDelegate (){
     Reachability *_reacha;
     NetworkStates _preStatus;
@@ -35,13 +36,20 @@
 
 // 实时监控网络状态
 - (void)checkNetworkStates{
+    
+    //开启网络状况的监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:kReachabilityChangedNotification object:nil];
+    
+    // 网络检查
     _reacha = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
+    
+    // 开始监听，会启动一个run loop
     [_reacha startNotifier];
 }
 
+// 网络状态改变时调用
 - (void)networkChange{
-    NSString *tips;
+    NSString *state;
     NetworkStates currentStates = [XJNetworkingTool getNetworkStates];
     if (currentStates == _preStatus) {
         return;
@@ -49,26 +57,26 @@
     _preStatus = currentStates;
     switch (currentStates) {
         case NetworkStatesNone:
-            tips = @"当前无网络, 请检查您的网络状态";
+            state = @"当前无网络, 请检查您的网络状态";
             break;
         case NetworkStates2G:
-            tips = @"切换到了2G网络";
+            state = @"切换到了2G网络";
             break;
         case NetworkStates3G:
-            tips = @"切换到了3G网络";
+            state = @"切换到了3G网络";
             break;
         case NetworkStates4G:
-            tips = @"切换到了4G网络";
+            state = @"切换到了4G网络";
             break;
         case NetworkStatesWifi:
-            tips = nil;
+            state = nil;
             break;
         default:
             break;
     }
     
-    if (tips.length) {
-        [[[UIAlertView alloc] initWithTitle:@"TTLive" message:tips delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
+    if (state.length) {
+        [[[UIAlertView alloc] initWithTitle:@"TTLive" message:state delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil] show];
     }
 }
 
@@ -90,7 +98,7 @@
 #pragma mark - 应用开始聚焦
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // 给状态栏添加一个按钮可以进行点击, 可以让屏幕上的scrollView滚到最顶部
-    //    [SLTopWindow show];
+        [XJToTopView show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

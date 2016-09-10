@@ -27,7 +27,9 @@
 		0B4EDF521D83169E00079231 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF511D83169E00079231 /* AVFoundation.framework */; };
 		0B4EDF541D8316AB00079231 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF531D8316AB00079231 /* AudioToolbox.framework */; };
 		0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */; };
-		0B4EDF601D83376700079231 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF5F1D83376700079231 /* IJKMediaFramework.framework */; };
+		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
+		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
+		0BC3673A1D8420030046B779 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC367391D8420030046B779 /* IJKMediaFramework.framework */; };
 		400ECC27DEC545E42B6C1253 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 873299A0FF6691A77615A1AB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +82,11 @@
 		0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNetworkingTool.h; sourceTree = "<group>"; };
 		0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNetworkingTool.m; sourceTree = "<group>"; };
 		0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
-		0B4EDF5F1D83376700079231 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		0BC367321D83F2C80046B779 /* XJToTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJToTopView.h; sourceTree = "<group>"; };
+		0BC367331D83F2C80046B779 /* XJToTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJToTopView.m; sourceTree = "<group>"; };
+		0BC367361D8402DF0046B779 /* UIView+XJExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJExtention.h"; sourceTree = "<group>"; };
+		0BC367371D8402DF0046B779 /* UIView+XJExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XJExtention.m"; sourceTree = "<group>"; };
+		0BC367391D8420030046B779 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		84A2758E855B6D2FD3E6742B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		873299A0FF6691A77615A1AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C95840A78277326BB1CC54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4EDF601D83376700079231 /* IJKMediaFramework.framework in Frameworks */,
+				0BC3673A1D8420030046B779 /* IJKMediaFramework.framework in Frameworks */,
 				0B4EDF541D8316AB00079231 /* AudioToolbox.framework in Frameworks */,
 				0B4EDF521D83169E00079231 /* AVFoundation.framework in Frameworks */,
 				0B4EDF501D83169500079231 /* CoreMedia.framework in Frameworks */,
@@ -203,7 +209,7 @@
 		0B4EDF261D8315DB00079231 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B4EDF5F1D83376700079231 /* IJKMediaFramework.framework */,
+				0BC367391D8420030046B779 /* IJKMediaFramework.framework */,
 				0B4EDF531D8316AB00079231 /* AudioToolbox.framework */,
 				0B4EDF511D83169E00079231 /* AVFoundation.framework */,
 				0B4EDF4F1D83169500079231 /* CoreMedia.framework */,
@@ -318,6 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
+				0BC367361D8402DF0046B779 /* UIView+XJExtention.h */,
+				0BC367371D8402DF0046B779 /* UIView+XJExtention.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -360,6 +368,8 @@
 				0B4EDF3C1D8315DB00079231 /* Reachability.m */,
 				0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */,
 				0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */,
+				0BC367321D83F2C80046B779 /* XJToTopView.h */,
+				0BC367331D83F2C80046B779 /* XJToTopView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -566,10 +576,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */,
+				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
 				0B4EDEF41D83150400079231 /* main.m in Sources */,
+				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
