@@ -15,7 +15,6 @@ static UIButton *_btn;
 // 第一次使用类的时候调用
 + (void)initialize{
     UIButton *btn = [[UIButton alloc] initWithFrame:[UIApplication sharedApplication].statusBarFrame];
-    btn.backgroundColor = [UIColor redColor];
     // 添加监听
     [btn addTarget:self action:@selector(statusBarClick) forControlEvents:UIControlEventTouchUpInside];
     [[self statusBarView] addSubview:btn];

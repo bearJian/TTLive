@@ -12,5 +12,6 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import "XJNetworkingTool.h"
 #import "UIView+XJExtention.h"
-
+#import "MBProgressHUD+XJ.h"
+#import "Masonry.h"
 #endif /* PrefixHeader_h */

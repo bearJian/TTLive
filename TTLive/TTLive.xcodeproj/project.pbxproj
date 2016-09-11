@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B45D1011D85BBF700E32FA1 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B45D1001D85BBF700E32FA1 /* IJKMediaFramework.framework */; };
 		0B4EDEF41D83150400079231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF31D83150400079231 /* main.m */; };
 		0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF61D83150400079231 /* AppDelegate.m */; };
 		0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EDEFE1D83150400079231 /* Assets.xcassets */; };
@@ -29,7 +30,12 @@
 		0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */; };
 		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
 		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
-		0BC3673A1D8420030046B779 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC367391D8420030046B779 /* IJKMediaFramework.framework */; };
+		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
+		0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673F1D8455E10046B779 /* XJMainViewController.m */; };
+		0BC367461D8456D10046B779 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367421D8456D10046B779 /* danmu.plist */; };
+		0BC367471D8456D10046B779 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367431D8456D10046B779 /* login_video.mp4 */; };
+		0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* loginmovie.mp4 */; };
+		0BC367491D8456D10046B779 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367451D8456D10046B779 /* user.plist */; };
 		400ECC27DEC545E42B6C1253 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 873299A0FF6691A77615A1AB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B45D1001D85BBF700E32FA1 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		0B4EDEEF1D83150300079231 /* TTLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4EDEF31D83150400079231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B4EDEF51D83150400079231 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -86,7 +93,14 @@
 		0BC367331D83F2C80046B779 /* XJToTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJToTopView.m; sourceTree = "<group>"; };
 		0BC367361D8402DF0046B779 /* UIView+XJExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJExtention.h"; sourceTree = "<group>"; };
 		0BC367371D8402DF0046B779 /* UIView+XJExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XJExtention.m"; sourceTree = "<group>"; };
-		0BC367391D8420030046B779 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		0BC3673B1D8452A80046B779 /* MBProgressHUD+XJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XJ.h"; sourceTree = "<group>"; };
+		0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XJ.m"; sourceTree = "<group>"; };
+		0BC3673E1D8455E10046B779 /* XJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMainViewController.h; sourceTree = "<group>"; };
+		0BC3673F1D8455E10046B779 /* XJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMainViewController.m; sourceTree = "<group>"; };
+		0BC367421D8456D10046B779 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
+		0BC367431D8456D10046B779 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		0BC367441D8456D10046B779 /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0BC367451D8456D10046B779 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		84A2758E855B6D2FD3E6742B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		873299A0FF6691A77615A1AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C95840A78277326BB1CC54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC3673A1D8420030046B779 /* IJKMediaFramework.framework in Frameworks */,
+				0B45D1011D85BBF700E32FA1 /* IJKMediaFramework.framework in Frameworks */,
 				0B4EDF541D8316AB00079231 /* AudioToolbox.framework in Frameworks */,
 				0B4EDF521D83169E00079231 /* AVFoundation.framework in Frameworks */,
 				0B4EDF501D83169500079231 /* CoreMedia.framework in Frameworks */,
@@ -202,6 +216,7 @@
 				0B4EDF351D8315DB00079231 /* Other */,
 				0B4EDF361D8315DB00079231 /* ShowTime */,
 				0B4EDF3A1D8315DB00079231 /* Tool */,
+				0BC367411D8456A20046B779 /* Resources */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,7 +224,7 @@
 		0B4EDF261D8315DB00079231 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0BC367391D8420030046B779 /* IJKMediaFramework.framework */,
+				0B45D1001D85BBF700E32FA1 /* IJKMediaFramework.framework */,
 				0B4EDF531D8316AB00079231 /* AudioToolbox.framework */,
 				0B4EDF511D83169E00079231 /* AVFoundation.framework */,
 				0B4EDF4F1D83169500079231 /* CoreMedia.framework */,
@@ -302,6 +317,8 @@
 		0B4EDF321D8315DB00079231 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0BC3673E1D8455E10046B779 /* XJMainViewController.h */,
+				0BC3673F1D8455E10046B779 /* XJMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +343,8 @@
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
 				0BC367361D8402DF0046B779 /* UIView+XJExtention.h */,
 				0BC367371D8402DF0046B779 /* UIView+XJExtention.m */,
+				0BC3673B1D8452A80046B779 /* MBProgressHUD+XJ.h */,
+				0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -372,6 +391,17 @@
 				0BC367331D83F2C80046B779 /* XJToTopView.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		0BC367411D8456A20046B779 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BC367421D8456D10046B779 /* danmu.plist */,
+				0BC367431D8456D10046B779 /* login_video.mp4 */,
+				0BC367441D8456D10046B779 /* loginmovie.mp4 */,
+				0BC367451D8456D10046B779 /* user.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2E1ED3DA3C3E9FEFD87D7B75 /* Pods */ = {
@@ -502,6 +532,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
+				0BC367491D8456D10046B779 /* user.plist in Resources */,
+				0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */,
+				0BC367471D8456D10046B779 /* login_video.mp4 in Resources */,
+				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
 				0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,7 +615,9 @@
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
 				0B4EDEF41D83150400079231 /* main.m in Sources */,
+				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
+				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
