@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6I7-SE-KQT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Care View Controller-->
+        <scene sceneID="mtl-aH-8DK">
+            <objects>
+                <viewController id="6I7-SE-KQT" customClass="XJCareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2mw-hz-XFt"/>
+                        <viewControllerLayoutGuide type="bottom" id="NCx-Uy-HUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yWi-IG-xOi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMX-Bb-IyJ">
+                                <rect key="frame" x="40" y="527" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZGT-PH-GgM"/>
+                                </constraints>
+                                <state key="normal" title="去看看当前那热门直播"/>
+                                <connections>
+                                    <action selector="toHotVC:" destination="6I7-SE-KQT" eventType="touchUpInside" id="fH1-kT-bwQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你关注的主播还未开播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-F2-rgx">
+                                <rect key="frame" x="100" y="476" width="175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OlW-Kh-bbl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_follow_250x247" translatesAutoresizingMaskIntoConstraints="NO" id="sDQ-S0-MGH">
+                                <rect key="frame" x="60" y="196" width="255" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Bkk-D0-zPQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sDQ-S0-MGH" firstAttribute="leading" secondItem="yWi-IG-xOi" secondAttribute="leading" constant="60" id="4Oj-Gx-xbv"/>
+                            <constraint firstItem="vMX-Bb-IyJ" firstAttribute="leading" secondItem="yWi-IG-xOi" secondAttribute="leading" constant="40" id="6ia-5p-PGk"/>
+                            <constraint firstAttribute="trailing" secondItem="vMX-Bb-IyJ" secondAttribute="trailing" constant="40" id="BPK-yF-hDS"/>
+                            <constraint firstAttribute="trailing" secondItem="zSN-F2-rgx" secondAttribute="trailing" constant="100" id="IDC-t7-21d"/>
+                            <constraint firstItem="zSN-F2-rgx" firstAttribute="top" secondItem="sDQ-S0-MGH" secondAttribute="bottom" constant="30" id="ObY-wZ-7wc"/>
+                            <constraint firstItem="NCx-Uy-HUt" firstAttribute="top" secondItem="vMX-Bb-IyJ" secondAttribute="bottom" constant="100" id="W0a-pP-fKw"/>
+                            <constraint firstAttribute="trailing" secondItem="sDQ-S0-MGH" secondAttribute="trailing" constant="60" id="XzB-kL-g6V"/>
+                            <constraint firstItem="zSN-F2-rgx" firstAttribute="leading" secondItem="yWi-IG-xOi" secondAttribute="leading" constant="100" id="tfE-lu-MLj"/>
+                            <constraint firstItem="vMX-Bb-IyJ" firstAttribute="top" secondItem="zSN-F2-rgx" secondAttribute="bottom" constant="30" id="xOr-s4-waQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="hotBtn" destination="vMX-Bb-IyJ" id="1R7-6V-dWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZC-JF-fP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239.5" y="254.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no_follow_250x247" width="320" height="316"/>
+    </resources>
+</document>

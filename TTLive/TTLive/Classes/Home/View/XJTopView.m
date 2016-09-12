@@ -9,9 +9,11 @@
 #import "XJTopView.h"
 
 @interface XJTopView()
+/**下划线*/
 @property (nonatomic, weak) UIView *line;
 /**选中的按钮*/
 @property (nonatomic, strong) UIButton *selectedBtn;
+/**热门*/
 @property (nonatomic, weak) UIButton *hotBtn;
 @end
 @implementation XJTopView
@@ -19,7 +21,7 @@
 #pragma mark - 懒加载
 - (UIView *)line{
     if (!_line) {
-        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(20, self.xj_height - 2, TopViewW, 2)];
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(self.hotBtn.xj_x, self.xj_height - 2, self.hotBtn.xj_width, 2)];
         line.backgroundColor = [UIColor whiteColor];
         [self addSubview:line];
         _line = line;
@@ -70,7 +72,11 @@
     // 强制刷新一次
     [self layoutIfNeeded];
     
+    // 默认选中热门
+    [self click:hotBtn];
     
+    // 监听点击
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(btnClick) name:kNotifyToHotVC object:nil];
 }
 
 // 创建按钮
@@ -89,10 +95,12 @@
     return btn;
 }
 
-//- (void)btnClick{
-//    [self click:_hotBtn];
-//}
+// 点击按钮
+- (void)btnClick{
+    [self click:_hotBtn];
+}
 
+// setter方法
 -(void)setSelectBtnType:(topType)selectBtnType{
     _selectBtnType = selectBtnType;
     self.selectedBtn.selected = NO;
@@ -105,6 +113,7 @@
     }
 }
 
+// 点击按钮
 - (void)click:(UIButton *)btn{
     self.selectedBtn.selected = NO;
     btn.selected = YES;
@@ -112,8 +121,11 @@
     
     // 滚动下划线
     [UIView animateWithDuration:0.5 animations:^{
-        self.line.xj_x = btn.xj_x;
+        self.line.xj_centerX = btn.xj_centerX;
     }];
+    
+    NSInteger i = btn.tag;
+    CGFloat offsetX = i * XJScreenW;
     
     if (self.selectBlock) {
         self.selectBlock(btn.tag);

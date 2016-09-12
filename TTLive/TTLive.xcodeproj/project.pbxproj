@@ -36,6 +36,8 @@
 		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
 		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
+		0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68841D87125800D673B8 /* XJCareViewController.m */; };
+		0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */; };
 		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
 		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
 		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
@@ -111,6 +113,9 @@
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
 		0B5F68801D86B15E00D673B8 /* XJTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJTopView.h; sourceTree = "<group>"; };
 		0B5F68811D86B15E00D673B8 /* XJTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJTopView.m; sourceTree = "<group>"; };
+		0B5F68831D87125800D673B8 /* XJCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJCareViewController.h; sourceTree = "<group>"; };
+		0B5F68841D87125800D673B8 /* XJCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJCareViewController.m; sourceTree = "<group>"; };
+		0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJCareViewController.storyboard; sourceTree = "<group>"; };
 		0BC367321D83F2C80046B779 /* XJToTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJToTopView.h; sourceTree = "<group>"; };
 		0BC367331D83F2C80046B779 /* XJToTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJToTopView.m; sourceTree = "<group>"; };
 		0BC367361D8402DF0046B779 /* UIView+XJExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJExtention.h"; sourceTree = "<group>"; };
@@ -312,6 +317,9 @@
 			children = (
 				0B04EBC31D86727500E897AF /* XJHomeViewController.h */,
 				0B04EBC41D86727500E897AF /* XJHomeViewController.m */,
+				0B5F68831D87125800D673B8 /* XJCareViewController.h */,
+				0B5F68841D87125800D673B8 /* XJCareViewController.m */,
+				0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -602,6 +610,7 @@
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
 				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
 				0BC367491D8456D10046B779 /* user.plist in Resources */,
+				0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */,
 				0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */,
 				0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */,
 				0BC367471D8456D10046B779 /* login_video.mp4 in Resources */,
@@ -692,6 +701,7 @@
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
+				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
 				0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */,
 			);

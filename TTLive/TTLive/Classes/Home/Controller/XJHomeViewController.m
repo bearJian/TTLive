@@ -7,6 +7,7 @@
 //
 
 #import "XJHomeViewController.h"
+#import "XJCareViewController.h"
 #import "XJTopView.h"
 // 标题个数
 static int count = 3;
@@ -34,6 +35,7 @@ static int count = 3;
     scrollView.delegate = self;
     // 赋值
     self.view = scrollView;
+    _scrollView = scrollView;
     
     // 添加子视图
     CGFloat height = XJScreenH - 49; // 底部tabBar高为49
@@ -41,7 +43,6 @@ static int count = 3;
     UIViewController *hot = [[UIViewController alloc] init];
     hot.view.frame = [UIScreen mainScreen].bounds;
     hot.view.xj_height = height;
-    hot.view.backgroundColor = [UIColor yellowColor];
     [self addChildViewController:hot];
     [self.view addSubview:hot.view];
     
@@ -50,16 +51,14 @@ static int count = 3;
     new.view.frame = [UIScreen mainScreen].bounds;
     new.view.xj_x = XJScreenW;
     new.view.xj_height = height;
-    new.view.backgroundColor = [UIColor blueColor];
     [self addChildViewController:new];
     [self.view addSubview:new.view];
     
     // 关注
-    UIViewController *care = [[UIViewController alloc] init];
+    XJCareViewController *care = [[UIStoryboard storyboardWithName:@"XJCareViewController" bundle:nil] instantiateInitialViewController];
     care.view.frame = [UIScreen mainScreen].bounds;
     care.view.xj_x = XJScreenW * 2;
     care.view.xj_height = height;
-    care.view.backgroundColor = [UIColor redColor];
     [self addChildViewController:care];
     [self.view addSubview:care.view];
 }
@@ -81,20 +80,39 @@ static int count = 3;
 
 -(void)rightItemClick{
     
+    UIViewController *webView = [[UIViewController alloc] init];
+    UIWebView *web = [[UIWebView alloc] init];
+    webView.view = web;
+    NSURL *url = [NSURL URLWithString:@"http://live.9158.com/Rank/WeekRank?Random=10"];
+    [web loadRequest:[NSURLRequest requestWithURL:url]];
+
+    webView.navigationItem.title = @"排行";
+    [_topView removeFromSuperview];
+    _topView = nil;
+    [self.navigationController pushViewController:webView animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (!_topView) {
+        [self setupTopView];
+    }
 }
 
 // 设置顶部视图
 - (void)setupTopView{
     XJTopView *topView = [[XJTopView alloc] initWithFrame:self.navigationController.navigationBar.bounds];
-    CGFloat space = 30; // 间距
+    CGFloat space = 40; // 间距
     topView.xj_x = space;
     topView.xj_width = XJScreenW - space * 2;
-    [self.navigationController.navigationBar addSubview:topView];
     [topView setSelectBlock:^(topType type) {
         [self.scrollView setContentOffset:CGPointMake(type * XJScreenW, 0) animated:YES];
     }];
+    [self.navigationController.navigationBar addSubview:topView];
     self.topView = topView;
 }
+
 
 #pragma mark - 代理方法
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
