@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface XJMainViewController : UITabBarController
-
+// 弹窗提醒
+- (void)showInfo:(NSString *)info;
 @end

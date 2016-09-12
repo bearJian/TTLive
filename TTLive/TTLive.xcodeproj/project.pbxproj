@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBC11D866DAE00E897AF /* XJNavigationController.m */; };
+		0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBC41D86727500E897AF /* XJHomeViewController.m */; };
+		0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBCB1D86752D00E897AF /* XJMeViewController.m */; };
+		0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */; };
+		0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBD01D86756100E897AF /* XJShowTimeViewController.m */; };
 		0B45D1011D85BBF700E32FA1 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B45D1001D85BBF700E32FA1 /* IJKMediaFramework.framework */; };
 		0B4EDEF41D83150400079231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF31D83150400079231 /* main.m */; };
 		0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF61D83150400079231 /* AppDelegate.m */; };
@@ -28,6 +33,8 @@
 		0B4EDF521D83169E00079231 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF511D83169E00079231 /* AVFoundation.framework */; };
 		0B4EDF541D8316AB00079231 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF531D8316AB00079231 /* AudioToolbox.framework */; };
 		0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */; };
+		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
+		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
 		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
 		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
@@ -57,6 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B04EBC01D866DAE00E897AF /* XJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNavigationController.h; sourceTree = "<group>"; };
+		0B04EBC11D866DAE00E897AF /* XJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNavigationController.m; sourceTree = "<group>"; };
+		0B04EBC31D86727500E897AF /* XJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHomeViewController.h; sourceTree = "<group>"; };
+		0B04EBC41D86727500E897AF /* XJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHomeViewController.m; sourceTree = "<group>"; };
+		0B04EBCA1D86752D00E897AF /* XJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMeViewController.h; sourceTree = "<group>"; };
+		0B04EBCB1D86752D00E897AF /* XJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMeViewController.m; sourceTree = "<group>"; };
+		0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJMeViewController.xib; sourceTree = "<group>"; };
+		0B04EBCF1D86756100E897AF /* XJShowTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJShowTimeViewController.h; sourceTree = "<group>"; };
+		0B04EBD01D86756100E897AF /* XJShowTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJShowTimeViewController.m; sourceTree = "<group>"; };
 		0B45D1001D85BBF700E32FA1 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		0B4EDEEF1D83150300079231 /* TTLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4EDEF31D83150400079231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +105,9 @@
 		0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNetworkingTool.h; sourceTree = "<group>"; };
 		0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNetworkingTool.m; sourceTree = "<group>"; };
 		0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
+		0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJShowTimeViewController.storyboard; sourceTree = "<group>"; };
+		0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XJExtension.h"; sourceTree = "<group>"; };
+		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
 		0BC367321D83F2C80046B779 /* XJToTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJToTopView.h; sourceTree = "<group>"; };
 		0BC367331D83F2C80046B779 /* XJToTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJToTopView.m; sourceTree = "<group>"; };
 		0BC367361D8402DF0046B779 /* UIView+XJExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJExtention.h"; sourceTree = "<group>"; };
@@ -144,6 +163,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B04EBC61D86750C00E897AF /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				0B04EBC71D86750C00E897AF /* Controller */,
+				0B04EBC81D86750C00E897AF /* Model */,
+				0B04EBC91D86750C00E897AF /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		0B04EBC71D86750C00E897AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B04EBCA1D86752D00E897AF /* XJMeViewController.h */,
+				0B04EBCB1D86752D00E897AF /* XJMeViewController.m */,
+				0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0B04EBC81D86750C00E897AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B04EBC91D86750C00E897AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0B4EDEE61D83150300079231 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +268,7 @@
 				0B4EDF311D8315DB00079231 /* Main */,
 				0B4EDF351D8315DB00079231 /* Other */,
 				0B4EDF361D8315DB00079231 /* ShowTime */,
+				0B04EBC61D86750C00E897AF /* Me */,
 				0B4EDF3A1D8315DB00079231 /* Tool */,
 				0BC367411D8456A20046B779 /* Resources */,
 			);
@@ -253,6 +307,8 @@
 		0B4EDF281D8315DB00079231 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0B04EBC31D86727500E897AF /* XJHomeViewController.h */,
+				0B04EBC41D86727500E897AF /* XJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +375,8 @@
 			children = (
 				0BC3673E1D8455E10046B779 /* XJMainViewController.h */,
 				0BC3673F1D8455E10046B779 /* XJMainViewController.m */,
+				0B04EBC01D866DAE00E897AF /* XJNavigationController.h */,
+				0B04EBC11D866DAE00E897AF /* XJNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +403,8 @@
 				0BC367371D8402DF0046B779 /* UIView+XJExtention.m */,
 				0BC3673B1D8452A80046B779 /* MBProgressHUD+XJ.h */,
 				0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */,
+				0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */,
+				0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -362,6 +422,9 @@
 		0B4EDF371D8315DB00079231 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0B04EBCF1D86756100E897AF /* XJShowTimeViewController.h */,
+				0B04EBD01D86756100E897AF /* XJShowTimeViewController.m */,
+				0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -532,7 +595,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
+				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
 				0BC367491D8456D10046B779 /* user.plist in Resources */,
+				0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */,
 				0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */,
 				0BC367471D8456D10046B779 /* login_video.mp4 in Resources */,
 				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
@@ -611,6 +676,8 @@
 			files = (
 				0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */,
 				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
+				0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */,
+				0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
@@ -618,6 +685,9 @@
 				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
+				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
+				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
+				0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

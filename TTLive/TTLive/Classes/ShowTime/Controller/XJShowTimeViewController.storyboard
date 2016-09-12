@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Show Time View Controller-->
+        <scene sceneID="xda-rI-dxv">
+            <objects>
+                <viewController id="bjy-Hp-u1X" customClass="XJShowTimeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kob-Cs-1mg"/>
+                        <viewControllerLayoutGuide type="bottom" id="iQF-5U-dJU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nR2-jN-i2j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWi-ZC-dXv">
+                                <rect key="frame" x="20" y="50" width="190" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.15367353719999999" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N2o-oO-pPw"/>
+                                    <constraint firstAttribute="width" constant="190" id="sKQ-rH-7Vd"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="智能美颜已经开启" image="icon_beautifulface_19x19"/>
+                                <state key="selected" title="智能美颜已经关闭"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keE-ai-KQb">
+                                <rect key="frame" x="540" y="40" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="55l-y9-GTS"/>
+                                    <constraint firstAttribute="width" constant="40" id="hrq-II-Hwy"/>
+                                </constraints>
+                                <state key="normal" image="talk_close_40x40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il3-22-qeS">
+                                <rect key="frame" x="480" y="40" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xaa-fg-MYi"/>
+                                    <constraint firstAttribute="width" constant="40" id="zXN-dx-i4d"/>
+                                </constraints>
+                                <state key="normal" image="camera_change_40x40"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态: 未知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-Kv-idG">
+                                <rect key="frame" x="261" y="110" width="78" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.15367353719999999" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0XJ-Kv-idG" firstAttribute="centerX" secondItem="nR2-jN-i2j" secondAttribute="centerX" id="GvY-bk-pdO"/>
+                            <constraint firstAttribute="trailing" secondItem="keE-ai-KQb" secondAttribute="trailing" constant="20" id="QCf-Xt-Jzv"/>
+                            <constraint firstItem="JWi-ZC-dXv" firstAttribute="top" secondItem="Kob-Cs-1mg" secondAttribute="bottom" constant="30" id="STZ-Fr-dWV"/>
+                            <constraint firstItem="keE-ai-KQb" firstAttribute="top" secondItem="Kob-Cs-1mg" secondAttribute="bottom" constant="20" id="Tl6-NW-3Yb"/>
+                            <constraint firstItem="keE-ai-KQb" firstAttribute="leading" secondItem="Il3-22-qeS" secondAttribute="trailing" constant="20" id="ht4-60-DXP"/>
+                            <constraint firstItem="Il3-22-qeS" firstAttribute="centerY" secondItem="keE-ai-KQb" secondAttribute="centerY" id="vCI-TA-PEX"/>
+                            <constraint firstItem="0XJ-Kv-idG" firstAttribute="top" secondItem="JWi-ZC-dXv" secondAttribute="bottom" constant="30" id="wsa-xo-PKV"/>
+                            <constraint firstItem="JWi-ZC-dXv" firstAttribute="leading" secondItem="nR2-jN-i2j" secondAttribute="leading" constant="20" id="z1o-vI-Kgw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Te-Oc-Ip2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="229"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_change_40x40" width="40" height="40"/>
+        <image name="icon_beautifulface_19x19" width="19" height="19"/>
+        <image name="talk_close_40x40" width="40" height="40"/>
+    </resources>
+</document>

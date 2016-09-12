@@ -20,6 +20,11 @@
 
 + (MBProgressHUD *)showMessage:(NSString *)message;
 
++(void)showText:(NSString *)text;
+
++ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view;
+
 + (void)hideHUDForView:(UIView *)view;
+
 + (void)hideHUD;
 @end

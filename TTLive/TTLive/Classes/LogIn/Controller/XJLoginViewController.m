@@ -42,6 +42,8 @@
         player.shouldAutoplay = NO;
         // 准备播放
         [player prepareToPlay];
+        // 添加到view
+        [self.view addSubview:player.view];
         
         _player = player;
     }
@@ -79,13 +81,12 @@
 // 快速进入
 - (void)quickLogIn{
     // 提示
-    [MBProgressHUD showMessage:@"登陆成功" toView:self.view];
+    [MBProgressHUD showText:@"登陆成功"];
+    
     // 延时1秒登录
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 隐藏弹窗
-        [MBProgressHUD hideHUDForView:self.view];
         // 跳转到主界面
-        [self presentViewController:[[XJMainViewController alloc] init] animated:YES completion:^{
+        [self presentViewController:[[XJMainViewController alloc] init] animated:NO completion:^{
             // 停止播放
             [self.player stop];
             // 移除
@@ -142,7 +143,7 @@
 
 #pragma mark - 控制器生命周期
 // 视图即将消失、被覆盖或是隐藏时调用
-- (void)viewWillDisAppear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     // 暂停
     [self.player shutdown];
@@ -156,6 +157,10 @@
     
     [self.player.view removeFromSuperview];
     self.player = nil;
+}
+
+-(void)dealloc{
+    NSLog(@"登录界面销毁");
 }
 
 @end

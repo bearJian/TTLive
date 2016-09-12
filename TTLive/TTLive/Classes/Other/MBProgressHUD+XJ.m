@@ -28,6 +28,20 @@
     [hud hide:YES afterDelay:0.7];
 }
 
+#pragma mark 显示文本信息
++ (void)showText:(NSString *)text
+{
+    //显示提示信息
+    UIView *view = [[UIApplication sharedApplication].delegate window];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.userInteractionEnabled = NO;
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = text;
+    hud.margin = 10.f;
+    hud.removeFromSuperViewOnHide = YES;
+    [hud hide:YES afterDelay:2];
+}
+
 #pragma mark 显示错误信息
 + (void)showError:(NSString *)error toView:(UIView *)view{
     [self show:error icon:@"error.png" view:view];

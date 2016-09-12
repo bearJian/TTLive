@@ -14,4 +14,5 @@
 #import "UIView+XJExtention.h"
 #import "MBProgressHUD+XJ.h"
 #import "Masonry.h"
+#import "UIDevice+XJExtension.h"
 #endif /* PrefixHeader_h */
