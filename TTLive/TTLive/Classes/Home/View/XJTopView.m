@@ -123,10 +123,7 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.line.xj_centerX = btn.xj_centerX;
     }];
-    
-    NSInteger i = btn.tag;
-    CGFloat offsetX = i * XJScreenW;
-    
+
     if (self.selectBlock) {
         self.selectBlock(btn.tag);
     }

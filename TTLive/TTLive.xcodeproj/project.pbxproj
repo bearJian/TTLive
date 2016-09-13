@@ -43,9 +43,14 @@
 		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
 		0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673F1D8455E10046B779 /* XJMainViewController.m */; };
 		0BC367461D8456D10046B779 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367421D8456D10046B779 /* danmu.plist */; };
-		0BC367471D8456D10046B779 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367431D8456D10046B779 /* login_video.mp4 */; };
-		0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* loginmovie.mp4 */; };
+		0BC367481D8456D10046B779 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* 2.mp4 */; };
 		0BC367491D8456D10046B779 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367451D8456D10046B779 /* user.plist */; };
+		0BF24FC61D8818F300FC3774 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FC51D8818F300FC3774 /* login_video.mp4 */; };
+		0BF24FD01D881BEB00FC3774 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */; };
+		0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FD91D88305B00FC3774 /* XJHotViewController.m */; };
+		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
+		0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */; };
+		0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FEA1D88406700FC3774 /* XJLiveModel.m */; };
 		400ECC27DEC545E42B6C1253 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 873299A0FF6691A77615A1AB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -125,9 +130,17 @@
 		0BC3673E1D8455E10046B779 /* XJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMainViewController.h; sourceTree = "<group>"; };
 		0BC3673F1D8455E10046B779 /* XJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMainViewController.m; sourceTree = "<group>"; };
 		0BC367421D8456D10046B779 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
-		0BC367431D8456D10046B779 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
-		0BC367441D8456D10046B779 /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0BC367441D8456D10046B779 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
 		0BC367451D8456D10046B779 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
+		0BF24FC51D8818F300FC3774 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0BF24FD81D88305B00FC3774 /* XJHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotViewController.h; sourceTree = "<group>"; };
+		0BF24FD91D88305B00FC3774 /* XJHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotViewController.m; sourceTree = "<group>"; };
+		0BF24FE01D8833D900FC3774 /* XJHotLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotLiveCell.h; sourceTree = "<group>"; };
+		0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotLiveCell.m; sourceTree = "<group>"; };
+		0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJHotLiveCell.xib; sourceTree = "<group>"; };
+		0BF24FE91D88406700FC3774 /* XJLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLiveModel.h; sourceTree = "<group>"; };
+		0BF24FEA1D88406700FC3774 /* XJLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLiveModel.m; sourceTree = "<group>"; };
 		84A2758E855B6D2FD3E6742B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		873299A0FF6691A77615A1AB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C95840A78277326BB1CC54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +318,8 @@
 		0B4EDF271D8315DB00079231 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0BF24FD61D88305B00FC3774 /* Hot */,
+				0BF24FD11D882F2800FC3774 /* New */,
 				0B4EDF281D8315DB00079231 /* Controller */,
 				0B4EDF291D8315DB00079231 /* Model */,
 				0B4EDF2A1D8315DB00079231 /* View */,
@@ -472,12 +487,82 @@
 		0BC367411D8456A20046B779 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0BF24FC51D8818F300FC3774 /* login_video.mp4 */,
+				0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */,
 				0BC367421D8456D10046B779 /* danmu.plist */,
-				0BC367431D8456D10046B779 /* login_video.mp4 */,
-				0BC367441D8456D10046B779 /* loginmovie.mp4 */,
+				0BC367441D8456D10046B779 /* 2.mp4 */,
 				0BC367451D8456D10046B779 /* user.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0BF24FD11D882F2800FC3774 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				0BF24FDD1D88306E00FC3774 /* Controller */,
+				0BF24FDE1D88306E00FC3774 /* Model */,
+				0BF24FDF1D88306E00FC3774 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		0BF24FD61D88305B00FC3774 /* Hot */ = {
+			isa = PBXGroup;
+			children = (
+				0BF24FD71D88305B00FC3774 /* Controller */,
+				0BF24FDA1D88305B00FC3774 /* Model */,
+				0BF24FDB1D88305B00FC3774 /* View */,
+			);
+			path = Hot;
+			sourceTree = "<group>";
+		};
+		0BF24FD71D88305B00FC3774 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BF24FD81D88305B00FC3774 /* XJHotViewController.h */,
+				0BF24FD91D88305B00FC3774 /* XJHotViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BF24FDA1D88305B00FC3774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BF24FE91D88406700FC3774 /* XJLiveModel.h */,
+				0BF24FEA1D88406700FC3774 /* XJLiveModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BF24FDB1D88305B00FC3774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BF24FE01D8833D900FC3774 /* XJHotLiveCell.h */,
+				0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */,
+				0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BF24FDD1D88306E00FC3774 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BF24FDE1D88306E00FC3774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BF24FDF1D88306E00FC3774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2E1ED3DA3C3E9FEFD87D7B75 /* Pods */ = {
@@ -611,10 +696,12 @@
 				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
 				0BC367491D8456D10046B779 /* user.plist in Resources */,
 				0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */,
+				0BF24FC61D8818F300FC3774 /* login_video.mp4 in Resources */,
+				0BF24FD01D881BEB00FC3774 /* loginmovie.mp4 in Resources */,
 				0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */,
-				0BC367481D8456D10046B779 /* loginmovie.mp4 in Resources */,
-				0BC367471D8456D10046B779 /* login_video.mp4 in Resources */,
+				0BC367481D8456D10046B779 /* 2.mp4 in Resources */,
 				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
+				0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */,
 				0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,9 +777,12 @@
 			files = (
 				0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */,
 				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
+				0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */,
+				0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */,
 				0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */,
 				0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */,
 				0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */,
+				0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
@@ -849,6 +939,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -869,6 +960,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,6 +8,7 @@
 
 #import "XJHomeViewController.h"
 #import "XJCareViewController.h"
+#import "XJHotViewController.h"
 #import "XJTopView.h"
 // 标题个数
 static int count = 3;
@@ -40,7 +41,7 @@ static int count = 3;
     // 添加子视图
     CGFloat height = XJScreenH - 49; // 底部tabBar高为49
     // 热门
-    UIViewController *hot = [[UIViewController alloc] init];
+    XJHotViewController *hot = [[XJHotViewController alloc] init];
     hot.view.frame = [UIScreen mainScreen].bounds;
     hot.view.xj_height = height;
     [self addChildViewController:hot];
