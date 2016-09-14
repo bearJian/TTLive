@@ -119,9 +119,14 @@
     btn.selected = YES;
     self.selectedBtn = btn;
     
+    // 让点击的按钮为滑动选中的类型
+    btn.tag = _selectBtnType;
     // 滚动下划线
     [UIView animateWithDuration:0.5 animations:^{
-        self.line.xj_centerX = btn.xj_centerX;
+//        if (btn.tag == _selectBtnType) {
+            self.line.xj_centerX = btn.xj_centerX;
+//        }
+        
     }];
 
     if (self.selectBlock) {

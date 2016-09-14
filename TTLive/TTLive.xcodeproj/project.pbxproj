@@ -45,8 +45,12 @@
 		0BC367461D8456D10046B779 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367421D8456D10046B779 /* danmu.plist */; };
 		0BC367481D8456D10046B779 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* 2.mp4 */; };
 		0BC367491D8456D10046B779 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367451D8456D10046B779 /* user.plist */; };
-		0BF24FC61D8818F300FC3774 /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FC51D8818F300FC3774 /* login_video.mp4 */; };
-		0BF24FD01D881BEB00FC3774 /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */; };
+		0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C64B1D89168700618D7C /* loginmovie.mp4 */; };
+		0BE0C6521D89182600618D7C /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6511D89182600618D7C /* 4.mp4 */; };
+		0BE0C6561D89184500618D7C /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6551D89184500618D7C /* 5.mp4 */; };
+		0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65D1D891F6000618D7C /* login_video.mp4 */; };
+		0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */; };
+		0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FC51D8818F300FC3774 /* 1.mp4 */; };
 		0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FD91D88305B00FC3774 /* XJHotViewController.m */; };
 		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
 		0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */; };
@@ -132,8 +136,12 @@
 		0BC367421D8456D10046B779 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
 		0BC367441D8456D10046B779 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
 		0BC367451D8456D10046B779 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
-		0BF24FC51D8818F300FC3774 /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
-		0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0BE0C64B1D89168700618D7C /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0BE0C6511D89182600618D7C /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
+		0BE0C6551D89184500618D7C /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
+		0BE0C65D1D891F6000618D7C /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie1.mp4; sourceTree = "<group>"; };
+		0BF24FC51D8818F300FC3774 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		0BF24FD81D88305B00FC3774 /* XJHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotViewController.h; sourceTree = "<group>"; };
 		0BF24FD91D88305B00FC3774 /* XJHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotViewController.m; sourceTree = "<group>"; };
 		0BF24FE01D8833D900FC3774 /* XJHotLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotLiveCell.h; sourceTree = "<group>"; };
@@ -487,9 +495,13 @@
 		0BC367411D8456A20046B779 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0BF24FC51D8818F300FC3774 /* login_video.mp4 */,
-				0BF24FCF1D881BEB00FC3774 /* loginmovie.mp4 */,
+				0BE0C6551D89184500618D7C /* 5.mp4 */,
+				0BE0C6511D89182600618D7C /* 4.mp4 */,
+				0BE0C65D1D891F6000618D7C /* login_video.mp4 */,
+				0BF24FC51D8818F300FC3774 /* 1.mp4 */,
+				0BE0C64B1D89168700618D7C /* loginmovie.mp4 */,
 				0BC367421D8456D10046B779 /* danmu.plist */,
+				0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */,
 				0BC367441D8456D10046B779 /* 2.mp4 */,
 				0BC367451D8456D10046B779 /* user.plist */,
 			);
@@ -692,14 +704,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE0C6521D89182600618D7C /* 4.mp4 in Resources */,
+				0BE0C6561D89184500618D7C /* 5.mp4 in Resources */,
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
 				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
 				0BC367491D8456D10046B779 /* user.plist in Resources */,
 				0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */,
-				0BF24FC61D8818F300FC3774 /* login_video.mp4 in Resources */,
-				0BF24FD01D881BEB00FC3774 /* loginmovie.mp4 in Resources */,
+				0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */,
+				0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */,
 				0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */,
+				0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */,
 				0BC367481D8456D10046B779 /* 2.mp4 in Resources */,
+				0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */,
 				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
 				0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */,
 				0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */,
