@@ -39,6 +39,7 @@
 		0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */; };
 		0B50E2B91D8E85F600210B01 /* XJHouseLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */; };
 		0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */; };
+		0B50E2C11D8EEDAF00210B01 /* UIImageView+XJGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */; };
 		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
 		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
@@ -136,6 +137,8 @@
 		0B50E2BA1D8E91FD00210B01 /* XJFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJFlowLayout.h; sourceTree = "<group>"; };
 		0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJFlowLayout.m; sourceTree = "<group>"; };
 		0B50E2BD1D8EDA3F00210B01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0B50E2BF1D8EEDAF00210B01 /* UIImageView+XJGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XJGif.h"; sourceTree = "<group>"; };
+		0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XJGif.m"; sourceTree = "<group>"; };
 		0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJShowTimeViewController.storyboard; sourceTree = "<group>"; };
 		0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XJExtension.h"; sourceTree = "<group>"; };
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
@@ -458,6 +461,8 @@
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
 				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
 				0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */,
+				0B50E2BF1D8EEDAF00210B01 /* UIImageView+XJGif.h */,
+				0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */,
 				0BC367361D8402DF0046B779 /* UIView+XJExtention.h */,
 				0BC367371D8402DF0046B779 /* UIView+XJExtention.m */,
 				0BC3673B1D8452A80046B779 /* MBProgressHUD+XJ.h */,
@@ -874,6 +879,7 @@
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
+				0B50E2C11D8EEDAF00210B01 /* UIImageView+XJGif.m in Sources */,
 				0B4EDEF41D83150400079231 /* main.m in Sources */,
 				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
