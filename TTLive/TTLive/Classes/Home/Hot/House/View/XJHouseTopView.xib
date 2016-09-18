@@ -66,6 +66,10 @@
                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <state key="selected" title="开启"/>
+                            <connections>
+                                <action selector="openBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="C0E-qn-A4s"/>
+                                <action selector="openOrCloseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="qcQ-l2-SUj"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-eW-IkB">
                             <rect key="frame" x="70" y="38" width="50" height="17"/>
@@ -115,7 +119,6 @@
                 <outlet property="giftBtn" destination="5h6-Tk-Lf4" id="kJT-Ma-hQP"/>
                 <outlet property="iconImage" destination="GGj-Zv-vZ2" id="EQb-MO-8a5"/>
                 <outlet property="nameLabel" destination="OKV-aC-Ozf" id="fwK-d3-dt0"/>
-                <outlet property="openBtn" destination="CE6-7R-VL2" id="1AW-sa-J22"/>
                 <outlet property="peopleScrollView" destination="Sz4-cW-zYF" id="7re-OH-IP5"/>
                 <outlet property="seeNumLabel" destination="rJb-eW-IkB" id="fiv-dQ-kPI"/>
             </connections>

@@ -34,5 +34,7 @@
 #pragma mark - 通知
 // 当前没有关注的主播, 去看热门主播
 #define kNotifyToHotVC @"kNotifyToHotVC"
+// 点击了用户
+#define kNotifyClickUser @"kNotifyClickUser"
 
 #endif /* PrefixHeader_h */

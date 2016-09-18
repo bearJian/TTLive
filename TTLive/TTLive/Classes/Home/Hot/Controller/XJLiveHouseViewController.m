@@ -8,22 +8,30 @@
 
 #import "XJLiveHouseViewController.h"
 #import "XJUserModel.h"
+#import "XJHouseLiveCell.h"
+#import "XJFlowLayout.h"
+
 @interface XJLiveHouseViewController ()
 
 @end
 
 @implementation XJLiveHouseViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"XJHouseLiveCell";
+-(instancetype)init{
+    
+    return [super initWithCollectionViewLayout:[[XJFlowLayout alloc] init]];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 设置背景
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[XJHouseLiveCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 
@@ -36,8 +44,10 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-
+    XJHouseLiveCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    
+    cell.live = self.lives[self.currentIndex];
     
     return cell;
 }

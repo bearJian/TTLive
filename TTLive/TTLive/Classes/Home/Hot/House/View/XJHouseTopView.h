@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class XJUserModel;
-@class XJLiveModel;
+@class XJLiveModel, XJUserModel;
 
 @interface XJHouseTopView : UIView
 /** 主播 */
 @property(nonatomic, strong) XJUserModel *user;
 /** 直播 */
 @property(nonatomic, strong) XJLiveModel *live;
+
+
 @end

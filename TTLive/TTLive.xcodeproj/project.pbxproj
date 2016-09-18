@@ -37,6 +37,8 @@
 		0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2AC1D8E604600210B01 /* XJUserModel.m */; };
 		0B50E2B41D8E665600210B01 /* XJHouseTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2B31D8E665600210B01 /* XJHouseTopView.m */; };
 		0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */; };
+		0B50E2B91D8E85F600210B01 /* XJHouseLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */; };
+		0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */; };
 		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
 		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
@@ -129,6 +131,11 @@
 		0B50E2B21D8E665600210B01 /* XJHouseTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseTopView.h; sourceTree = "<group>"; };
 		0B50E2B31D8E665600210B01 /* XJHouseTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseTopView.m; sourceTree = "<group>"; };
 		0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJHouseTopView.xib; sourceTree = "<group>"; };
+		0B50E2B71D8E85F600210B01 /* XJHouseLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseLiveCell.h; sourceTree = "<group>"; };
+		0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseLiveCell.m; sourceTree = "<group>"; };
+		0B50E2BA1D8E91FD00210B01 /* XJFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJFlowLayout.h; sourceTree = "<group>"; };
+		0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJFlowLayout.m; sourceTree = "<group>"; };
+		0B50E2BD1D8EDA3F00210B01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJShowTimeViewController.storyboard; sourceTree = "<group>"; };
 		0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XJExtension.h"; sourceTree = "<group>"; };
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
@@ -539,9 +546,13 @@
 		0B50E2B11D8E658B00210B01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B50E2BA1D8E91FD00210B01 /* XJFlowLayout.h */,
+				0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */,
 				0B50E2B21D8E665600210B01 /* XJHouseTopView.h */,
 				0B50E2B31D8E665600210B01 /* XJHouseTopView.m */,
 				0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */,
+				0B50E2B71D8E85F600210B01 /* XJHouseLiveCell.h */,
+				0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -644,6 +655,7 @@
 		DFE1E6AE08BB5CEAABED9338 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B50E2BD1D8EDA3F00210B01 /* Accelerate.framework */,
 				873299A0FF6691A77615A1AB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -848,6 +860,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */,
+				0B50E2B91D8E85F600210B01 /* XJHouseLiveCell.m in Sources */,
 				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
 				0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */,
 				0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */,
@@ -868,6 +881,7 @@
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
 				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
+				0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */,
 				0B50E2B41D8E665600210B01 /* XJHouseTopView.m in Sources */,
 				0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */,
 			);

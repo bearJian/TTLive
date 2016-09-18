@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface XJLiveHouseViewController : UICollectionViewController
-
+/** 直播 */
+@property (nonatomic, strong) NSArray *lives;
+/** 当前的index */
+@property (nonatomic, assign) NSUInteger currentIndex;
 @end

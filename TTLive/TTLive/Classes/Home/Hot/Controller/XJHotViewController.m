@@ -92,8 +92,12 @@ static NSString *IDADCell = @"XJHomeADCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
     XJLiveHouseViewController *liveHouse = [[XJLiveHouseViewController alloc] init];
+    
+    // 赋值
+    liveHouse.lives = self.liveArray;
+    liveHouse.currentIndex = indexPath.row;
     
     [self presentViewController:liveHouse animated:YES completion:nil];
 }
