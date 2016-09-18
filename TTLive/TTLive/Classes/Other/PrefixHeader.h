@@ -14,8 +14,10 @@
 #import "UIView+XJExtention.h"
 #import "MBProgressHUD+XJ.h"
 #import "Masonry.h"
+#import "UIImageView+WebCache.h"
 #import "UIDevice+XJExtension.h"
-
+#import "UIImage+XJExtension.h"
+#import "MJExtension.h"
 
 #pragma mark - Frame相关
 // 屏幕宽/高

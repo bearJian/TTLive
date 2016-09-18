@@ -33,6 +33,10 @@
 		0B4EDF521D83169E00079231 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF511D83169E00079231 /* AVFoundation.framework */; };
 		0B4EDF541D8316AB00079231 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EDF531D8316AB00079231 /* AudioToolbox.framework */; };
 		0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */; };
+		0B50E2AA1D8E5FA200210B01 /* XJLiveHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2A91D8E5FA200210B01 /* XJLiveHouseViewController.m */; };
+		0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2AC1D8E604600210B01 /* XJUserModel.m */; };
+		0B50E2B41D8E665600210B01 /* XJHouseTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2B31D8E665600210B01 /* XJHouseTopView.m */; };
+		0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */; };
 		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
 		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
@@ -50,6 +54,7 @@
 		0BE0C6561D89184500618D7C /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6551D89184500618D7C /* 5.mp4 */; };
 		0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65D1D891F6000618D7C /* login_video.mp4 */; };
 		0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */; };
+		0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */; };
 		0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FC51D8818F300FC3774 /* 1.mp4 */; };
 		0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FD91D88305B00FC3774 /* XJHotViewController.m */; };
 		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
@@ -117,6 +122,13 @@
 		0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNetworkingTool.h; sourceTree = "<group>"; };
 		0B4EDF5C1D83244600079231 /* XJNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNetworkingTool.m; sourceTree = "<group>"; };
 		0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
+		0B50E2A81D8E5FA200210B01 /* XJLiveHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJLiveHouseViewController.h; path = ../../Controller/XJLiveHouseViewController.h; sourceTree = "<group>"; };
+		0B50E2A91D8E5FA200210B01 /* XJLiveHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJLiveHouseViewController.m; path = ../../Controller/XJLiveHouseViewController.m; sourceTree = "<group>"; };
+		0B50E2AB1D8E604600210B01 /* XJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJUserModel.h; path = ../../Model/XJUserModel.h; sourceTree = "<group>"; };
+		0B50E2AC1D8E604600210B01 /* XJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJUserModel.m; path = ../../Model/XJUserModel.m; sourceTree = "<group>"; };
+		0B50E2B21D8E665600210B01 /* XJHouseTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseTopView.h; sourceTree = "<group>"; };
+		0B50E2B31D8E665600210B01 /* XJHouseTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseTopView.m; sourceTree = "<group>"; };
+		0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJHouseTopView.xib; sourceTree = "<group>"; };
 		0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJShowTimeViewController.storyboard; sourceTree = "<group>"; };
 		0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XJExtension.h"; sourceTree = "<group>"; };
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
@@ -141,6 +153,8 @@
 		0BE0C6551D89184500618D7C /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
 		0BE0C65D1D891F6000618D7C /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
 		0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie1.mp4; sourceTree = "<group>"; };
+		0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XJExtension.h"; sourceTree = "<group>"; };
+		0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XJExtension.m"; sourceTree = "<group>"; };
 		0BF24FC51D8818F300FC3774 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		0BF24FD81D88305B00FC3774 /* XJHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotViewController.h; sourceTree = "<group>"; };
 		0BF24FD91D88305B00FC3774 /* XJHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotViewController.m; sourceTree = "<group>"; };
@@ -435,6 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
+				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
+				0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */,
 				0BC367361D8402DF0046B779 /* UIView+XJExtention.h */,
 				0BC367371D8402DF0046B779 /* UIView+XJExtention.m */,
 				0BC3673B1D8452A80046B779 /* MBProgressHUD+XJ.h */,
@@ -492,6 +508,44 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		0B50E2AE1D8E658B00210B01 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				0B50E2AF1D8E658B00210B01 /* Controller */,
+				0B50E2B01D8E658B00210B01 /* Model */,
+				0B50E2B11D8E658B00210B01 /* View */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		0B50E2AF1D8E658B00210B01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B50E2A81D8E5FA200210B01 /* XJLiveHouseViewController.h */,
+				0B50E2A91D8E5FA200210B01 /* XJLiveHouseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0B50E2B01D8E658B00210B01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B50E2AB1D8E604600210B01 /* XJUserModel.h */,
+				0B50E2AC1D8E604600210B01 /* XJUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B50E2B11D8E658B00210B01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B50E2B21D8E665600210B01 /* XJHouseTopView.h */,
+				0B50E2B31D8E665600210B01 /* XJHouseTopView.m */,
+				0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0BC367411D8456A20046B779 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +575,7 @@
 		0BF24FD61D88305B00FC3774 /* Hot */ = {
 			isa = PBXGroup;
 			children = (
+				0B50E2AE1D8E658B00210B01 /* House */,
 				0BF24FD71D88305B00FC3774 /* Controller */,
 				0BF24FDA1D88305B00FC3774 /* Model */,
 				0BF24FDB1D88305B00FC3774 /* View */,
@@ -718,6 +773,7 @@
 				0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */,
 				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
 				0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */,
+				0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */,
 				0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,9 +852,12 @@
 				0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */,
 				0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */,
 				0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */,
+				0B50E2AA1D8E5FA200210B01 /* XJLiveHouseViewController.m in Sources */,
 				0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */,
 				0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */,
+				0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */,
 				0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */,
+				0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
@@ -809,6 +868,7 @@
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
 				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
+				0B50E2B41D8E665600210B01 /* XJHouseTopView.m in Sources */,
 				0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

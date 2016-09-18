@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="420" id="n2P-hU-D1V" customClass="XJHotLiveCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="420" id="n2P-hU-D1V" customClass="XJHotLiveCell">
             <rect key="frame" x="0.0" y="0.0" width="345" height="420"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n2P-hU-D1V" id="e9I-YM-l20">
@@ -24,8 +24,8 @@
                                     <constraint firstAttribute="height" constant="40" id="7PS-hq-lPf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-zE-tht">
-                                <rect key="frame" x="60" y="10" width="42" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear-巨蟹座" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-zE-tht">
+                                <rect key="frame" x="60" y="10" width="79" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="Gak-r4-S1c"/>
                                 </constraints>
@@ -40,12 +40,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="上海市" image="home_location_8x8">
+                                <state key="normal" title="钟祥市" image="home_location_8x8">
                                     <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_star1_40x19" translatesAutoresizingMaskIntoConstraints="NO" id="bTI-1S-Hp7">
-                                <rect key="frame" x="117" y="9" width="40" height="19"/>
+                                <rect key="frame" x="154" y="9" width="40" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="AWY-aJ-csi"/>
                                     <constraint firstAttribute="width" constant="40" id="LSS-jt-D3z"/>
@@ -107,6 +107,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressBtn" destination="EaZ-Lq-AAj" id="GHO-xx-4Ko"/>
+                <outlet property="coverImage" destination="Vdu-jw-52S" id="Lrd-e2-pkq"/>
                 <outlet property="iconImage" destination="Nj9-sV-IiT" id="4mH-8e-2Kl"/>
                 <outlet property="nameLabel" destination="gyT-zE-tht" id="ZS4-h5-dMJ"/>
                 <outlet property="seeCountL" destination="PGC-ws-TzH" id="D4y-r3-cRI"/>

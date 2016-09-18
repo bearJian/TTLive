@@ -107,7 +107,6 @@
     for (UIView *view in self.subviews) { // 让滑动的按钮为选中
         if ([view isKindOfClass:[UIButton class]] && view.tag == selectBtnType) {
             self.selectedBtn = (UIButton *)view;
-            self.selectedBtn = (UIButton *)view;
             ((UIButton *)view).selected = YES;
         }
     }
@@ -119,13 +118,12 @@
     btn.selected = YES;
     self.selectedBtn = btn;
     
-    // 让点击的按钮为滑动选中的类型
-    btn.tag = _selectBtnType;
     // 滚动下划线
     [UIView animateWithDuration:0.5 animations:^{
-//        if (btn.tag == _selectBtnType) {
+        // 让点击的按钮为滑动选中的类型
+        if (btn.tag == _selectBtnType) {
             self.line.xj_centerX = btn.xj_centerX;
-//        }
+        }
         
     }];
 
