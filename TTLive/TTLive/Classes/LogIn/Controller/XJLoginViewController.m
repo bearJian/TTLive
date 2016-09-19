@@ -31,9 +31,14 @@
     
     if (!_player) {
         // 随机播放一组视频
+        // 选项
+        IJKFFOptions *option = [IJKFFOptions optionsByDefault];
+        // 不播放声音
+        [option setPlayerOptionValue:@"1" forKey:@"an"];
+        
         NSString *path = arc4random_uniform(10) % 2 ? @"login_video" : @"loginmovie";
         // 创建,并设置数据源
-        IJKFFMoviePlayerController *player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:[[NSBundle mainBundle] pathForResource:path ofType:@"mp4" ] withOptions:[IJKFFOptions optionsByDefault]];
+        IJKFFMoviePlayerController *player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:[[NSBundle mainBundle] pathForResource:path ofType:@"mp4" ] withOptions:option];
         // 设置player
         player.view.frame = self.view.bounds;
         // 设置缩放比例

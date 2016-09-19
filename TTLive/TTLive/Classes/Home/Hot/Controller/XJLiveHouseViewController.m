@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 }
 
 -(void)dealloc{
-    NSLog(@"直播间销毁了");
+    NSLog(@"直播间销毁了---------------");
 }
 
 - (void)viewDidLoad {
@@ -63,6 +63,12 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     cell.parentVc = self;
     cell.live = self.lives[self.currentIndex];
+    cell.previewLive = self.lives[self.currentIndex + 1];
+    __weak typeof(self)weakSelf = self;
+    [cell setClickPreviewLiveBlock:^{
+        weakSelf.currentIndex++;
+        [weakSelf.collectionView reloadData];
+    }];
     
     return cell;
 }

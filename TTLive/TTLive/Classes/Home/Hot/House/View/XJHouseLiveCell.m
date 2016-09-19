@@ -10,18 +10,108 @@
 #import "XJHouseTopView.h"
 #import "XJLiveModel.h"
 #import "XJHouseBottomView.h"
+#import "XJHousePreviewView.h"
 @interface XJHouseLiveCell()
 /**主播顶部栏*/
-@property (nonatomic, strong) XJHouseTopView *topView;
+@property (nonatomic, weak) XJHouseTopView *topView;
 /** 底部的工具栏 */
 @property(nonatomic, weak) XJHouseBottomView *toolView;
 /**直播开始前的占位图片*/
 @property(nonatomic, weak) UIImageView *placeholderView;
 /** 直播播放器 */
 @property (nonatomic, strong) IJKFFMoviePlayerController *moviePlayer;
+/**粒子融器*/
+@property (nonatomic, weak) CAEmitterLayer *emitterLayer;
+/**关联的主播*/
+@property (nonatomic, weak) UIImageView *associate;
+/**直播预览View*/
+@property (nonatomic, weak) XJHousePreviewView *previewView;
+
 @end
 
 @implementation XJHouseLiveCell
+
+#pragma mark - 懒加载
+
+- (XJHousePreviewView *)previewView{
+    
+    if (!_previewView) {
+        XJHousePreviewView *preview = [XJHousePreviewView allocWithNib];
+        [self.moviePlayer.view addSubview:preview];
+        // 添加手势
+        [preview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickPreview:)]];
+        // 设置位置
+        [preview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@-30);
+            make.centerY.equalTo(self.moviePlayer.view);
+            make.width.height.equalTo(@100);
+        }];
+        _previewView = preview;
+    }
+    return _previewView;
+}
+
+- (UIImageView *)associate{
+    
+    if (!_associate) {
+        UIImageView *preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"private_icon_70x70"]];
+        // 设置交互
+        preview.userInteractionEnabled = YES;
+        // 添加点按手势
+        [preview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAssociate:)]];
+        [self.moviePlayer.view addSubview:preview];
+    }
+    
+    return _associate;
+}
+
+- (CAEmitterLayer *)emitterLayer{
+    
+    if (!_emitterLayer) {
+        // 创建粒子容器
+        CAEmitterLayer *emitterLayer = [[CAEmitterLayer alloc] init];
+        // 设置发射位置
+        emitterLayer.emitterPosition = CGPointMake(self.moviePlayer.view.xj_width - 50, self.moviePlayer.view.xj_height - 50);
+        // 设置尺寸大小
+        emitterLayer.emitterSize = CGSizeMake(20, 20);
+        // 渲染模式
+        emitterLayer.renderMode = kCAEmitterLayerUnordered;
+        // 开启三维效果
+        emitterLayer.preservesDepth = YES;
+        // 创建粒子
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i < 10; i++) {
+            // 粒子
+            CAEmitterCell *imgCell = [[CAEmitterCell alloc] init];
+            // 粒子的创建速率,默认为1/s
+            imgCell.birthRate = 1;
+            // 粒子的存活时间
+            imgCell.lifetime = arc4random_uniform(3) + 1;
+            // 粒子的生存时间容差
+            imgCell.lifetimeRange = 1.5;
+            // 设置内容
+            imgCell.contents = (id)[UIImage imageNamed:[NSString stringWithFormat:@"good%d_30x30",i]].CGImage;
+            // 粒子的运动速率
+            imgCell.velocity = arc4random_uniform(100) + 100;
+            // 粒子速度的容差
+            imgCell.velocityRange = 80;
+            // 粒子的发射角度
+            imgCell.emissionLongitude = -M_PI_2;
+            // 粒子发射角度的容差
+            imgCell.emissionRange = M_PI_2 / 6;
+            // 粒子的缩放比例
+            imgCell.scale = 0.3;
+            // 添加到数组
+            [array addObject:imgCell];
+        }
+        // 加到粒子容器
+        emitterLayer.emitterCells = array;
+        // 将粒子容器加入到view
+        [self.moviePlayer.view.layer insertSublayer:emitterLayer below:self.toolView.layer];
+        _emitterLayer = emitterLayer;
+    }
+    return  _emitterLayer;
+}
 
 - (UIImageView *)placeholderView{
     if (!_placeholderView) {
@@ -42,6 +132,14 @@
     
     if (!_topView) {
         XJHouseTopView *topView = [XJHouseTopView allocWithNib];
+        __weak typeof(self)weakSelf = self;
+        [topView setClickOpenBtnBlock:^(bool selected) {
+            if (selected == NO) {
+                [weakSelf.previewView show];
+            }else{
+                [weakSelf.previewView hide];
+            }
+        }];
         [self.contentView insertSubview:topView aboveSubview:self.placeholderView];
         [topView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(@0);
@@ -57,6 +155,7 @@
 - (XJHouseBottomView *)toolView{
     if (!_toolView) {
         XJHouseBottomView *toolview = [[XJHouseBottomView alloc] init];
+        __weak typeof(self)weakSelf = self;
         [toolview setClickTollBlock:^(LiveToolType type) {
             switch (type) {
                 case LiveToolTypePublicTalk:
@@ -71,7 +170,7 @@
                 case LiveToolTypeShare:
                     break;
                 case LiveToolTypeClose:
-                    [self close];
+                    [weakSelf close];
                     break;
                 default:
                     break;
@@ -89,6 +188,30 @@
     return  _toolView;
 }
 
+#pragma mark - 方法
+
+-(void)setPreviewLive:(XJUserModel *)previewLive{
+    
+    _previewLive = previewLive;
+    if (previewLive) {
+        self.previewView.live = previewLive;
+    }else{
+        self.previewView.hidden = YES;
+    }
+}
+
+- (void)clickPreview:(UITapGestureRecognizer *)tap{
+    
+    if (self.clickPreviewLiveBlock) {
+        self.clickPreviewLiveBlock();
+    }
+}
+
+- (void)clickAssociate:(UITapGestureRecognizer *)tap{
+    
+    [MBProgressHUD showText:@"暂未完善"];
+}
+
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.toolView.hidden = NO;
@@ -103,19 +226,31 @@
 }
 
 - ( void)playerFLV:(NSString *)flv placehplderUrl:(NSString *)placehplderUrl{
-    if (!_moviePlayer) {
-        // 将站位图片插入到播放器上面
-        [self.contentView insertSubview:self.placeholderView aboveSubview:_moviePlayer.view];
+    
+    if (_moviePlayer) {
+        if (_moviePlayer) {
+            // 将站位图片插入到播放器上面
+            [self.contentView insertSubview:self.placeholderView aboveSubview:_moviePlayer.view];
+        }
+        if (_previewView) {
+            [_previewView removeFromSuperview];
+            _previewView = nil;
     }
+        [_moviePlayer shutdown];
+        [_moviePlayer.view removeFromSuperview];
+        _moviePlayer = nil;
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:placehplderUrl] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.parentVc showGifLoding:nil inView:self.placeholderView];
-            self.placeholderView.image = [UIImage blurImage:image blur:0.8];
-        });
-    }];
-    
+    }
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:placehplderUrl] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.parentVc showGifLoding:nil inView:self.placeholderView];
+                self.placeholderView.image = [UIImage blurImage:image blur:0.8];
+            });
+        }];
+ 
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
+    // 开启硬解码
     [options setPlayerOptionIntValue:1 forKey:@"videotoolbox"];
     // 帧速率
     [options setPlayerOptionIntValue:29.97 forKey:@"r"];
@@ -142,6 +277,9 @@
     // 设置监听
     [self initObserver];
     
+    // 显示粒子效果
+    [self.emitterLayer setHidden:NO];
+    
 }
 
 - (void)initObserver{
@@ -162,19 +300,19 @@
                     _placeholderView = nil;
 //                    [self.moviePlayer.view addSubview:_renderer.view];
                 }
-//                [self.parentVc hideGufLoding];
+                [self.parentVc hideGifLoding];
             });
-//        }else{
+        }else{
             // 如果是网络状态不好, 断开后恢复, 也需要去掉加载
-//            if (self.parentVc.gifView.isAnimating) {
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    [self.parentVc hideGufLoding];
-//                });
+            if (self.parentVc.gifView.isAnimating) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.parentVc hideGifLoding];
+                });
             
-//            }
+            }
         }
-//    }else if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled){ // 网速不佳, 自动暂停状态
-//        [self.parentVc showGifLoding:nil inView:self.moviePlayer.view];
+    }else if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled){ // 网速不佳, 自动暂停状态
+        [self.parentVc showGifLoding:nil inView:self.moviePlayer.view];
     }
 }
 
@@ -207,6 +345,10 @@
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
     [self.parentVc dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)dealloc{
+    NSLog(@"cell销毁了--------------");
 }
 
 @end

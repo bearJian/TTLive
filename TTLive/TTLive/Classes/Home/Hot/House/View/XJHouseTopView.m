@@ -82,7 +82,9 @@ static int randomNum = 0;
 // 开启或关闭按钮
 - (IBAction)openOrCloseBtn:(UIButton *)sender {
     sender.selected = !sender.selected;
-    
+    if (self.clickOpenBtnBlock) {
+        self.clickOpenBtnBlock(sender.selected);
+    }
 }
 
 -(void)setLive:(XJLiveModel *)live{

@@ -54,6 +54,8 @@
 		0BC367481D8456D10046B779 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* 2.mp4 */; };
 		0BC367491D8456D10046B779 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367451D8456D10046B779 /* user.plist */; };
 		0BD4BC4D1D8F91D600536F6F /* XJHouseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */; };
+		0BD4BC501D8FFBAD00536F6F /* XJHousePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4BC4F1D8FFBAD00536F6F /* XJHousePreviewView.m */; };
+		0BD4BC521D8FFBC100536F6F /* XJHousePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD4BC511D8FFBC100536F6F /* XJHousePreviewView.xib */; };
 		0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C64B1D89168700618D7C /* loginmovie.mp4 */; };
 		0BE0C6521D89182600618D7C /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6511D89182600618D7C /* 4.mp4 */; };
 		0BE0C6561D89184500618D7C /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6551D89184500618D7C /* 5.mp4 */; };
@@ -164,6 +166,9 @@
 		0BC367451D8456D10046B779 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		0BD4BC4B1D8F91D600536F6F /* XJHouseBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseBottomView.h; sourceTree = "<group>"; };
 		0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseBottomView.m; sourceTree = "<group>"; };
+		0BD4BC4E1D8FFBAD00536F6F /* XJHousePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHousePreviewView.h; sourceTree = "<group>"; };
+		0BD4BC4F1D8FFBAD00536F6F /* XJHousePreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHousePreviewView.m; sourceTree = "<group>"; };
+		0BD4BC511D8FFBC100536F6F /* XJHousePreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJHousePreviewView.xib; sourceTree = "<group>"; };
 		0BE0C64B1D89168700618D7C /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
 		0BE0C6511D89182600618D7C /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
 		0BE0C6551D89184500618D7C /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
@@ -559,6 +564,9 @@
 		0B50E2B11D8E658B00210B01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BD4BC4E1D8FFBAD00536F6F /* XJHousePreviewView.h */,
+				0BD4BC4F1D8FFBAD00536F6F /* XJHousePreviewView.m */,
+				0BD4BC511D8FFBC100536F6F /* XJHousePreviewView.xib */,
 				0BD4BC4B1D8F91D600536F6F /* XJHouseBottomView.h */,
 				0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */,
 				0B50E2BA1D8E91FD00210B01 /* XJFlowLayout.h */,
@@ -802,6 +810,7 @@
 				0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */,
 				0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */,
 				0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */,
+				0BD4BC521D8FFBC100536F6F /* XJHousePreviewView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +906,7 @@
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
 				0B50E2C41D8EEF4B00210B01 /* UIViewController+XJExtension.m in Sources */,
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
+				0BD4BC501D8FFBAD00536F6F /* XJHousePreviewView.m in Sources */,
 				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
 				0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */,
