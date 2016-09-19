@@ -9,10 +9,12 @@
 #import "XJHouseLiveCell.h"
 #import "XJHouseTopView.h"
 #import "XJLiveModel.h"
-
+#import "XJHouseBottomView.h"
 @interface XJHouseLiveCell()
 /**主播顶部栏*/
 @property (nonatomic, strong) XJHouseTopView *topView;
+/** 底部的工具栏 */
+@property(nonatomic, weak) XJHouseBottomView *toolView;
 /**直播开始前的占位图片*/
 @property(nonatomic, weak) UIImageView *placeholderView;
 /** 直播播放器 */
@@ -21,6 +23,78 @@
 
 @implementation XJHouseLiveCell
 
+- (UIImageView *)placeholderView{
+    if (!_placeholderView) {
+        UIImageView *img = [[UIImageView alloc] init];
+        img.frame = self.contentView.bounds;
+        img.image = [UIImage imageNamed:@"profile_user_414x414"];
+        [self.contentView addSubview:img];
+        _placeholderView = img;
+        // 显示gif
+        [self.parentVc showGifLoding:nil inView:self.placeholderView];
+        // 强制布局
+        [_placeholderView layoutIfNeeded];
+    }
+    return _placeholderView;
+}
+
+- (XJHouseTopView *)topView{
+    
+    if (!_topView) {
+        XJHouseTopView *topView = [XJHouseTopView allocWithNib];
+        [self.contentView insertSubview:topView aboveSubview:self.placeholderView];
+        [topView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@0);
+            make.left.right.equalTo(@0);
+            make.height.equalTo(@120);
+        }];
+        _topView = topView;
+    }
+    
+    return _topView;
+}
+
+- (XJHouseBottomView *)toolView{
+    if (!_toolView) {
+        XJHouseBottomView *toolview = [[XJHouseBottomView alloc] init];
+        [toolview setClickTollBlock:^(LiveToolType type) {
+            switch (type) {
+                case LiveToolTypePublicTalk:
+                    [MBProgressHUD showText:@"开启弹幕"];
+                    break;
+                case LiveToolTypePrivateTalk:
+                    break;
+                case LiveToolTypeRank:
+                    break;
+                case LiveToolTypeGift:
+                    break;
+                case LiveToolTypeShare:
+                    break;
+                case LiveToolTypeClose:
+                    [self close];
+                    break;
+                default:
+                    break;
+            }
+        }];
+        [self.contentView insertSubview:toolview aboveSubview:self.placeholderView];
+        [toolview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(@0);
+            make.bottom.equalTo(@-10);
+            make.height.equalTo(@40);
+        }];
+        _toolView = toolview;
+        
+    }
+    return  _toolView;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.toolView.hidden = NO;
+    }
+    return  self;
+}
 
 -(void)setLive:(XJLiveModel *)live{
     _live = live;
@@ -36,7 +110,7 @@
     
     [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:placehplderUrl] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
         dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.parentVc showGifLoding:nil inView:self.placeHolderView];
+            [self.parentVc showGifLoding:nil inView:self.placeholderView];
             self.placeholderView.image = [UIImage blurImage:image blur:0.8];
         });
     }];
@@ -127,19 +201,12 @@
 //    }];
 }
 
-
-- (UIImageView *)placeholderView
-{
-    if (!_placeholderView) {
-        UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.frame = self.contentView.bounds;
-        imageView.image = [UIImage imageNamed:@"profile_user_414x414"];
-        [self.contentView addSubview:imageView];
-        _placeholderView = imageView;
-//        [self.parentVc showGifLoding:nil inView:self.placeholderView];
-        // 强制布局
-        [_placeholderView layoutIfNeeded];
+- (void)close{
+    if (_moviePlayer) {
+        [self.moviePlayer shutdown];
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
-    return _placeholderView;
+    [self.parentVc dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

@@ -18,6 +18,7 @@
 #import "UIDevice+XJExtension.h"
 #import "UIImage+XJExtension.h"
 #import "MJExtension.h"
+#import "UIViewController+XJExtension.h"
 
 #pragma mark - Frame相关
 // 屏幕宽/高

@@ -12,6 +12,7 @@
 @interface XJHouseLiveCell : UICollectionViewCell
 /**直播*/
 @property (nonatomic, strong) XJLiveModel *live;
-
+/** 父控制器 */
+@property (nonatomic, weak) UIViewController *parentVc;
 
 @end

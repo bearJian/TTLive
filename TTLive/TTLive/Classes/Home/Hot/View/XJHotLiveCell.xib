@@ -25,8 +25,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear-巨蟹座" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-zE-tht">
-                                <rect key="frame" x="60" y="10" width="79" height="17"/>
+                                <rect key="frame" x="60" y="10" width="80" height="17"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1A9-gm-7Ei"/>
                                     <constraint firstAttribute="height" constant="17" id="Gak-r4-S1c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -45,7 +46,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_star1_40x19" translatesAutoresizingMaskIntoConstraints="NO" id="bTI-1S-Hp7">
-                                <rect key="frame" x="154" y="9" width="40" height="19"/>
+                                <rect key="frame" x="155" y="9" width="40" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19" id="AWY-aJ-csi"/>
                                     <constraint firstAttribute="width" constant="40" id="LSS-jt-D3z"/>

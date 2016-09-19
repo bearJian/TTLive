@@ -11,6 +11,7 @@
 @class XJLiveModel, XJUserModel;
 
 @interface XJHouseTopView : UIView
++ (instancetype)allocWithNib;
 /** 主播 */
 @property(nonatomic, strong) XJUserModel *user;
 /** 直播 */

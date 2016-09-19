@@ -40,6 +40,7 @@
 		0B50E2B91D8E85F600210B01 /* XJHouseLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */; };
 		0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */; };
 		0B50E2C11D8EEDAF00210B01 /* UIImageView+XJGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */; };
+		0B50E2C41D8EEF4B00210B01 /* UIViewController+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E2C31D8EEF4B00210B01 /* UIViewController+XJExtension.m */; };
 		0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */; };
 		0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */; };
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
@@ -52,6 +53,7 @@
 		0BC367461D8456D10046B779 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367421D8456D10046B779 /* danmu.plist */; };
 		0BC367481D8456D10046B779 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* 2.mp4 */; };
 		0BC367491D8456D10046B779 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367451D8456D10046B779 /* user.plist */; };
+		0BD4BC4D1D8F91D600536F6F /* XJHouseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */; };
 		0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C64B1D89168700618D7C /* loginmovie.mp4 */; };
 		0BE0C6521D89182600618D7C /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6511D89182600618D7C /* 4.mp4 */; };
 		0BE0C6561D89184500618D7C /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6551D89184500618D7C /* 5.mp4 */; };
@@ -139,6 +141,8 @@
 		0B50E2BD1D8EDA3F00210B01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0B50E2BF1D8EEDAF00210B01 /* UIImageView+XJGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XJGif.h"; sourceTree = "<group>"; };
 		0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XJGif.m"; sourceTree = "<group>"; };
+		0B50E2C21D8EEF4B00210B01 /* UIViewController+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XJExtension.h"; sourceTree = "<group>"; };
+		0B50E2C31D8EEF4B00210B01 /* UIViewController+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XJExtension.m"; sourceTree = "<group>"; };
 		0B5F68771D86799000D673B8 /* XJShowTimeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJShowTimeViewController.storyboard; sourceTree = "<group>"; };
 		0B5F687C1D86A00000D673B8 /* UIDevice+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XJExtension.h"; sourceTree = "<group>"; };
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		0BC367421D8456D10046B779 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
 		0BC367441D8456D10046B779 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
 		0BC367451D8456D10046B779 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
+		0BD4BC4B1D8F91D600536F6F /* XJHouseBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseBottomView.h; sourceTree = "<group>"; };
+		0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseBottomView.m; sourceTree = "<group>"; };
 		0BE0C64B1D89168700618D7C /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
 		0BE0C6511D89182600618D7C /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
 		0BE0C6551D89184500618D7C /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
@@ -461,6 +467,8 @@
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
 				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
 				0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */,
+				0B50E2C21D8EEF4B00210B01 /* UIViewController+XJExtension.h */,
+				0B50E2C31D8EEF4B00210B01 /* UIViewController+XJExtension.m */,
 				0B50E2BF1D8EEDAF00210B01 /* UIImageView+XJGif.h */,
 				0B50E2C01D8EEDAF00210B01 /* UIImageView+XJGif.m */,
 				0BC367361D8402DF0046B779 /* UIView+XJExtention.h */,
@@ -551,6 +559,8 @@
 		0B50E2B11D8E658B00210B01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BD4BC4B1D8F91D600536F6F /* XJHouseBottomView.h */,
+				0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */,
 				0B50E2BA1D8E91FD00210B01 /* XJFlowLayout.h */,
 				0B50E2BB1D8E91FD00210B01 /* XJFlowLayout.m */,
 				0B50E2B21D8E665600210B01 /* XJHouseTopView.h */,
@@ -868,6 +878,7 @@
 				0B50E2B91D8E85F600210B01 /* XJHouseLiveCell.m in Sources */,
 				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
 				0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */,
+				0BD4BC4D1D8F91D600536F6F /* XJHouseBottomView.m in Sources */,
 				0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */,
 				0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */,
 				0B50E2AA1D8E5FA200210B01 /* XJLiveHouseViewController.m in Sources */,
@@ -884,6 +895,7 @@
 				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
+				0B50E2C41D8EEF4B00210B01 /* UIViewController+XJExtension.m in Sources */,
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,
 				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,

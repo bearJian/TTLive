@@ -23,6 +23,9 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     return [super initWithCollectionViewLayout:[[XJFlowLayout alloc] init]];
 }
 
+-(void)dealloc{
+    NSLog(@"直播间销毁了");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,9 +35,21 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     // Register cell classes
     [self.collectionView registerClass:[XJHouseLiveCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
 }
 
-
+- (void)clickUser:(NSNotification *)notify
+{
+//    if (notify.userInfo[@"user"] != nil) {
+//        ALinUser *user = notify.userInfo[@"user"];
+//        self.userView.user = user;
+//        [UIView animateWithDuration:0.5 animations:^{
+//            self.userView.transform = CGAffineTransformIdentity;
+//        }];
+//    }
+    [MBProgressHUD showText:@"点击了观众"];
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -46,7 +61,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XJHouseLiveCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    
+    cell.parentVc = self;
     cell.live = self.lives[self.currentIndex];
     
     return cell;

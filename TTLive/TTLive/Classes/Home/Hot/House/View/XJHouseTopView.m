@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *giftBtn;
 /**定时器*/
 @property (strong, nonatomic) NSTimer *timer;
-
+/**观众列表*/
 @property (strong, nonatomic) NSArray *audienceArray;
 
 @end
@@ -36,7 +36,14 @@
 @implementation XJHouseTopView
 static int randomNum = 0;
 
++ (instancetype)allocWithNib{
+    
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
 -(void)awakeFromNib{
+    
+    [super awakeFromNib];
     
     [self makeRadiusOfView:self.UserView];
     [self makeRadiusOfView:self.iconImage];
@@ -52,6 +59,9 @@ static int randomNum = 0;
     [self.openBtn setBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor] size:self.openBtn.xj_size]forState:UIControlStateSelected];
     // 默认关闭
     [self openOrCloseBtn:self.openBtn];
+    
+    // 设置观众
+    [self setupAudience];
 }
 
 - (NSArray *)audienceArray{
@@ -82,13 +92,13 @@ static int randomNum = 0;
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人观看",live.allnum];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateNum) userInfo:nil repeats:YES];
     // 添加手势
-    [self.iconImage addGestureRecognizer:[[UIGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
+    [self.iconImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
     self.iconImage.userInteractionEnabled = YES;
 }
 
 // 设置观众的Scrollview
 - (void)setupAudience{
-    self.peopleScrollView.contentSize = CGSizeMake((self.peopleScrollView.xj_height + Space10) * self.audienceArray.count + Space10, 0);
+    self.peopleScrollView.contentSize = CGSizeMake((self.peopleScrollView.xj_height + Space10) * self.audienceArray.count + Space10 - self.peopleScrollView.xj_width * 0.5, 0);
     CGFloat wh = self.peopleScrollView.xj_height - Space10;
     CGFloat x = 0;
     for (int i = 0; i < self.audienceArray.count; i++) {
@@ -106,7 +116,7 @@ static int randomNum = 0;
         }];
         // 设置监听
         audienceView.userInteractionEnabled = YES;
-        [audienceView addGestureRecognizer:[[UIGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
+        [audienceView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
         // 标记
         audienceView.tag = i;
         // 添加到scrollview
@@ -115,7 +125,8 @@ static int randomNum = 0;
 }
 
 // 点击头像触发的手势
-- (void)clickIocnImage:(UIGestureRecognizer *)tap{
+- (void)clickIocnImage:(UITapGestureRecognizer *)tap{
+    
     if (tap.view == self.iconImage) {
         XJUserModel *user = [[XJUserModel alloc] init];
         user.nickname = self.live.myname;
