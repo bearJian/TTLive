@@ -57,9 +57,8 @@ static int randomNum = 0;
     // 设置按钮
     [self.openBtn setBackgroundImage:[UIImage imageWithColor:KeyColor size:self.openBtn.xj_size]forState:UIControlStateNormal];
     [self.openBtn setBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor] size:self.openBtn.xj_size]forState:UIControlStateSelected];
-    // 默认关闭
+    // 开启
     [self openOrCloseBtn:self.openBtn];
-    
     // 设置观众
     [self setupAudience];
 }
@@ -82,9 +81,15 @@ static int randomNum = 0;
 // 开启或关闭按钮
 - (IBAction)openOrCloseBtn:(UIButton *)sender {
     sender.selected = !sender.selected;
+
     if (self.clickOpenBtnBlock) {
         self.clickOpenBtnBlock(sender.selected);
     }
+}
+
+- (void)keepSelectState{
+    
+    self.openBtn.selected = NO;
 }
 
 -(void)setLive:(XJLiveModel *)live{

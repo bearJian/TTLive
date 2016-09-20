@@ -18,5 +18,7 @@
 @property(nonatomic, strong) XJLiveModel *live;
 /** 点击开关  */
 @property(nonatomic, copy)void (^clickOpenBtnBlock)(bool selected);
+/**点击按钮方法*/
+- (void)keepSelectState;
 
 @end

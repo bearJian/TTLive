@@ -40,22 +40,25 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播名字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKV-aC-Ozf">
-                            <rect key="frame" x="70" y="5" width="60" height="18"/>
+                            <rect key="frame" x="65" y="5" width="70" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="HlA-mO-JiG"/>
-                                <constraint firstAttribute="width" constant="60" id="hdm-g1-9h2"/>
+                                <constraint firstAttribute="width" constant="70" id="hdm-g1-9h2"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10442人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGg-4P-yGb">
-                            <rect key="frame" x="70" y="-20" width="56" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-eW-IkB">
+                            <rect key="frame" x="65" y="38" width="70" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="3ff-PD-3GR"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE6-7R-VL2">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE6-7R-VL2">
                             <rect key="frame" x="140" y="10" width="50" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="EbS-LY-pEE"/>
@@ -66,20 +69,11 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
-                            <state key="selected" title="开启"/>
+                            <state key="selected" title="关闭"/>
                             <connections>
                                 <action selector="openOrCloseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="YC1-gW-3mK"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJb-eW-IkB">
-                            <rect key="frame" x="70" y="38" width="50" height="17"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="3ff-PD-3GR"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.19722406910000001" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -90,13 +84,12 @@
                         <constraint firstItem="CE6-7R-VL2" firstAttribute="top" secondItem="hDf-ly-umq" secondAttribute="top" constant="10" id="Ohe-JN-tFI"/>
                         <constraint firstAttribute="trailing" secondItem="CE6-7R-VL2" secondAttribute="trailing" constant="10" id="SWz-D5-QXd"/>
                         <constraint firstAttribute="width" constant="200" id="XY5-OP-FHc"/>
-                        <constraint firstItem="OKV-aC-Ozf" firstAttribute="leading" secondItem="GGj-Zv-vZ2" secondAttribute="trailing" constant="10" id="bgP-fW-hom"/>
+                        <constraint firstItem="OKV-aC-Ozf" firstAttribute="leading" secondItem="GGj-Zv-vZ2" secondAttribute="trailing" constant="5" id="bgP-fW-hom"/>
                         <constraint firstItem="rJb-eW-IkB" firstAttribute="leading" secondItem="OKV-aC-Ozf" secondAttribute="leading" id="fVd-Jc-6GB"/>
                         <constraint firstItem="rJb-eW-IkB" firstAttribute="bottom" secondItem="GGj-Zv-vZ2" secondAttribute="bottom" id="jC1-S1-MxB"/>
                         <constraint firstItem="GGj-Zv-vZ2" firstAttribute="leading" secondItem="hDf-ly-umq" secondAttribute="leading" constant="10" id="oc3-Wp-csg"/>
                         <constraint firstItem="OKV-aC-Ozf" firstAttribute="top" secondItem="GGj-Zv-vZ2" secondAttribute="top" id="s0b-Os-M27"/>
                         <constraint firstItem="GGj-Zv-vZ2" firstAttribute="top" secondItem="hDf-ly-umq" secondAttribute="top" constant="5" id="vyJ-Pd-xEw"/>
-                        <constraint firstItem="fGg-4P-yGb" firstAttribute="leading" secondItem="GGj-Zv-vZ2" secondAttribute="trailing" constant="10" id="xS3-Yw-odV"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">

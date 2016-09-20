@@ -46,6 +46,7 @@
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
 		0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68841D87125800D673B8 /* XJCareViewController.m */; };
 		0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */; };
+		0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */; };
 		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
 		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
 		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
@@ -150,9 +151,11 @@
 		0B5F687D1D86A00000D673B8 /* UIDevice+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+XJExtension.m"; sourceTree = "<group>"; };
 		0B5F68801D86B15E00D673B8 /* XJTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJTopView.h; sourceTree = "<group>"; };
 		0B5F68811D86B15E00D673B8 /* XJTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJTopView.m; sourceTree = "<group>"; };
-		0B5F68831D87125800D673B8 /* XJCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJCareViewController.h; sourceTree = "<group>"; };
-		0B5F68841D87125800D673B8 /* XJCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJCareViewController.m; sourceTree = "<group>"; };
-		0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJCareViewController.storyboard; sourceTree = "<group>"; };
+		0B5F68831D87125800D673B8 /* XJCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJCareViewController.h; path = ../Controller/XJCareViewController.h; sourceTree = "<group>"; };
+		0B5F68841D87125800D673B8 /* XJCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJCareViewController.m; path = ../Controller/XJCareViewController.m; sourceTree = "<group>"; };
+		0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = XJCareViewController.storyboard; path = ../Controller/XJCareViewController.storyboard; sourceTree = "<group>"; };
+		0B8C3C551D90F02E00284EE8 /* XJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJRefreshGifHeader.h; sourceTree = "<group>"; };
+		0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJRefreshGifHeader.m; sourceTree = "<group>"; };
 		0BC367321D83F2C80046B779 /* XJToTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJToTopView.h; sourceTree = "<group>"; };
 		0BC367331D83F2C80046B779 /* XJToTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJToTopView.m; sourceTree = "<group>"; };
 		0BC367361D8402DF0046B779 /* UIView+XJExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJExtention.h"; sourceTree = "<group>"; };
@@ -361,6 +364,7 @@
 		0B4EDF271D8315DB00079231 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0B8C3C511D90E8F100284EE8 /* Care */,
 				0BF24FD61D88305B00FC3774 /* Hot */,
 				0BF24FD11D882F2800FC3774 /* New */,
 				0B4EDF281D8315DB00079231 /* Controller */,
@@ -375,9 +379,6 @@
 			children = (
 				0B04EBC31D86727500E897AF /* XJHomeViewController.h */,
 				0B04EBC41D86727500E897AF /* XJHomeViewController.m */,
-				0B5F68831D87125800D673B8 /* XJCareViewController.h */,
-				0B5F68841D87125800D673B8 /* XJCareViewController.m */,
-				0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -470,6 +471,8 @@
 			isa = PBXGroup;
 			children = (
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
+				0B8C3C551D90F02E00284EE8 /* XJRefreshGifHeader.h */,
+				0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */,
 				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
 				0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */,
 				0B50E2C21D8EEF4B00210B01 /* UIViewController+XJExtension.h */,
@@ -578,6 +581,16 @@
 				0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0B8C3C511D90E8F100284EE8 /* Care */ = {
+			isa = PBXGroup;
+			children = (
+				0B5F68831D87125800D673B8 /* XJCareViewController.h */,
+				0B5F68841D87125800D673B8 /* XJCareViewController.m */,
+				0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */,
+			);
+			path = Care;
 			sourceTree = "<group>";
 		};
 		0BC367411D8456A20046B779 /* Resources */ = {
@@ -896,6 +909,7 @@
 				0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */,
 				0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */,
 				0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */,
+				0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,

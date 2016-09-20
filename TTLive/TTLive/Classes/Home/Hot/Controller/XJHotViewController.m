@@ -10,6 +10,7 @@
 #import "XJHotLiveCell.h"
 #import "XJLiveModel.h"
 #import "XJLiveHouseViewController.h"
+#import "XJRefreshGifHeader.h"
 static NSString *IDHotCell = @"XJHotLiveCell";
 static NSString *IDADCell = @"XJHomeADCell";
 @interface XJHotViewController ()
@@ -17,6 +18,7 @@ static NSString *IDADCell = @"XJHomeADCell";
 @property (nonatomic, strong) NSMutableArray *liveArray;
 /** 当前页 */
 @property(nonatomic, assign) NSUInteger currentPage;
+
 @end
 
 @implementation XJHotViewController
@@ -36,28 +38,45 @@ static NSString *IDADCell = @"XJHomeADCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XJHotLiveCell class]) bundle:nil] forCellReuseIdentifier:IDHotCell];
     // 设置当前页
     self.currentPage = 1;
+    // 刷新设置
+    self.tableView.mj_header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
+        self.currentPage = 1;
+        // 加载数据
+        [self getHotLiveData];
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        self.currentPage++;
+        // 加载数据
+        [self getHotLiveData];
+    }];
+    // 刷新
+    [self.tableView.mj_header beginRefreshing];
     // 分割线设置
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // 加载数据
-    [self getHotLiveData];
+    
 }
 
 // 获取数据
 - (void)getHotLiveData{
     [[XJNetworkingTool shareTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld",self.currentPage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         // 数据转模型
         NSArray *array = [XJLiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
         if (array.count) {
             [self.liveArray addObjectsFromArray:array];
             // 刷新
             [self.tableView reloadData];
-            // 当前页
-            self.currentPage--;
         }else{
             [MBProgressHUD showText:@"暂时没有更多最新数据"];
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        
         [MBProgressHUD showText:@"网络异常"];
         // 当前页
         self.currentPage--;

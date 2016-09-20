@@ -37,7 +37,7 @@ static UIButton *_btn;
 
 /**点击状态栏调用*/
 + (void)statusBarClick{
-    NSLog(@"点击了状态栏,请指示...");
+    NSLog(@"点击了状态栏...");
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [self searchScrollView:window];
 }
@@ -52,12 +52,14 @@ static UIButton *_btn;
             // 滚动
             [subview setContentOffset:offset animated:YES];
         }
+        // 继续查找子控件
+        [self searchScrollView:subview];
     }
 }
 
 // 获取当前状态栏的方法
 /**
- *  调用了瓶的私有API
+ *  调用了苹果的私有API
  *  调用这个方法就可以拿到系统的状态栏对象，是个UIView。那么我们可以改变状态栏的颜色，大小位置（frame）等等。
  */
 + (UIView *)statusBarView{

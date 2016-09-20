@@ -84,7 +84,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-jw-52S">
-                        <rect key="frame" x="0.0" y="55" width="345" height="364"/>
+                        <rect key="frame" x="0.0" y="55" width="345" height="359"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_43x22" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-SC-cXQ">
                         <rect key="frame" x="292" y="65" width="43" height="22"/>
@@ -94,10 +94,11 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.86491231715425532" green="0.86491231715425532" blue="0.86491231715425532" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Vdu-jw-52S" secondAttribute="trailing" id="0N9-My-jLd"/>
                     <constraint firstItem="Vdu-jw-52S" firstAttribute="leading" secondItem="e9I-YM-l20" secondAttribute="leading" id="9Xp-oO-MlJ"/>
-                    <constraint firstAttribute="bottom" secondItem="Vdu-jw-52S" secondAttribute="bottom" id="JjI-uo-a6g"/>
+                    <constraint firstAttribute="bottom" secondItem="Vdu-jw-52S" secondAttribute="bottom" constant="5" id="JjI-uo-a6g"/>
                     <constraint firstItem="t0X-Gh-zIM" firstAttribute="top" secondItem="e9I-YM-l20" secondAttribute="top" id="Q0C-LG-R5H"/>
                     <constraint firstItem="t0X-Gh-zIM" firstAttribute="leading" secondItem="e9I-YM-l20" secondAttribute="leading" id="fgT-9S-Yfa"/>
                     <constraint firstItem="Vdu-jw-52S" firstAttribute="top" secondItem="t0X-Gh-zIM" secondAttribute="bottom" id="fxW-UB-ydb"/>

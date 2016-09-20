@@ -23,7 +23,7 @@
 /**粒子融器*/
 @property (nonatomic, weak) CAEmitterLayer *emitterLayer;
 /**关联的主播*/
-@property (nonatomic, weak) UIImageView *associate;
+@property (nonatomic, weak) UIImageView *associateView;
 /**直播预览View*/
 @property (nonatomic, weak) XJHousePreviewView *previewView;
 
@@ -37,12 +37,12 @@
     
     if (!_previewView) {
         XJHousePreviewView *preview = [XJHousePreviewView allocWithNib];
-        [self.moviePlayer.view addSubview:preview];
         // 添加手势
         [preview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickPreview:)]];
         // 设置位置
+        [self.moviePlayer.view addSubview:preview];
         [preview mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(@-30);
+            make.right.equalTo(@-20);
             make.centerY.equalTo(self.moviePlayer.view);
             make.width.height.equalTo(@100);
         }];
@@ -51,18 +51,24 @@
     return _previewView;
 }
 
-- (UIImageView *)associate{
+- (UIImageView *)associateView{
     
-    if (!_associate) {
-        UIImageView *preview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"private_icon_70x70"]];
+    if (!_associateView) {
+        UIImageView *associate = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"private_icon_70x70"]];
         // 设置交互
-        preview.userInteractionEnabled = YES;
+        associate.userInteractionEnabled = YES;
         // 添加点按手势
-        [preview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAssociate:)]];
-        [self.moviePlayer.view addSubview:preview];
+        [associate addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAssociateView:)]];
+        [self.moviePlayer.view addSubview:associate];
+        [associate mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@-10);
+            make.width.height.equalTo(@60);
+            make.bottom.equalTo(self.previewView.mas_top).offset(-10);
+        }];
+        _associateView = associate;
     }
     
-    return _associate;
+    return _associateView;
 }
 
 - (CAEmitterLayer *)emitterLayer{
@@ -207,7 +213,7 @@
     }
 }
 
-- (void)clickAssociate:(UITapGestureRecognizer *)tap{
+- (void)clickAssociateView:(UITapGestureRecognizer *)tap{
     
     [MBProgressHUD showText:@"暂未完善"];
 }
@@ -233,14 +239,22 @@
             [self.contentView insertSubview:self.placeholderView aboveSubview:_moviePlayer.view];
         }
         if (_previewView) {
+            // 保持开启状态
+            [self.topView keepSelectState];
             [_previewView removeFromSuperview];
             _previewView = nil;
-    }
+        }
+        
         [_moviePlayer shutdown];
         [_moviePlayer.view removeFromSuperview];
         _moviePlayer = nil;
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     
+    }
+    // 切换主播,取消之前的动画
+    if (_emitterLayer) {
+        [_emitterLayer removeFromSuperlayer];
+        _emitterLayer = nil;
     }
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:placehplderUrl] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -276,6 +290,10 @@
     
     // 设置监听
     [self initObserver];
+    
+    // 将关联主播加载到父视图最上层
+//    [self.moviePlayer.view bringSubviewToFront:self.associateView];
+    [self.associateView setHidden:NO];
     
     // 显示粒子效果
     [self.emitterLayer setHidden:NO];
@@ -318,24 +336,24 @@
 
 - (void)didFinish
 {
-    NSLog(@"加载状态...%ld %ld %s", self.moviePlayer.loadState, self.moviePlayer.playbackState, __func__);
-    // 因为网速或者其他原因导致直播stop了, 也要显示GIF
+//    NSLog(@"加载状态...%ld %ld %s", self.moviePlayer.loadState, self.moviePlayer.playbackState, __func__);
+//    // 因为网速或者其他原因导致直播stop了, 也要显示GIF
 //    if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled && !self.parentVc.gifView) {
 //        [self.parentVc showGifLoding:nil inView:self.moviePlayer.view];
 //        return;
 //    }
-    //    方法：
-    //      1、重新获取直播地址，服务端控制是否有地址返回。
-    //      2、用户http请求该地址，若请求成功表示直播未结束，否则结束
+////        方法：
+////          1、重新获取直播地址，服务端控制是否有地址返回。
+////          2、用户http请求该地址，若请求成功表示直播未结束，否则结束
 //    __weak typeof(self)weakSelf = self;
-//    [[ALinNetworkTool shareTool] GET:self.live.flv parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    [[XJNetworkingTool shareTool] GET:self.live.flv parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"请求成功%@, 等待继续播放", responseObject);
 //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        NSLog(@"请求失败, 加载失败界面, 关闭播放器%@", error);
 //        [weakSelf.moviePlayer shutdown];
 //        [weakSelf.moviePlayer.view removeFromSuperview];
 //        weakSelf.moviePlayer = nil;
-//        weakSelf.endView.hidden = NO;
+////        weakSelf.endView.hidden = NO;
 //    }];
 }
 

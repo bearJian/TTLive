@@ -10,6 +10,7 @@
 #import "XJUserModel.h"
 #import "XJHouseLiveCell.h"
 #import "XJFlowLayout.h"
+#import "XJRefreshGifHeader.h"
 
 @interface XJLiveHouseViewController ()
 
@@ -31,12 +32,31 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     [super viewDidLoad];
     
     // 设置背景
-    self.view.backgroundColor = [UIColor redColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     // Register cell classes
     [self.collectionView registerClass:[XJHouseLiveCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
+    
+    // 刷新设置
+    XJRefreshGifHeader *header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
+        self.currentIndex++;
+        if (self.currentIndex == self.lives.count) {
+            self.currentIndex = 0;
+        }
+        [self.collectionView.mj_header endRefreshing];
+        [self.collectionView reloadData];
+    }];
+    // 显示状态
+    header.stateLabel.hidden = NO;
+    // 设置刷新的title
+    [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStatePulling];
+    [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStateIdle];
+    [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStateRefreshing];
+    
+    self.collectionView.mj_header = header;
+    
 }
 
 - (void)clickUser:(NSNotification *)notify
@@ -63,14 +83,24 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     cell.parentVc = self;
     cell.live = self.lives[self.currentIndex];
-    cell.previewLive = self.lives[self.currentIndex + 1];
+    
+    NSUInteger index = self.currentIndex;
+    if (self.currentIndex == self.lives.count) {
+        index = 0;
+    }else{
+        index += 1;
+    }
+    cell.previewLive = self.lives[index];
+    
     __weak typeof(self)weakSelf = self;
     [cell setClickPreviewLiveBlock:^{
         weakSelf.currentIndex++;
         [weakSelf.collectionView reloadData];
     }];
-    
+
     return cell;
 }
+
+
 
 @end

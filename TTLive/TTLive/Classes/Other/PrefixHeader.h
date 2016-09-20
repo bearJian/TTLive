@@ -19,6 +19,7 @@
 #import "UIImage+XJExtension.h"
 #import "MJExtension.h"
 #import "UIViewController+XJExtension.h"
+#import "MJRefresh.h"
 
 #pragma mark - Frame相关
 // 屏幕宽/高
