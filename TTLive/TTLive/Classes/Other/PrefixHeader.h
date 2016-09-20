@@ -13,13 +13,13 @@
 #import "XJNetworkingTool.h"
 #import "UIView+XJExtention.h"
 #import "MBProgressHUD+XJ.h"
-#import "Masonry.h"
-#import "UIImageView+WebCache.h"
+#import <Masonry.h>
+#import <UIImageView+WebCache.h>
 #import "UIDevice+XJExtension.h"
 #import "UIImage+XJExtension.h"
-#import "MJExtension.h"
+#import <MJExtension.h>
 #import "UIViewController+XJExtension.h"
-#import "MJRefresh.h"
+#import <MJRefresh.h>
 
 #pragma mark - Frame相关
 // 屏幕宽/高

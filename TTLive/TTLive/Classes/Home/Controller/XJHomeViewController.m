@@ -10,6 +10,7 @@
 #import "XJCareViewController.h"
 #import "XJHotViewController.h"
 #import "XJTopView.h"
+#import "XJNewStarViewController.h"
 // 标题个数
 static int count = 3;
 @interface XJHomeViewController ()<UIScrollViewDelegate>
@@ -48,7 +49,7 @@ static int count = 3;
     [self.view addSubview:hot.view];
     
     // 最新
-    UIViewController *new = [[UIViewController alloc] init];
+    XJNewStarViewController *new = [[XJNewStarViewController alloc] init];
     new.view.frame = [UIScreen mainScreen].bounds;
     new.view.xj_x = XJScreenW;
     new.view.xj_height = height;

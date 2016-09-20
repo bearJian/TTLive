@@ -59,6 +59,7 @@
         associate.userInteractionEnabled = YES;
         // 添加点按手势
         [associate addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAssociateView:)]];
+        
         [self.moviePlayer.view addSubview:associate];
         [associate mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
@@ -292,8 +293,7 @@
     [self initObserver];
     
     // 将关联主播加载到父视图最上层
-//    [self.moviePlayer.view bringSubviewToFront:self.associateView];
-    [self.associateView setHidden:NO];
+    [self.moviePlayer.view bringSubviewToFront:self.associateView];
     
     // 显示粒子效果
     [self.emitterLayer setHidden:NO];
@@ -336,25 +336,25 @@
 
 - (void)didFinish
 {
-//    NSLog(@"加载状态...%ld %ld %s", self.moviePlayer.loadState, self.moviePlayer.playbackState, __func__);
-//    // 因为网速或者其他原因导致直播stop了, 也要显示GIF
-//    if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled && !self.parentVc.gifView) {
-//        [self.parentVc showGifLoding:nil inView:self.moviePlayer.view];
-//        return;
-//    }
-////        方法：
-////          1、重新获取直播地址，服务端控制是否有地址返回。
-////          2、用户http请求该地址，若请求成功表示直播未结束，否则结束
-//    __weak typeof(self)weakSelf = self;
-//    [[XJNetworkingTool shareTool] GET:self.live.flv parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSLog(@"请求成功%@, 等待继续播放", responseObject);
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"请求失败, 加载失败界面, 关闭播放器%@", error);
-//        [weakSelf.moviePlayer shutdown];
-//        [weakSelf.moviePlayer.view removeFromSuperview];
-//        weakSelf.moviePlayer = nil;
-////        weakSelf.endView.hidden = NO;
-//    }];
+    NSLog(@"加载状态...%ld %ld %s", self.moviePlayer.loadState, self.moviePlayer.playbackState, __func__);
+    // 因为网速或者其他原因导致直播stop了, 也要显示GIF
+    if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled && !self.parentVc.gifView) {
+        [self.parentVc showGifLoding:nil inView:self.moviePlayer.view];
+        return;
+    }
+//        方法：
+//          1、重新获取直播地址，服务端控制是否有地址返回。
+//          2、用户http请求该地址，若请求成功表示直播未结束，否则结束
+    __weak typeof(self)weakSelf = self;
+    [[XJNetworkingTool shareTool] GET:self.live.flv parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"请求成功%@, 等待继续播放", responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败, 加载失败界面, 关闭播放器%@", error);
+        [weakSelf.moviePlayer shutdown];
+        [weakSelf.moviePlayer.view removeFromSuperview];
+        weakSelf.moviePlayer = nil;
+//        weakSelf.endView.hidden = NO;
+    }];
 }
 
 - (void)close{

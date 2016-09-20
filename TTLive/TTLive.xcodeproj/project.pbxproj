@@ -46,6 +46,10 @@
 		0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68811D86B15E00D673B8 /* XJTopView.m */; };
 		0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F68841D87125800D673B8 /* XJCareViewController.m */; };
 		0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */; };
+		0B72C03D1D9167940065C320 /* XJNewStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B72C03C1D9167940065C320 /* XJNewStarViewController.m */; };
+		0B72C0401D9168E30065C320 /* XJNewStarFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B72C03F1D9168E30065C320 /* XJNewStarFlowLayout.m */; };
+		0B72C0441D916CCF0065C320 /* XJNewStarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B72C0421D916CCF0065C320 /* XJNewStarCell.m */; };
+		0B72C0451D916CCF0065C320 /* XJNewStarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B72C0431D916CCF0065C320 /* XJNewStarCell.xib */; };
 		0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */; };
 		0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367331D83F2C80046B779 /* XJToTopView.m */; };
 		0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC367371D8402DF0046B779 /* UIView+XJExtention.m */; };
@@ -154,6 +158,13 @@
 		0B5F68831D87125800D673B8 /* XJCareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XJCareViewController.h; path = ../Controller/XJCareViewController.h; sourceTree = "<group>"; };
 		0B5F68841D87125800D673B8 /* XJCareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XJCareViewController.m; path = ../Controller/XJCareViewController.m; sourceTree = "<group>"; };
 		0B5F68861D87126800D673B8 /* XJCareViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = XJCareViewController.storyboard; path = ../Controller/XJCareViewController.storyboard; sourceTree = "<group>"; };
+		0B72C03B1D9167940065C320 /* XJNewStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNewStarViewController.h; sourceTree = "<group>"; };
+		0B72C03C1D9167940065C320 /* XJNewStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewStarViewController.m; sourceTree = "<group>"; };
+		0B72C03E1D9168E30065C320 /* XJNewStarFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNewStarFlowLayout.h; sourceTree = "<group>"; };
+		0B72C03F1D9168E30065C320 /* XJNewStarFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewStarFlowLayout.m; sourceTree = "<group>"; };
+		0B72C0411D916CCF0065C320 /* XJNewStarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNewStarCell.h; sourceTree = "<group>"; };
+		0B72C0421D916CCF0065C320 /* XJNewStarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewStarCell.m; sourceTree = "<group>"; };
+		0B72C0431D916CCF0065C320 /* XJNewStarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJNewStarCell.xib; sourceTree = "<group>"; };
 		0B8C3C551D90F02E00284EE8 /* XJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJRefreshGifHeader.h; sourceTree = "<group>"; };
 		0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJRefreshGifHeader.m; sourceTree = "<group>"; };
 		0BC367321D83F2C80046B779 /* XJToTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJToTopView.h; sourceTree = "<group>"; };
@@ -661,6 +672,8 @@
 		0BF24FDD1D88306E00FC3774 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0B72C03B1D9167940065C320 /* XJNewStarViewController.h */,
+				0B72C03C1D9167940065C320 /* XJNewStarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -675,6 +688,11 @@
 		0BF24FDF1D88306E00FC3774 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B72C03E1D9168E30065C320 /* XJNewStarFlowLayout.h */,
+				0B72C03F1D9168E30065C320 /* XJNewStarFlowLayout.m */,
+				0B72C0411D916CCF0065C320 /* XJNewStarCell.h */,
+				0B72C0421D916CCF0065C320 /* XJNewStarCell.m */,
+				0B72C0431D916CCF0065C320 /* XJNewStarCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -811,6 +829,7 @@
 				0BE0C6561D89184500618D7C /* 5.mp4 in Resources */,
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
 				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
+				0B72C0451D916CCF0065C320 /* XJNewStarCell.xib in Resources */,
 				0BC367491D8456D10046B779 /* user.plist in Resources */,
 				0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */,
 				0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */,
@@ -908,6 +927,7 @@
 				0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */,
 				0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */,
 				0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */,
+				0B72C0401D9168E30065C320 /* XJNewStarFlowLayout.m in Sources */,
 				0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */,
 				0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
@@ -923,9 +943,11 @@
 				0BD4BC501D8FFBAD00536F6F /* XJHousePreviewView.m in Sources */,
 				0B5F68851D87125800D673B8 /* XJCareViewController.m in Sources */,
 				0B5F687E1D86A00000D673B8 /* UIDevice+XJExtension.m in Sources */,
+				0B72C0441D916CCF0065C320 /* XJNewStarCell.m in Sources */,
 				0B50E2BC1D8E91FD00210B01 /* XJFlowLayout.m in Sources */,
 				0B50E2B41D8E665600210B01 /* XJHouseTopView.m in Sources */,
 				0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */,
+				0B72C03D1D9167940065C320 /* XJNewStarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

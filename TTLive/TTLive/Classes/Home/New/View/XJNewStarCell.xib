@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewStarCell" id="gTV-IL-0wX" customClass="XJNewStarCell">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="183"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="183"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_head" translatesAutoresizingMaskIntoConstraints="NO" id="Sk2-Z8-Rjx">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="183"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag_new_33x17_" translatesAutoresizingMaskIntoConstraints="NO" id="T70-Po-hfS">
+                        <rect key="frame" x="142" y="5" width="33" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="Kms-gh-ZZL"/>
+                            <constraint firstAttribute="height" constant="17" id="zF0-ZS-q74"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播昵称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHW-1T-CGV">
+                        <rect key="frame" x="55" y="163" width="70" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Kgx-9D-5hs"/>
+                            <constraint firstAttribute="height" constant="15" id="cwD-0T-7AF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.75138551389999997" blue="0.83797993770000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je2-Hr-RF2">
+                        <rect key="frame" x="5" y="5" width="70" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="M2J-ZC-sab"/>
+                            <constraint firstAttribute="height" constant="19" id="dNd-0j-M3m"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="武汉市" image="location_white_8x9_">
+                            <color key="titleColor" red="1" green="0.75138551389999997" blue="0.83797993770000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Je2-Hr-RF2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="0is-cu-A4s"/>
+                <constraint firstItem="Sk2-Z8-Rjx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4B7-bH-Q5P"/>
+                <constraint firstItem="Je2-Hr-RF2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="4H6-Cb-x5x"/>
+                <constraint firstItem="T70-Po-hfS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="8FD-eD-YJ1"/>
+                <constraint firstItem="mHW-1T-CGV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Bc7-i9-eLd"/>
+                <constraint firstItem="Sk2-Z8-Rjx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gmt-wt-Tpg"/>
+                <constraint firstAttribute="trailing" secondItem="T70-Po-hfS" secondAttribute="trailing" constant="5" id="MUZ-Ms-JHf"/>
+                <constraint firstAttribute="bottom" secondItem="mHW-1T-CGV" secondAttribute="bottom" constant="5" id="hEF-ID-B77"/>
+                <constraint firstAttribute="trailing" secondItem="Sk2-Z8-Rjx" secondAttribute="trailing" id="j4S-ra-EK0"/>
+                <constraint firstAttribute="bottom" secondItem="Sk2-Z8-Rjx" secondAttribute="bottom" id="tNA-vx-ybL"/>
+            </constraints>
+            <size key="customSize" width="180" height="183"/>
+            <connections>
+                <outlet property="addressBtn" destination="Je2-Hr-RF2" id="spL-Ul-j7b"/>
+                <outlet property="nameLabel" destination="mHW-1T-CGV" id="u6d-pf-5n2"/>
+                <outlet property="starImage" destination="Sk2-Z8-Rjx" id="t2C-eN-4cu"/>
+                <outlet property="tagImage" destination="T70-Po-hfS" id="xLA-GQ-cbo"/>
+            </connections>
+            <point key="canvasLocation" x="724" y="506.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flag_new_33x17_" width="33" height="17"/>
+        <image name="location_white_8x9_" width="8" height="9"/>
+        <image name="placeholder_head" width="100" height="100"/>
+    </resources>
+</document>

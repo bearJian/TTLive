@@ -21,8 +21,6 @@
 @property (nonatomic, copy) NSString *myname;
 /** 个性签名 */
 @property (nonatomic, copy) NSString *signatures;
-/** 用户ID */
-@property (nonatomic, copy) NSString *userId;
 /** 星级 */
 @property (nonatomic, assign) NSUInteger starlevel;
 /** 朝阳群众数目 */

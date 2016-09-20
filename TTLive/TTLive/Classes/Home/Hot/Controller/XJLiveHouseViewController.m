@@ -40,13 +40,14 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
     
     // 刷新设置
+    __weak typeof(self)weakSelf = self;
     XJRefreshGifHeader *header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
-        self.currentIndex++;
-        if (self.currentIndex == self.lives.count) {
-            self.currentIndex = 0;
+        weakSelf.currentIndex++;
+        if (weakSelf.currentIndex == weakSelf.lives.count) {
+            weakSelf.currentIndex = 0;
         }
-        [self.collectionView.mj_header endRefreshing];
-        [self.collectionView reloadData];
+        [weakSelf.collectionView.mj_header endRefreshing];
+        [weakSelf.collectionView reloadData];
     }];
     // 显示状态
     header.stateLabel.hidden = NO;
@@ -100,7 +101,6 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 
     return cell;
 }
-
 
 
 @end

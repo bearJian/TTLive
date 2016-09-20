@@ -39,15 +39,16 @@ static NSString *IDADCell = @"XJHomeADCell";
     // 设置当前页
     self.currentPage = 1;
     // 刷新设置
+    __weak typeof(self)weakSelf = self;
     self.tableView.mj_header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
-        self.currentPage = 1;
+        weakSelf.currentPage = 1;
         // 加载数据
-        [self getHotLiveData];
+        [weakSelf getHotLiveData];
     }];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        self.currentPage++;
+        weakSelf.currentPage++;
         // 加载数据
-        [self getHotLiveData];
+        [weakSelf getHotLiveData];
     }];
     // 刷新
     [self.tableView.mj_header beginRefreshing];
@@ -58,6 +59,7 @@ static NSString *IDADCell = @"XJHomeADCell";
 
 // 获取数据
 - (void)getHotLiveData{
+    
     [[XJNetworkingTool shareTool] GET:[NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld",self.currentPage] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // 结束刷新
         [self.tableView.mj_header endRefreshing];
