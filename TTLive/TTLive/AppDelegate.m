@@ -21,6 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self setupShare];
+    
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // 设置根控制器
@@ -32,6 +35,22 @@
     
     NSLog(@"网络状态码:------>%ld",[XJNetworkingTool getNetworkStates]);
     return YES;
+}
+
+- (void)setupShare{
+    
+    //设置友盟社会化组件appkey
+    [UMSocialData setAppKey:@"57e202e967e58e423c00261a"];
+    // 隐藏未安装的程序
+    [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]];
+    // 微信
+    [UMSocialWechatHandler setWXAppId:@"wxb69b9ccbd6f8cfff" appSecret:@"ae2568ac8c27fccc056f3479f30e3eee" url:@"http://www.jianshu.com/users/7a29a936552d/latest_articles"];
+    // QQ
+    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.jianshu.com/users/7a29a936552d/latest_articles"];
+    // 新浪微博
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"263570835"
+                                              secret:@"6fa08301a3a4f2d2dbe94c1ef002c441"
+                                         RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
 }
 
 // 实时监控网络状态
@@ -80,6 +99,31 @@
     }
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
+}
+
+
+#pragma mark - 应用开始聚焦
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // 给状态栏添加一个按钮可以进行点击, 可以让屏幕上的scrollView滚到最顶部
+    [XJToTopView show];
+}
+
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的平台名
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -95,11 +139,6 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-#pragma mark - 应用开始聚焦
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // 给状态栏添加一个按钮可以进行点击, 可以让屏幕上的scrollView滚到最顶部
-        [XJToTopView show];
-}
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.

@@ -18,4 +18,5 @@
 @property (nonatomic, strong) XJUserModel *previewLive;
 /**点击预览直播*/
 @property (nonatomic, copy) void (^clickPreviewLiveBlock)();
+
 @end

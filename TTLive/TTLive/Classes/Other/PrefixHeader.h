@@ -21,6 +21,11 @@
 #import "UIViewController+XJExtension.h"
 #import <MJRefresh.h>
 
+#import "UMSocial.h"
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaSSOHandler.h"
+#import "UMSocialWechatHandler.h"
+
 #pragma mark - Frame相关
 // 屏幕宽/高
 #define XJScreenW  [UIScreen mainScreen].bounds.size.width

@@ -12,7 +12,6 @@
 #import "XJLiveHouseViewController.h"
 #import "XJRefreshGifHeader.h"
 static NSString *IDHotCell = @"XJHotLiveCell";
-static NSString *IDADCell = @"XJHomeADCell";
 @interface XJHotViewController ()
 /**直播用户组*/
 @property (nonatomic, strong) NSMutableArray *liveArray;
@@ -72,6 +71,8 @@ static NSString *IDADCell = @"XJHomeADCell";
             [self.tableView reloadData];
         }else{
             [MBProgressHUD showText:@"暂时没有更多最新数据"];
+            // 恢复当前页
+            self.currentPage--;
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -104,7 +105,7 @@ static NSString *IDADCell = @"XJHomeADCell";
 //        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:IDADCell];
 //        return cell;
 //    }
-    XJHotLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:IDHotCell];
+    XJHotLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:IDHotCell forIndexPath:indexPath];
     if (self.liveArray.count) {
         XJLiveModel *live = self.liveArray[indexPath.row];
         cell.live = live;

@@ -63,4 +63,12 @@
     self.seeCountL.attributedText = [[NSAttributedString alloc] initWithString:allNumFull attributes:att];
 }
 
+// 内存警告时的处理
+- (void)didReceiveMemoryWarning{
+    
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    [[SDWebImageManager sharedManager] cancelAll];
+}
+
+
 @end

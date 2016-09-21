@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iQF-5U-dJU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nR2-jN-i2j">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWi-ZC-dXv">
@@ -30,7 +30,7 @@
                                 <state key="selected" title="智能美颜已经关闭"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keE-ai-KQb">
-                                <rect key="frame" x="540" y="40" width="40" height="40"/>
+                                <rect key="frame" x="315" y="40" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="55l-y9-GTS"/>
                                     <constraint firstAttribute="width" constant="40" id="hrq-II-Hwy"/>
@@ -38,7 +38,7 @@
                                 <state key="normal" image="talk_close_40x40"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il3-22-qeS">
-                                <rect key="frame" x="480" y="40" width="40" height="40"/>
+                                <rect key="frame" x="255" y="40" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xaa-fg-MYi"/>
                                     <constraint firstAttribute="width" constant="40" id="zXN-dx-i4d"/>
@@ -46,7 +46,7 @@
                                 <state key="normal" image="camera_change_40x40"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态: 未知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-Kv-idG">
-                                <rect key="frame" x="261" y="110" width="78" height="21"/>
+                                <rect key="frame" x="149" y="110" width="78" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.15367353719999999" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,6 +65,7 @@
                             <constraint firstItem="JWi-ZC-dXv" firstAttribute="leading" secondItem="nR2-jN-i2j" secondAttribute="leading" constant="20" id="z1o-vI-Kgw"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Te-Oc-Ip2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

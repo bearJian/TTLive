@@ -3,370 +3,308 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
 		<key>flv</key>
-		<string>http://hdl.9158.com/live/e4f7c1489cbebca799fae85e11ee4bc3.flv</string>
+		<string>http://hdl.9158.com/live/70502c4a77afbda891b9cddc704e19f1.flv</string>
 		<key>new</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>冷氏、木惜</string>
+		<string>Soulmate山楂卷🍥</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/14/19/20160614190503_60210568_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/21/16/20160921161016_64691049_250.png</string>
 		<key>position</key>
-		<string>咸宁市</string>
+		<string>Jeongeup</string>
 		<key>roomid</key>
-		<integer>60820750</integer>
-		<key>serverid</key>
-		<integer>7</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60210568</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/bd53d5fb77ff384c83086349c0139bc8.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>蒂九💋程姑娘💍</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/09/12/60710142_124155563_250.png</string>
-		<key>position</key>
-		<string>天津市</string>
-		<key>roomid</key>
-		<integer>60204648</integer>
-		<key>serverid</key>
-		<integer>7</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60710142</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/af174540dc3a253885d1817e946f59dc.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>杨宇峰</string>
-		<key>photo</key>
-		<string>http://wx.qlogo.cn/mmopen/xxLzNxqMsxnUQpnnrJp5GibhYnzfibZJb1oRmMiaCicBtgNunHUPWETDdQbzpSBg01QBWtRzLHvLWN8XUyiaZEctkROwZTWpTZRBz/132</string>
-		<key>position</key>
-		<string>重庆市</string>
-		<key>roomid</key>
-		<integer>60378751</integer>
+		<integer>63622570</integer>
 		<key>serverid</key>
 		<integer>4</integer>
 		<key>sex</key>
-		<integer>1</integer>
-		<key>starlevel</key>
 		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60378751</integer>
+		<integer>64691049</integer>
 	</dict>
 	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
 		<key>flv</key>
-		<string>http://hdl.9158.com/live/576904f8e7ae514a8e99e0e065699d51.flv</string>
+		<string>http://hdl.9158.com/live/a1a2b4f19d899104f3377be26e2c83a8.flv</string>
 		<key>new</key>
 		<integer>1</integer>
 		<key>nickname</key>
-		<string>传说💕💕小黑💋</string>
+		<string>Yc💗雷汁</string>
 		<key>photo</key>
-		<string>http://wx.qlogo.cn/mmopen/XJeYryjRdrVia2toCmd03U3qRLUIlhRPwtGRG9HibibY72ZASeFe5eDQs4wZia8Jk8ibAkspCQtKjxMLSadEMkOxibOGnJcIBLvs25/132</string>
+		<string>http://wx.qlogo.cn/mmopen/t65ets2U43cKTHqfWouz7ATibLRVXjmgp6ya0iaC6tI0mrsBLlejAxZFUZCQRJnVNpic1lmIOhE8ya1U5T1EV0jEmZfticEnnhdt/132</string>
+		<key>position</key>
+		<string>无锡市</string>
+		<key>roomid</key>
+		<integer>63487815</integer>
+		<key>serverid</key>
+		<integer>5</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64197184</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/bc481d60728f79c3d01184e86e38343a.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>Meow.k💋、茉</string>
+		<key>photo</key>
+		<string>http://wx.qlogo.cn/mmopen/t65ets2U43cKTHqfWouz7LcIaUkvlmLCRpPSeRsyQ6bRqicHJnZibqndKvKt57EiaxPBJicQ7z0ia9rzM7DhL3gcNtxrWgFRXjsyk/132</string>
 		<key>position</key>
 		<string></string>
 		<key>roomid</key>
-		<integer>60572530</integer>
-		<key>serverid</key>
-		<integer>7</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60110105</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/7a9d2455367e36a266e407c9e47ba578.flv</string>
-		<key>new</key>
-		<integer>1</integer>
-		<key>nickname</key>
-		<string>Ly、涵</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/13/12/60707266_120736260_250.png</string>
-		<key>position</key>
-		<string>新乡市</string>
-		<key>roomid</key>
-		<integer>60210825</integer>
-		<key>serverid</key>
-		<integer>7</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60707266</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/26984ecb354618376bd3bd9d2ce6381c.flv</string>
-		<key>new</key>
-		<integer>1</integer>
-		<key>nickname</key>
-		<string>YR-电竞少女</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/14/23/20160614232645_60224190_250.png</string>
-		<key>position</key>
-		<string>威海市</string>
-		<key>roomid</key>
-		<integer>60337848</integer>
-		<key>serverid</key>
-		<integer>4</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60224190</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/b7684618654d8134ea3b27e1e29be485.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>芭比娱乐-火火</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/00/20160616001344_60656131_250.png</string>
-		<key>position</key>
-		<string>六盘水市</string>
-		<key>roomid</key>
-		<integer>60603091</integer>
-		<key>serverid</key>
-		<integer>4</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60656131</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/ac8f070c0e60af1a467c250611784b07.flv</string>
-		<key>new</key>
-		<integer>1</integer>
-		<key>nickname</key>
-		<string>师妹</string>
-		<key>photo</key>
-		<string>http://wx.qlogo.cn/mmopen/ps68icnpRvDXYEWpxnLibSma74PKEu2q51E3GFZZtUcmRQzdfQHuXGTlhWf17J7rzuiadpXsfAD221Q1zXLs6PFhg/132</string>
-		<key>position</key>
-		<string>随州市</string>
-		<key>roomid</key>
-		<integer>60587080</integer>
-		<key>serverid</key>
-		<integer>6</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60587080</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/c8f1ee42a5a9df2a3066b56a40c86db0.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>凡人</string>
-		<key>photo</key>
-		<string>http://q.qlogo.cn/qqapp/204515/CEFA2D9BCA0D4D1B00F68C5707A9DE69/40</string>
-		<key>position</key>
-		<string>武威市</string>
-		<key>roomid</key>
-		<integer>60641110</integer>
-		<key>serverid</key>
-		<integer>4</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60641110</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/bbe7e3042af3b2dc9f921e60ef2836f8.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>Ko💎草莓</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/11/02/60771729_024534566_250.png</string>
-		<key>position</key>
-		<string></string>
-		<key>roomid</key>
-		<integer>13579</integer>
+		<integer>60714335</integer>
 		<key>serverid</key>
 		<integer>2</integer>
 		<key>sex</key>
 		<integer>0</integer>
 		<key>starlevel</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60771729</integer>
+		<integer>64643997</integer>
 	</dict>
 	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/03bf1449563186f7c6f56104c48d0b36.flv</string>
-		<key>new</key>
+		<key>allnum</key>
 		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/9fb2a44b6ada3d7658fc0af050630121.flv</string>
+		<key>new</key>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>_wyz💋</string>
+		<string>小阿晶👄。</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/17/20160616172843_60617091_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/19/11/20160919111710_64148074_250.png</string>
 		<key>position</key>
-		<string>韶关市</string>
+		<string>晋中市</string>
 		<key>roomid</key>
-		<integer>60617091</integer>
+		<integer>60785740</integer>
 		<key>serverid</key>
 		<integer>4</integer>
 		<key>sex</key>
-		<integer>1</integer>
-		<key>starlevel</key>
 		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60617091</integer>
+		<integer>64148074</integer>
 	</dict>
 	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/b6fa59ad7578c366f663faf1efc75f5a.flv</string>
-		<key>new</key>
+		<key>allnum</key>
 		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/300320f6c3c782af0dfbd6d46c6461c5.flv</string>
+		<key>new</key>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>林熙</string>
+		<string>a噢</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-05-27/20160527203227234_250.png</string>
+		<string>http://wx.qlogo.cn/mmopen/XJeYryjRdrVM3DAWGiaSYmcRZ5aptnb3DbFlHxvicXM0ibmTuzCmjJSDBgHS37oTkLJSBMiaj4Cfz4iaB2XmSoiavymCkSox6N9ppa/132</string>
 		<key>position</key>
-		<string>无锡市</string>
+		<string>大连市</string>
 		<key>roomid</key>
-		<integer>29996427</integer>
+		<integer>62326315</integer>
 		<key>serverid</key>
 		<integer>3</integer>
 		<key>sex</key>
 		<integer>0</integer>
 		<key>starlevel</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60039332</integer>
+		<integer>64883411</integer>
 	</dict>
 	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
 		<key>flv</key>
-		<string>http://hdl.9158.com/live/e3a5c7b9a1ae0eed3c1149b5543d2c61.flv</string>
+		<string>http://hdl.9158.com/live/2936288ef844ffe92884ba37a495a1a0.flv</string>
 		<key>new</key>
 		<integer>1</integer>
 		<key>nickname</key>
-		<string>Ly_👄安安</string>
+		<string>闰~吃西瓜的猫</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/15/20160616153627_60302502_250.png</string>
+		<string>http://wx.qlogo.cn/mmopen/ps68icnpRvDWbaEC9oibxpQAoict7vdqEUyo2BSOILCHlQBKTyPjj8w787oUxv2ib8Q4lSn3XSiatdOloyCqg3bePhIqCI3J8e1Fg/132</string>
 		<key>position</key>
-		<string>锦州市</string>
+		<string>南阳市</string>
 		<key>roomid</key>
-		<integer>60210825</integer>
+		<integer>729879</integer>
 		<key>serverid</key>
 		<integer>7</integer>
 		<key>sex</key>
 		<integer>0</integer>
 		<key>starlevel</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60302502</integer>
+		<integer>64392892</integer>
 	</dict>
 	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
 		<key>flv</key>
-		<string>http://hdl.9158.com/live/3c1362d941b03e68845475486ca12e7c.flv</string>
-		<key>new</key>
-		<integer>0</integer>
-		<key>nickname</key>
-		<string>热播💋小雨欣呀</string>
-		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/16/20160616164919_60755283_250.png</string>
-		<key>position</key>
-		<string></string>
-		<key>roomid</key>
-		<integer>60320642</integer>
-		<key>serverid</key>
-		<integer>4</integer>
-		<key>sex</key>
-		<integer>0</integer>
-		<key>starlevel</key>
-		<integer>0</integer>
-		<key>useridx</key>
-		<integer>60755283</integer>
-	</dict>
-	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/c7035672be649fc736292f8b6809bc2f.flv</string>
+		<string>http://hdl.9158.com/live/e4e1cec094c3441e1515736cc48d2d4c.flv</string>
 		<key>new</key>
 		<integer>1</integer>
 		<key>nickname</key>
-		<string>8090❤陌儿小妖精</string>
+		<string>木瓜嫨依姐姐</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/14/20160616140957_60261610_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/21/16/20160921165240_64005034_250.png</string>
 		<key>position</key>
-		<string>芜湖市</string>
+		<string>廊坊市</string>
 		<key>roomid</key>
-		<integer>7766678</integer>
+		<integer>61679721</integer>
+		<key>serverid</key>
+		<integer>3</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64005034</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/2520c778d5bcea5bd8d991857acb470a.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>羊咩咩</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/19/14/20160919145912_64344016_250.png</string>
+		<key>position</key>
+		<string>长沙市</string>
+		<key>roomid</key>
+		<integer>64032879</integer>
 		<key>serverid</key>
 		<integer>2</integer>
 		<key>sex</key>
 		<integer>0</integer>
 		<key>starlevel</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60261610</integer>
+		<integer>64344016</integer>
 	</dict>
 	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/9f21254cfcf3a76a26ebd946646ee479.flv</string>
-		<key>new</key>
+		<key>allnum</key>
 		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/3bdaa4af259da7d4c3d6e39d8cca4bdb.flv</string>
+		<key>new</key>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>ting、雅晴</string>
+		<string>lhg神话肉山</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/15/02/20160615025128_60796311_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/21/14/20160921141418_64283748_250.png</string>
 		<key>position</key>
-		<string>成都市</string>
+		<string></string>
 		<key>roomid</key>
-		<integer>60049094</integer>
+		<integer>63727822</integer>
 		<key>serverid</key>
-		<integer>7</integer>
+		<integer>4</integer>
 		<key>sex</key>
 		<integer>0</integer>
 		<key>starlevel</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>useridx</key>
-		<integer>60796311</integer>
+		<integer>64283748</integer>
 	</dict>
 	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/052803a92c4fa613028e88b179c33e72.flv</string>
-		<key>new</key>
+		<key>allnum</key>
 		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/c2a593e1236c154ff3445cebaee786a8.flv</string>
+		<key>new</key>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>༺纵横👏苏霸</string>
+		<string>ゞ灬╭ァ傾峸。心有独钟</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-06/16/12/20160616125446_60133367_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/18/13/20160918133630_64068608_250.png</string>
 		<key>position</key>
-		<string>太原市</string>
+		<string>鞍山市</string>
 		<key>roomid</key>
-		<integer>20827716</integer>
+		<integer>61393193</integer>
+		<key>serverid</key>
+		<integer>3</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64068608</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/0d6fee58441b777ee1c8399082176167.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>遇见.阿段 🎈</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/20/20/20160920204943_64074994_250.png</string>
+		<key>position</key>
+		<string>重庆市</string>
+		<key>roomid</key>
+		<integer>62478140</integer>
+		<key>serverid</key>
+		<integer>2</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64074994</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/1d275f27d9f1480763ac477c63baa64c.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>小雪大人</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/21/11/20160921115959_64880738_250.png</string>
+		<key>position</key>
+		<string>郑州市</string>
+		<key>roomid</key>
+		<integer>60950335</integer>
+		<key>serverid</key>
+		<integer>6</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64880738</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/76d3d1a5ff0c920c59df757397057d16.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>God-玲</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/20/15/20160920151802_64686137_250.png</string>
+		<key>position</key>
+		<string>宁波市</string>
+		<key>roomid</key>
+		<integer>61625000</integer>
 		<key>serverid</key>
 		<integer>4</integer>
 		<key>sex</key>
@@ -374,17 +312,115 @@
 		<key>starlevel</key>
 		<integer>0</integer>
 		<key>useridx</key>
-		<integer>60133367</integer>
+		<integer>64686137</integer>
 	</dict>
 	<dict>
-		<key>flv</key>
-		<string>http://hdl.9158.com/live/58f56b6d41aca3ab7466b73b198680fb.flv</string>
-		<key>new</key>
+		<key>allnum</key>
 		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/e13e0d1d3a595a6c17155cbc0326f54c.flv</string>
+		<key>new</key>
+		<integer>1</integer>
 		<key>nickname</key>
-		<string>MS.胖纸虎-160</string>
+		<string>菲舞💋洁儿</string>
 		<key>photo</key>
-		<string>http://liveimg.9158.com/pic/avator/2016-05-31/20160531005514565_250.png</string>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/21/18/20160921181828_64372612_250.png</string>
+		<key>position</key>
+		<string>重庆市</string>
+		<key>roomid</key>
+		<integer>62722660</integer>
+		<key>serverid</key>
+		<integer>2</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64372612</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/d77264921cf0c125d5b7fe523a7c3525.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>宴遇乌啦啦</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/20/18/20160920181931_64590118_250.png</string>
+		<key>position</key>
+		<string>湖州市</string>
+		<key>roomid</key>
+		<integer>64681051</integer>
+		<key>serverid</key>
+		<integer>5</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64590118</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/75fdfaf39821b868e472d9b8a88d1929.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>SH金喵🐱Ann</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/19/18/20160919182650_64839740_250.png</string>
+		<key>position</key>
+		<string>漳州市</string>
+		<key>roomid</key>
+		<integer>60098914</integer>
+		<key>serverid</key>
+		<integer>5</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>64839740</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/3e41ddf4e888205aafb86f3a20550efa.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>UFO、綯綯</string>
+		<key>photo</key>
+		<string>http://liveimg.9158.com/pic/avator/2016-09/19/16/20160919165612_63742378_250.png</string>
+		<key>position</key>
+		<string>长沙市</string>
+		<key>roomid</key>
+		<integer>60164948</integer>
+		<key>serverid</key>
+		<integer>7</integer>
+		<key>sex</key>
+		<integer>0</integer>
+		<key>starlevel</key>
+		<integer>1</integer>
+		<key>useridx</key>
+		<integer>63742378</integer>
+	</dict>
+	<dict>
+		<key>allnum</key>
+		<integer>0</integer>
+		<key>flv</key>
+		<string>http://hdl.9158.com/live/9f3bfa8c45ff2b778286ce6fe49dd4da.flv</string>
+		<key>new</key>
+		<integer>1</integer>
+		<key>nickname</key>
+		<string>MS.大思-162</string>
+		<key>photo</key>
+		<string>http://wx.qlogo.cn/mmopen/XJeYryjRdrVM3DAWGiaSYmbicUG5DbykdWNKNwQkIuicjwNmZpMErenTwicKiaibuJibJ9KO5IF5aEWus0vpKtG1R1T0p6Iluhzoa54/132</string>
 		<key>position</key>
 		<string>上海市</string>
 		<key>roomid</key>
@@ -396,7 +432,7 @@
 		<key>starlevel</key>
 		<integer>0</integer>
 		<key>useridx</key>
-		<integer>60305887</integer>
+		<integer>63594820</integer>
 	</dict>
 </array>
 </plist>

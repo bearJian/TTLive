@@ -77,7 +77,7 @@ static NSString * const reuseIdentifier = @"NewStarCell";
             [MBProgressHUD showText:@"暂时没有更多的数据"];
         }else{
             NSArray *arry = responseObject[@"data"][@"list"];
-//            [arry writeToFile:@"/Users/dear/Desktop/user.plist" atomically:YES];
+            [arry writeToFile:@"/Users/dear/Desktop/user.plist" atomically:YES];
             // 数组转模型
            NSArray *resule = [XJUserModel mj_objectArrayWithKeyValuesArray:arry];
             if (resule.count) {

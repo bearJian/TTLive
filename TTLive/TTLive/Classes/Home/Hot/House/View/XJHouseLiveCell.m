@@ -11,6 +11,7 @@
 #import "XJLiveModel.h"
 #import "XJHouseBottomView.h"
 #import "XJHousePreviewView.h"
+
 @interface XJHouseLiveCell()
 /**主播顶部栏*/
 @property (nonatomic, weak) XJHouseTopView *topView;
@@ -64,7 +65,7 @@
         [associate mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
             make.width.height.equalTo(@60);
-            make.top.equalTo(self.contentView.mas_top).offset(200);
+            make.bottom.equalTo(self.previewView.mas_top).offset(-20);
         }];
         _associateView = associate;
     }
@@ -175,6 +176,7 @@
                 case LiveToolTypeGift:
                     break;
                 case LiveToolTypeShare:
+                    [weakSelf share];
                     break;
                 case LiveToolTypeClose:
                     [weakSelf close];
@@ -364,6 +366,23 @@
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
     [self.parentVc dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)share{
+
+    // 获取当前房间
+    XJLiveModel *house = self.topView.live;
+    
+    NSString *str = [NSString stringWithFormat:@"%@",house.bigpic];
+    [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:str];
+    [UMSocialData defaultData].extConfig.title = @"我的心愿是,世界和平";
+    [UMSocialData defaultData].extConfig.qqData.url = @"http://www.jianshu.com/users/7a29a936552d/latest_articles";
+    [UMSocialSnsService presentSnsIconSheetView:self.parentVc
+                                         appKey:nil
+                                      shareText:[NSString stringWithFormat:@"我是:%@我的心情:%@我的房间号:%ld我的直播间:https://live.9158.com/miaoboAD/miaoboApp.html",house.myname, house.signatures,house.roomid]
+                                     shareImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",house.bigpic]]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone,UMShareToWechatFavorite,UMShareToDouban]
+                                       delegate:nil];
 }
 
 -(void)dealloc{

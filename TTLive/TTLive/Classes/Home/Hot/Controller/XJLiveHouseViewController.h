@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSArray *lives;
 /** 当前的index */
 @property (nonatomic, assign) NSUInteger currentIndex;
+
 @end

@@ -93,10 +93,11 @@ static int randomNum = 0;
 }
 
 -(void)setLive:(XJLiveModel *)live{
+    
     _live = live;
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:live.smallpic] placeholderImage:[UIImage imageNamed:@"placeholder_head"]];
     self.nameLabel.text = live.myname;
-    self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人观看",live.allnum];
+    self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人",live.allnum];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateNum) userInfo:nil repeats:YES];
     // 添加手势
     [self.iconImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
@@ -105,6 +106,7 @@ static int randomNum = 0;
 
 // 设置观众的Scrollview
 - (void)setupAudience{
+    
     self.peopleScrollView.contentSize = CGSizeMake((self.peopleScrollView.xj_height + Space10) * self.audienceArray.count + Space10 - self.peopleScrollView.xj_width * 0.5, 0);
     CGFloat wh = self.peopleScrollView.xj_height - Space10;
     CGFloat x = 0;
@@ -152,5 +154,13 @@ static int randomNum = 0;
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人", self.live.allnum + randomNum];
     [self.giftBtn setTitle:[NSString stringWithFormat:@"猫粮:%u  娃娃%u", 1993045 + randomNum,  124593+randomNum] forState:UIControlStateNormal];
 }
+
+// 内存警告时的处理
+- (void)didReceiveMemoryWarning{
+    
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    [[SDWebImageManager sharedManager] cancelAll];
+}
+
 
 @end

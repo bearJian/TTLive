@@ -33,8 +33,6 @@
     
     [self addChildViewController:[[XJHomeViewController alloc] init] imageName:@"toolbar_home"];
     
-//    UIViewController *showTime = [[UIViewController alloc] init];
-//    showTime.view.backgroundColor = [UIColor whiteColor];
     [self addChildViewController:[[XJShowTimeViewController alloc] init] imageName:@"toolbar_live"];
     
     [self addChildViewController:[[XJMeViewController alloc] init] imageName:@"toolbar_me"];

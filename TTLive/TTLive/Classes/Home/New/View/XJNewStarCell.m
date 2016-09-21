@@ -39,4 +39,12 @@
     self.nameLabel.text = user.nickname;
 }
 
+// 内存警告时的处理
+- (void)didReceiveMemoryWarning{
+    
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    [[SDWebImageManager sharedManager] cancelAll];
+}
+
+
 @end
