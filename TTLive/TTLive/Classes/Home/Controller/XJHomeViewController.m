@@ -108,8 +108,9 @@ static int count = 3;
     CGFloat space = 40; // 间距
     topView.xj_x = space;
     topView.xj_width = XJScreenW - space * 2;
+    __weak typeof(self) weakSelf = self;
     [topView setSelectBlock:^(topType type) {
-        [self.scrollView setContentOffset:CGPointMake(type * XJScreenW, 0) animated:YES];
+        [weakSelf.scrollView setContentOffset:CGPointMake(type * XJScreenW, 0) animated:YES];
     }];
     [self.navigationController.navigationBar addSubview:topView];
     self.topView = topView;

@@ -60,11 +60,11 @@
         // 添加点按手势
         [associate addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAssociateView:)]];
         
-        [self.moviePlayer.view addSubview:associate];
+        [self.contentView insertSubview:associate aboveSubview:self.placeholderView];
         [associate mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
             make.width.height.equalTo(@60);
-            make.bottom.equalTo(self.previewView.mas_top).offset(-10);
+            make.top.equalTo(self.contentView.mas_top).offset(200);
         }];
         _associateView = associate;
     }
@@ -293,7 +293,8 @@
     [self initObserver];
     
     // 将关联主播加载到父视图最上层
-    [self.moviePlayer.view bringSubviewToFront:self.associateView];
+//    [self.moviePlayer.view bringSubviewToFront:self.associateView];
+    [self.associateView setHidden:NO];
     
     // 显示粒子效果
     [self.emitterLayer setHidden:NO];
