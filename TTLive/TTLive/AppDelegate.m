@@ -43,10 +43,11 @@
     [UMSocialData setAppKey:@"57e202e967e58e423c00261a"];
     // 隐藏未安装的程序
     [UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]];
+
     // 微信
-    [UMSocialWechatHandler setWXAppId:@"wxb69b9ccbd6f8cfff" appSecret:@"ae2568ac8c27fccc056f3479f30e3eee" url:@"http://www.jianshu.com/users/7a29a936552d/latest_articles"];
+    [UMSocialWechatHandler setWXAppId:@"wxb69b9ccbd6f8cfff" appSecret:@"ae2568ac8c27fccc056f3479f30e3eee" url:@"http://www.umeng.com/social"];
     // QQ
-    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.jianshu.com/users/7a29a936552d/latest_articles"];
+    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.umeng.com/social"];
     // 新浪微博
     [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"263570835"
                                               secret:@"6fa08301a3a4f2d2dbe94c1ef002c441"
@@ -113,16 +114,6 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // 给状态栏添加一个按钮可以进行点击, 可以让屏幕上的scrollView滚到最顶部
     [XJToTopView show];
-}
-
--(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
-{
-    //根据`responseCode`得到发送结果,如果分享成功
-    if(response.responseCode == UMSResponseCodeSuccess)
-    {
-        //得到分享到的平台名
-        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

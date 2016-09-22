@@ -373,17 +373,25 @@
     // 获取当前房间
     XJLiveModel *house = self.topView.live;
     
+    NSString *homeUrl = [NSString stringWithFormat:@"http://www.miaobolive.com/live.aspx?u_serverid=%ld&u_roomid=%ld&isappinstalled=0&roomidx=%@",house.serverid,house.roomid,house.useridx];
+
     NSString *str = [NSString stringWithFormat:@"%@",house.bigpic];
     [[UMSocialData defaultData].urlResource setResourceType:UMSocialUrlResourceTypeImage url:str];
     [UMSocialData defaultData].extConfig.title = @"我的心愿是,世界和平";
-    [UMSocialData defaultData].extConfig.qqData.url = @"http://www.jianshu.com/users/7a29a936552d/latest_articles";
+    [UMSocialData defaultData].extConfig.qqData.url = [NSString stringWithFormat:@"%@",homeUrl];
+    [UMSocialData defaultData].extConfig.qzoneData.url = [NSString stringWithFormat:@"%@",homeUrl];
+    [UMSocialData defaultData].extConfig.wechatTimelineData.url = [NSString stringWithFormat:@"%@",homeUrl];
+    [UMSocialData defaultData].extConfig.wechatSessionData.url = [NSString stringWithFormat:@"%@",homeUrl];
+    
     [UMSocialSnsService presentSnsIconSheetView:self.parentVc
                                          appKey:nil
-                                      shareText:[NSString stringWithFormat:@"我是:%@我的心情:%@我的房间号:%ld我的直播间:https://live.9158.com/miaoboAD/miaoboApp.html",house.myname, house.signatures,house.roomid]
+                                      shareText:[NSString stringWithFormat:@"我是:%@我的心情:%@我的房间号:%@我的直播间:%@",house.myname, house.signatures,house.useridx,homeUrl]
                                      shareImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",house.bigpic]]
                                 shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone,UMShareToWechatFavorite,UMShareToDouban]
                                        delegate:nil];
+
 }
+
 
 -(void)dealloc{
     NSLog(@"cell销毁了--------------");
