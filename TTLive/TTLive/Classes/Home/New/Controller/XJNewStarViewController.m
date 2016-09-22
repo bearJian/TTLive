@@ -38,6 +38,14 @@ static NSString * const reuseIdentifier = @"NewStarCell";
     [self setup];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 每一分钟自动更新
+    _timer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(autoRefresh) userInfo:nil repeats:YES];
+}
+
 - (NSMutableArray *)starList{
     
     if (!_starList) {
@@ -45,6 +53,19 @@ static NSString * const reuseIdentifier = @"NewStarCell";
         _starList = array;
     }
     return _starList;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+// 自动刷新
+- (void)autoRefresh
+{
+    [self.collectionView.mj_header beginRefreshing];
 }
 
 - (void)setup{
@@ -56,7 +77,8 @@ static NSString * const reuseIdentifier = @"NewStarCell";
     __weak typeof(self) weakSelf = self;
     self.collectionView.mj_header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
         weakSelf.currentPage = 1;
-        
+        // 加载最新数据时每次只显示一组
+        self.starList = [NSMutableArray array];
         [weakSelf getStarList];
     }];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
@@ -75,6 +97,8 @@ static NSString * const reuseIdentifier = @"NewStarCell";
             [self.collectionView.mj_footer endRefreshingWithNoMoreData];
             // 弹窗
             [MBProgressHUD showText:@"暂时没有更多的数据"];
+            // 恢复当前页
+            self.currentPage--;
         }else{
             NSArray *arry = responseObject[@"data"][@"list"];
             [arry writeToFile:@"/Users/dear/Desktop/user.plist" atomically:YES];
