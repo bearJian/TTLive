@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bjy-Hp-u1X">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -28,6 +28,9 @@
                                 <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="智能美颜已经开启" image="icon_beautifulface_19x19"/>
                                 <state key="selected" title="智能美颜已经关闭"/>
+                                <connections>
+                                    <action selector="makeBeautifulBtn:" destination="bjy-Hp-u1X" eventType="touchUpInside" id="FPw-JL-Bd2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keE-ai-KQb">
                                 <rect key="frame" x="315" y="40" width="40" height="40"/>
@@ -36,6 +39,9 @@
                                     <constraint firstAttribute="width" constant="40" id="hrq-II-Hwy"/>
                                 </constraints>
                                 <state key="normal" image="talk_close_40x40"/>
+                                <connections>
+                                    <action selector="closeLive:" destination="bjy-Hp-u1X" eventType="touchUpInside" id="Yfc-8d-7Ic"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Il3-22-qeS">
                                 <rect key="frame" x="255" y="40" width="40" height="40"/>
@@ -44,18 +50,39 @@
                                     <constraint firstAttribute="width" constant="40" id="zXN-dx-i4d"/>
                                 </constraints>
                                 <state key="normal" image="camera_change_40x40"/>
+                                <connections>
+                                    <action selector="switchCamare:" destination="bjy-Hp-u1X" eventType="touchUpInside" id="ZKs-h9-QHG"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态: 未知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-Kv-idG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态: 未知" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XJ-Kv-idG">
                                 <rect key="frame" x="149" y="110" width="78" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.15367353719999999" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQN-qo-1LF">
+                                <rect key="frame" x="40" y="527" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fpH-2a-DRP"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="开始直播">
+                                    <color key="titleColor" red="1" green="0.75138551389999997" blue="0.83797993770000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="结束直播">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startLiveBtn:" destination="bjy-Hp-u1X" eventType="touchUpInside" id="s5u-uD-tz2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pQN-qo-1LF" secondAttribute="trailing" constant="40" id="CUN-Aq-6ZZ"/>
                             <constraint firstItem="0XJ-Kv-idG" firstAttribute="centerX" secondItem="nR2-jN-i2j" secondAttribute="centerX" id="GvY-bk-pdO"/>
+                            <constraint firstItem="iQF-5U-dJU" firstAttribute="top" secondItem="pQN-qo-1LF" secondAttribute="bottom" constant="100" id="HjZ-nC-F7Z"/>
                             <constraint firstAttribute="trailing" secondItem="keE-ai-KQb" secondAttribute="trailing" constant="20" id="QCf-Xt-Jzv"/>
                             <constraint firstItem="JWi-ZC-dXv" firstAttribute="top" secondItem="Kob-Cs-1mg" secondAttribute="bottom" constant="30" id="STZ-Fr-dWV"/>
                             <constraint firstItem="keE-ai-KQb" firstAttribute="top" secondItem="Kob-Cs-1mg" secondAttribute="bottom" constant="20" id="Tl6-NW-3Yb"/>
@@ -63,13 +90,19 @@
                             <constraint firstItem="Il3-22-qeS" firstAttribute="centerY" secondItem="keE-ai-KQb" secondAttribute="centerY" id="vCI-TA-PEX"/>
                             <constraint firstItem="0XJ-Kv-idG" firstAttribute="top" secondItem="JWi-ZC-dXv" secondAttribute="bottom" constant="30" id="wsa-xo-PKV"/>
                             <constraint firstItem="JWi-ZC-dXv" firstAttribute="leading" secondItem="nR2-jN-i2j" secondAttribute="leading" constant="20" id="z1o-vI-Kgw"/>
+                            <constraint firstItem="pQN-qo-1LF" firstAttribute="leading" secondItem="nR2-jN-i2j" secondAttribute="leading" constant="40" id="zff-en-sSs"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="makeBeautifulBtn" destination="JWi-ZC-dXv" id="E8C-gH-JlJ"/>
+                        <outlet property="startLivingBtn" destination="pQN-qo-1LF" id="qUG-z5-vlf"/>
+                        <outlet property="statusBtn" destination="0XJ-Kv-idG" id="lkt-o8-shM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Te-Oc-Ip2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="229"/>
+            <point key="canvasLocation" x="296.5" y="228.5"/>
         </scene>
     </scenes>
     <resources>

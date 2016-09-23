@@ -35,7 +35,10 @@
     
     [self addChildViewController:[[XJShowTimeViewController alloc] init] imageName:@"toolbar_live"];
     
-    [self addChildViewController:[[XJMeViewController alloc] init] imageName:@"toolbar_me"];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"XJMeViewController" bundle:[NSBundle mainBundle]];
+    XJMeViewController *vc = [sb instantiateInitialViewController];
+    [self addChildViewController:vc imageName:@"toolbar_me"];
+    
 }
 
 // 添加子控制器

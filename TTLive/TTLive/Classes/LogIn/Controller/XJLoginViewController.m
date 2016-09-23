@@ -8,6 +8,8 @@
 
 #import "XJLoginViewController.h"
 #import "XJMainViewController.h"
+#import "XJThirdLogInView.h"
+
 @interface XJLoginViewController ()
 /**player*/
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
@@ -15,6 +17,8 @@
 @property (nonatomic, weak) UIButton *quickBtn;
 /**封面图片*/
 @property (nonatomic, weak) UIImageView *imageView;
+/**第三方登录*/
+@property (nonatomic, weak) XJThirdLogInView *thirdLoginView;
 @end
 
 @implementation XJLoginViewController
@@ -34,7 +38,7 @@
         // 选项
         IJKFFOptions *option = [IJKFFOptions optionsByDefault];
         // 不播放声音
-        [option setPlayerOptionValue:@"1" forKey:@"an"];
+//        [option setPlayerOptionValue:@"1" forKey:@"an"];
         
         NSString *path = arc4random_uniform(10) % 2 ? @"login_video" : @"loginmovie";
         // 创建,并设置数据源
@@ -53,6 +57,31 @@
         _player = player;
     }
     return _player;
+}
+
+- (XJThirdLogInView *)thirdLoginView{
+    
+    if (!_thirdLoginView) {
+        XJThirdLogInView *thirdLogin = [[XJThirdLogInView alloc] init];
+        [self.view addSubview:thirdLogin];
+        [thirdLogin setClickLogin:^(LoginType type) {
+            switch (type) { // 与枚举顺序对应
+                case 0: // QQ
+                    [self QQLogin];
+                    break;
+                case 1: // 新浪
+                    [self SinaLogin];
+                    break;
+                case 2: // 微信
+                    [self WeChatLogin];
+                    break;
+                default:
+                    break;
+            }
+        }];
+        _thirdLoginView = thirdLogin;
+    }
+    return _thirdLoginView;
 }
 
 - (UIImageView *)imageView{
@@ -109,10 +138,15 @@
     self.imageView.hidden = NO;
     
     [self.quickBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@40);
-        make.right.equalTo(@-40);
+        make.left.right.equalTo(@100);
+        make.right.equalTo(@-100);
         make.bottom.equalTo(@-60);
-        make.height.equalTo(@40);
+        make.height.equalTo(@30);
+    }];
+    [self.thirdLoginView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(@0);
+        make.height.equalTo(@60);
+        make.bottom.equalTo(self.quickBtn.mas_top).offset(-40);
     }];
 }
 
@@ -162,6 +196,71 @@
     
     [self.player.view removeFromSuperview];
     self.player = nil;
+}
+
+#pragma mark - 第三方登录
+- (void)QQLogin{
+    // QQ
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            // 提示弹窗
+            [MBProgressHUD showMessage:@"正在努力帮你加载..." toView:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 隐藏提醒框
+                [MBProgressHUD hideHUDForView:self.view];
+                [self quickLogIn];
+            });
+        }});
+}
+
+- (void)SinaLogin{
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            // 提示弹窗
+            [MBProgressHUD showMessage:@"正在努力帮你加载..." toView:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 隐藏提醒框
+                [MBProgressHUD hideHUDForView:self.view];
+                [self quickLogIn];
+            });
+        }});
+}
+
+- (void)WeChatLogin{
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            // 提示弹窗
+            [MBProgressHUD showMessage:@"正在努力帮你加载..." toView:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 隐藏提醒框
+                [MBProgressHUD hideHUDForView:self.view];
+                [self quickLogIn];
+            });
+        }
+    });
 }
 
 -(void)dealloc{

@@ -10,8 +10,8 @@
 		0B04EBC21D866DAE00E897AF /* XJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBC11D866DAE00E897AF /* XJNavigationController.m */; };
 		0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBC41D86727500E897AF /* XJHomeViewController.m */; };
 		0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBCB1D86752D00E897AF /* XJMeViewController.m */; };
-		0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */; };
 		0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B04EBD01D86756100E897AF /* XJShowTimeViewController.m */; };
+		0B31255B1D94E7D5009B537B /* XJScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B31255A1D94E7D5009B537B /* XJScrollTextView.m */; };
 		0B4EDEF41D83150400079231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF31D83150400079231 /* main.m */; };
 		0B4EDEF71D83150400079231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EDEF61D83150400079231 /* AppDelegate.m */; };
 		0B4EDEFF1D83150400079231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EDEFE1D83150400079231 /* Assets.xcassets */; };
@@ -63,7 +63,6 @@
 		0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673C1D8452A80046B779 /* MBProgressHUD+XJ.m */; };
 		0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC3673F1D8455E10046B779 /* XJMainViewController.m */; };
 		0BC367461D8456D10046B779 /* danmu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367421D8456D10046B779 /* danmu.plist */; };
-		0BC367481D8456D10046B779 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BC367441D8456D10046B779 /* 2.mp4 */; };
 		0BD4BC4D1D8F91D600536F6F /* XJHouseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */; };
 		0BD4BC501D8FFBAD00536F6F /* XJHousePreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4BC4F1D8FFBAD00536F6F /* XJHousePreviewView.m */; };
 		0BD4BC521D8FFBC100536F6F /* XJHousePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD4BC511D8FFBC100536F6F /* XJHousePreviewView.xib */; };
@@ -87,13 +86,14 @@
 		0BD8F7781D92A82500BD23AF /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F76C1D92A82500BD23AF /* libSocialWechat.a */; };
 		0BD8F7791D92A82500BD23AF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F76D1D92A82500BD23AF /* libWeChatSDK.a */; };
 		0BD8F77B1D92A86700BD23AF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F77A1D92A86700BD23AF /* IJKMediaFramework.framework */; };
+		0BDAF7811D93AB980054F20A /* XJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */; };
+		0BDAF7841D93B01C0054F20A /* XJThirdLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7831D93B01C0054F20A /* XJThirdLogInView.m */; };
+		0BDAF7861D93C1730054F20A /* XJMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAF7851D93C1730054F20A /* XJMeViewController.storyboard */; };
+		0BDAF7891D93D8FC0054F20A /* XJCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7881D93D8FC0054F20A /* XJCell1.m */; };
 		0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C64B1D89168700618D7C /* loginmovie.mp4 */; };
-		0BE0C6521D89182600618D7C /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6511D89182600618D7C /* 4.mp4 */; };
-		0BE0C6561D89184500618D7C /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C6551D89184500618D7C /* 5.mp4 */; };
 		0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65D1D891F6000618D7C /* login_video.mp4 */; };
 		0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */; };
 		0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */; };
-		0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FC51D8818F300FC3774 /* 1.mp4 */; };
 		0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FD91D88305B00FC3774 /* XJHotViewController.m */; };
 		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
 		0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */; };
@@ -124,9 +124,10 @@
 		0B04EBC41D86727500E897AF /* XJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHomeViewController.m; sourceTree = "<group>"; };
 		0B04EBCA1D86752D00E897AF /* XJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMeViewController.h; sourceTree = "<group>"; };
 		0B04EBCB1D86752D00E897AF /* XJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMeViewController.m; sourceTree = "<group>"; };
-		0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJMeViewController.xib; sourceTree = "<group>"; };
 		0B04EBCF1D86756100E897AF /* XJShowTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJShowTimeViewController.h; sourceTree = "<group>"; };
 		0B04EBD01D86756100E897AF /* XJShowTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJShowTimeViewController.m; sourceTree = "<group>"; };
+		0B3125591D94E7D5009B537B /* XJScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJScrollTextView.h; sourceTree = "<group>"; };
+		0B31255A1D94E7D5009B537B /* XJScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJScrollTextView.m; sourceTree = "<group>"; };
 		0B4EDEEF1D83150300079231 /* TTLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4EDEF31D83150400079231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B4EDEF51D83150400079231 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -208,7 +209,6 @@
 		0BC3673E1D8455E10046B779 /* XJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMainViewController.h; sourceTree = "<group>"; };
 		0BC3673F1D8455E10046B779 /* XJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMainViewController.m; sourceTree = "<group>"; };
 		0BC367421D8456D10046B779 /* danmu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = danmu.plist; sourceTree = "<group>"; };
-		0BC367441D8456D10046B779 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
 		0BD4BC4B1D8F91D600536F6F /* XJHouseBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHouseBottomView.h; sourceTree = "<group>"; };
 		0BD4BC4C1D8F91D600536F6F /* XJHouseBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHouseBottomView.m; sourceTree = "<group>"; };
 		0BD4BC4E1D8FFBAD00536F6F /* XJHousePreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHousePreviewView.h; sourceTree = "<group>"; };
@@ -263,14 +263,18 @@
 		0BD8F7701D92A82500BD23AF /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0BD8F7711D92A82500BD23AF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		0BD8F77A1D92A86700BD23AF /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		0BDAF77F1D93AB980054F20A /* XJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJRefreshFooter.h; sourceTree = "<group>"; };
+		0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJRefreshFooter.m; sourceTree = "<group>"; };
+		0BDAF7821D93B01C0054F20A /* XJThirdLogInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJThirdLogInView.h; sourceTree = "<group>"; };
+		0BDAF7831D93B01C0054F20A /* XJThirdLogInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJThirdLogInView.m; sourceTree = "<group>"; };
+		0BDAF7851D93C1730054F20A /* XJMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJMeViewController.storyboard; sourceTree = "<group>"; };
+		0BDAF7871D93D8FC0054F20A /* XJCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJCell1.h; sourceTree = "<group>"; };
+		0BDAF7881D93D8FC0054F20A /* XJCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJCell1.m; sourceTree = "<group>"; };
 		0BE0C64B1D89168700618D7C /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
-		0BE0C6511D89182600618D7C /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
-		0BE0C6551D89184500618D7C /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
 		0BE0C65D1D891F6000618D7C /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
 		0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie1.mp4; sourceTree = "<group>"; };
 		0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XJExtension.h"; sourceTree = "<group>"; };
 		0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XJExtension.m"; sourceTree = "<group>"; };
-		0BF24FC51D8818F300FC3774 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		0BF24FD81D88305B00FC3774 /* XJHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotViewController.h; sourceTree = "<group>"; };
 		0BF24FD91D88305B00FC3774 /* XJHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotViewController.m; sourceTree = "<group>"; };
 		0BF24FE01D8833D900FC3774 /* XJHotLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotLiveCell.h; sourceTree = "<group>"; };
@@ -348,7 +352,7 @@
 			children = (
 				0B04EBCA1D86752D00E897AF /* XJMeViewController.h */,
 				0B04EBCB1D86752D00E897AF /* XJMeViewController.m */,
-				0B04EBCC1D86752D00E897AF /* XJMeViewController.xib */,
+				0BDAF7851D93C1730054F20A /* XJMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +367,8 @@
 		0B04EBC91D86750C00E897AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BDAF7871D93D8FC0054F20A /* XJCell1.h */,
+				0BDAF7881D93D8FC0054F20A /* XJCell1.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,6 +527,8 @@
 		0B4EDF301D8315DB00079231 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0BDAF7821D93B01C0054F20A /* XJThirdLogInView.h */,
+				0BDAF7831D93B01C0054F20A /* XJThirdLogInView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +572,8 @@
 			isa = PBXGroup;
 			children = (
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
+				0BDAF77F1D93AB980054F20A /* XJRefreshFooter.h */,
+				0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */,
 				0B8C3C551D90F02E00284EE8 /* XJRefreshGifHeader.h */,
 				0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */,
 				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
@@ -672,6 +682,8 @@
 				0B50E2B51D8E666200210B01 /* XJHouseTopView.xib */,
 				0B50E2B71D8E85F600210B01 /* XJHouseLiveCell.h */,
 				0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */,
+				0B3125591D94E7D5009B537B /* XJScrollTextView.h */,
+				0B31255A1D94E7D5009B537B /* XJScrollTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -719,15 +731,11 @@
 		0BC367411D8456A20046B779 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0BE0C6551D89184500618D7C /* 5.mp4 */,
-				0BE0C6511D89182600618D7C /* 4.mp4 */,
 				0BE0C65D1D891F6000618D7C /* login_video.mp4 */,
-				0BF24FC51D8818F300FC3774 /* 1.mp4 */,
 				0BE0C64B1D89168700618D7C /* loginmovie.mp4 */,
 				0BC367421D8456D10046B779 /* danmu.plist */,
 				0B5695A01D92A4E200DA1FEA /* user.plist */,
 				0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */,
-				0BC367441D8456D10046B779 /* 2.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1036,25 +1044,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD8F74E1D92A80C00BD23AF /* UMSCommentInputController.xib in Resources */,
-				0BE0C6521D89182600618D7C /* 4.mp4 in Resources */,
-				0BE0C6561D89184500618D7C /* 5.mp4 in Resources */,
+				0BDAF7861D93C1730054F20A /* XJMeViewController.storyboard in Resources */,
 				0BD8F7501D92A80C00BD23AF /* UMShareEditViewController.xib in Resources */,
 				0BD8F7741D92A82500BD23AF /* WeiboSDK.bundle in Resources */,
 				0B4EDF021D83150400079231 /* LaunchScreen.storyboard in Resources */,
-				0B04EBCE1D86752D00E897AF /* XJMeViewController.xib in Resources */,
 				0BD8F7551D92A80C00BD23AF /* UMSocialSDKResourcesNew.bundle in Resources */,
 				0B72C0451D916CCF0065C320 /* XJNewStarCell.xib in Resources */,
 				0BD8F7531D92A80C00BD23AF /* UMSnsAccountViewController.xib in Resources */,
 				0B5F68871D87126800D673B8 /* XJCareViewController.storyboard in Resources */,
 				0BD8F74D1D92A80C00BD23AF /* UMSCommentDetailController.xib in Resources */,
-				0BF24FC61D8818F300FC3774 /* 1.mp4 in Resources */,
 				0BE0C64C1D89168700618D7C /* loginmovie.mp4 in Resources */,
 				0BD8F74F1D92A80C00BD23AF /* UMSCommentInputControlleriPad.xib in Resources */,
 				0B5F68781D86799000D673B8 /* XJShowTimeViewController.storyboard in Resources */,
 				0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */,
 				0BD8F7511D92A80C00BD23AF /* UMShareEditViewControlleriPad.xib in Resources */,
 				0BD8F7771D92A82500BD23AF /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				0BC367481D8456D10046B779 /* 2.mp4 in Resources */,
 				0BD8F7541D92A80C00BD23AF /* UMSShareListController.xib in Resources */,
 				0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */,
 				0BD8F74B1D92A80C00BD23AF /* UMSocialLocalizable.strings in Resources */,
@@ -1142,7 +1146,9 @@
 				0BC367341D83F2C80046B779 /* XJToTopView.m in Sources */,
 				0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */,
 				0BD4BC4D1D8F91D600536F6F /* XJHouseBottomView.m in Sources */,
+				0BDAF7841D93B01C0054F20A /* XJThirdLogInView.m in Sources */,
 				0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */,
+				0BDAF7891D93D8FC0054F20A /* XJCell1.m in Sources */,
 				0B04EBD21D86756100E897AF /* XJShowTimeViewController.m in Sources */,
 				0B50E2AA1D8E5FA200210B01 /* XJLiveHouseViewController.m in Sources */,
 				0B04EBC51D86727500E897AF /* XJHomeViewController.m in Sources */,
@@ -1159,6 +1165,8 @@
 				0B4EDEF41D83150400079231 /* main.m in Sources */,
 				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
+				0BDAF7811D93AB980054F20A /* XJRefreshFooter.m in Sources */,
+				0B31255B1D94E7D5009B537B /* XJScrollTextView.m in Sources */,
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
 				0B50E2C41D8EEF4B00210B01 /* UIViewController+XJExtension.m in Sources */,
 				0B04EBCD1D86752D00E897AF /* XJMeViewController.m in Sources */,

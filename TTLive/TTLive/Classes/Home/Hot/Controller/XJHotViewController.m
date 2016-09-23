@@ -11,6 +11,7 @@
 #import "XJLiveModel.h"
 #import "XJLiveHouseViewController.h"
 #import "XJRefreshGifHeader.h"
+#import "XJRefreshFooter.h"
 static NSString *IDHotCell = @"XJHotLiveCell";
 @interface XJHotViewController ()
 /**直播用户组*/
@@ -41,10 +42,12 @@ static NSString *IDHotCell = @"XJHotLiveCell";
     __weak typeof(self)weakSelf = self;
     self.tableView.mj_header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
         weakSelf.currentPage = 1;
+        // 加载最新数据时每次只显示一组
+        weakSelf.liveArray = [NSMutableArray array];
         // 加载数据
         [weakSelf getHotLiveData];
     }];
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [XJRefreshFooter footerWithRefreshingBlock:^{
         weakSelf.currentPage++;
         // 加载数据
         [weakSelf getHotLiveData];

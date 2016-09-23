@@ -57,7 +57,7 @@
     // 创建富文本
 //    NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:allNumFull];
     NSMutableDictionary *att = [NSMutableDictionary dictionary];
-    att[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    att[NSFontAttributeName] = [UIFont systemFontOfSize:15];
     att[NSForegroundColorAttributeName] = KeyColor;
     
     self.seeCountL.attributedText = [[NSAttributedString alloc] initWithString:allNumFull attributes:att];

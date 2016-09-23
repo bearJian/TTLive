@@ -9,7 +9,7 @@
 #import "XJHouseTopView.h"
 #import "XJLiveModel.h"
 #import "XJUserModel.h"
-
+#import "XJScrollTextView.h"
 #define Space10 10
 @interface XJHouseTopView()
 /**主播栏*/
@@ -17,7 +17,7 @@
 /**头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 /**昵称*/
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet XJScrollTextView *nameLabel;
 /**人数*/
 @property (weak, nonatomic) IBOutlet UILabel *seeNumLabel;
 /**按钮*/
@@ -96,7 +96,14 @@ static int randomNum = 0;
     
     _live = live;
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:live.smallpic] placeholderImage:[UIImage imageNamed:@"placeholder_head"]];
+    //设置连续滚动
+    self.nameLabel.textScrollMode = MyTextScrollContinuous;
+    self.nameLabel.textScrollDirection = MyTextScrollMoveLeft;
+    self.nameLabel.textColor = [UIColor magentaColor];
+    self.nameLabel.textFont = [UIFont systemFontOfSize:13.f];
     self.nameLabel.text = live.myname;
+    // 开始滚动
+    [self.nameLabel startScroll];
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人",live.allnum];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateNum) userInfo:nil repeats:YES];
     // 添加手势

@@ -9,6 +9,7 @@
 #import "XJMeViewController.h"
 
 @interface XJMeViewController ()
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,22 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+//    self.view.backgroundColor = [UIColor whiteColor];
+//     隐藏导航条
+    self.navigationController.navigationBar.hidden = YES;
+    // 清掉每一组间的距离
+    self.tableView.sectionFooterHeight = 20;
+    self.tableView.sectionHeaderHeight = 0;
+     // 设置额外滚动区域: tabelview额外滚动区域
+    self.tableView.contentInset = UIEdgeInsetsMake(-59, 0, 0, 0);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

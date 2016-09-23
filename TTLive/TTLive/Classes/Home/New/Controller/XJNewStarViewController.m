@@ -43,7 +43,7 @@ static NSString * const reuseIdentifier = @"NewStarCell";
     [super viewWillAppear:animated];
     
     // 每一分钟自动更新
-    _timer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(autoRefresh) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:45 target:self selector:@selector(autoRefresh) userInfo:nil repeats:YES];
 }
 
 - (NSMutableArray *)starList{
@@ -78,7 +78,7 @@ static NSString * const reuseIdentifier = @"NewStarCell";
     self.collectionView.mj_header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
         weakSelf.currentPage = 1;
         // 加载最新数据时每次只显示一组
-        self.starList = [NSMutableArray array];
+        weakSelf.starList = [NSMutableArray array];
         [weakSelf getStarList];
     }];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
