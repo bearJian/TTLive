@@ -92,6 +92,17 @@ static int randomNum = 0;
     self.openBtn.selected = NO;
 }
 
+-(void)setScrollText:(XJScrollTextView *)scrollText{
+    _scrollText = scrollText;
+    for (UIView *view in scrollText.subviews) {
+        NSLog(@"%@+++++++++++++++++",view);
+        if ([view isKindOfClass:[UILabel class]]) {
+            UILabel *l1 = (UILabel *)view;
+            l1.text = nil;
+        };
+    }
+}
+
 -(void)setLive:(XJLiveModel *)live{
     
     _live = live;
@@ -101,7 +112,9 @@ static int randomNum = 0;
     self.nameLabel.textScrollDirection = MyTextScrollMoveLeft;
     self.nameLabel.textColor = [UIColor magentaColor];
     self.nameLabel.textFont = [UIFont systemFontOfSize:13.f];
+    self.scrollText = self.nameLabel;
     self.nameLabel.text = live.myname;
+    
     // 开始滚动
     [self.nameLabel startScroll];
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人",live.allnum];

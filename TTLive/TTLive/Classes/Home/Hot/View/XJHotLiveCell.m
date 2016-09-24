@@ -53,14 +53,20 @@
     self.startImage.image = live.starImage;
     self.startImage.hidden = !live.starlevel;
     // 观看人数
-    NSString *allNumFull = [NSString stringWithFormat:@"%ld人在看", live.allnum];
-    // 创建富文本
-//    NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:allNumFull];
-    NSMutableDictionary *att = [NSMutableDictionary dictionary];
-    att[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    att[NSForegroundColorAttributeName] = KeyColor;
     
-    self.seeCountL.attributedText = [[NSAttributedString alloc] initWithString:allNumFull attributes:att];
+    NSString *allNum = [NSString stringWithFormat:@"%ld人再观看", live.allnum];
+    // 创建富文本
+    NSRange range = [allNum rangeOfString:[NSString stringWithFormat:@"%ld", live.allnum]];
+    NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:allNum];
+    [att addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:range];
+    [att addAttribute:NSForegroundColorAttributeName value:KeyColor range:range];
+    self.seeCountL.attributedText = att;
+    // 这种创建方式适用于整体控制
+//    NSMutableDictionary *att = [NSMutableDictionary dictionary];
+//    att[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+//    att[NSForegroundColorAttributeName] = KeyColor;
+//    
+//    self.seeCountL.attributedText = [[NSAttributedString alloc] initWithString:allNumFull attributes:att];
 }
 
 // 内存警告时的处理

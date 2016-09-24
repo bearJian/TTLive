@@ -65,7 +65,7 @@
         [associate mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
             make.width.height.equalTo(@60);
-            make.bottom.equalTo(self.previewView.mas_top).offset(-20);
+            make.top.equalTo(@(XJScreenH * 0.35));
         }];
         _associateView = associate;
     }
@@ -230,6 +230,7 @@
 
 -(void)setLive:(XJLiveModel *)live{
     _live = live;
+    self.topView.scrollText = nil;
     self.topView.live = live;
     [self playerFLV:live.flv placehplderUrl:live.bigpic];
 }

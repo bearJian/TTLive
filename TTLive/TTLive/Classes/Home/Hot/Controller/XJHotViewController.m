@@ -47,7 +47,7 @@ static NSString *IDHotCell = @"XJHotLiveCell";
         // 加载数据
         [weakSelf getHotLiveData];
     }];
-    self.tableView.mj_footer = [XJRefreshFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         weakSelf.currentPage++;
         // 加载数据
         [weakSelf getHotLiveData];
@@ -109,6 +109,14 @@ static NSString *IDHotCell = @"XJHotLiveCell";
 //        return cell;
 //    }
     XJHotLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:IDHotCell forIndexPath:indexPath];
+    
+//    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    NSLog(@"cell.contentView.subviews---%@",cell.contentView.subviews);
+
+//    while ([cell.contentView.subviews lastObject] != nil) {
+//             [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
+//         }
+    
     if (self.liveArray.count) {
         XJLiveModel *live = self.liveArray[indexPath.row];
         cell.live = live;

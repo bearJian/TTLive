@@ -41,7 +41,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     // 刷新设置
     __weak typeof(self)weakSelf = self;
-    XJRefreshGifHeader *header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
+    XJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
         weakSelf.currentIndex++;
         if (weakSelf.currentIndex == weakSelf.lives.count) {
             weakSelf.currentIndex = 0;
@@ -80,6 +80,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     XJHouseLiveCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     cell.parentVc = self;

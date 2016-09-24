@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class XJLiveModel, XJUserModel;
+@class XJLiveModel, XJUserModel, XJScrollTextView;
 
 @interface XJHouseTopView : UIView
 + (instancetype)allocWithNib;
@@ -18,6 +18,8 @@
 @property(nonatomic, strong) XJLiveModel *live;
 /** 点击开关  */
 @property(nonatomic, copy)void (^clickOpenBtnBlock)(bool selected);
+/**scrollView*/
+@property (nonatomic, strong) XJScrollTextView *scrollText;
 /**点击按钮方法*/
 - (void)keepSelectState;
 
