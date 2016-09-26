@@ -11,7 +11,7 @@
 #import "XJLiveModel.h"
 #import "XJLiveHouseViewController.h"
 #import "XJRefreshGifHeader.h"
-#import "XJRefreshFooter.h"
+
 static NSString *IDHotCell = @"XJHotLiveCell";
 @interface XJHotViewController ()
 /**直播用户组*/
@@ -68,9 +68,11 @@ static NSString *IDHotCell = @"XJHotLiveCell";
         [self.tableView.mj_footer endRefreshing];
         // 数据转模型
         NSArray *array = [XJLiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+        [array writeToFile:@"/Users/dear/Desktop/xj123.plist" atomically:YES];
+        NSLog(@"array+++++++++++:%@",responseObject);
         if (array.count) {
             [self.liveArray addObjectsFromArray:array];
-            // 刷新
+            // 刷新A
             [self.tableView reloadData];
         }else{
             [MBProgressHUD showText:@"暂时没有更多最新数据"];
@@ -97,26 +99,17 @@ static NSString *IDHotCell = @"XJHotLiveCell";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if (indexPath == 0) {
-//        return 100;
-//    }
+
     return 465;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath == 0) {
-//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:IDADCell];
-//        return cell;
-//    }
+    
     XJHotLiveCell *cell = [tableView dequeueReusableCellWithIdentifier:IDHotCell forIndexPath:indexPath];
+//    // 注意：一定要记得移除之前添加到cell上子控制器
     
 //    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-//    NSLog(@"cell.contentView.subviews---%@",cell.contentView.subviews);
 
-//    while ([cell.contentView.subviews lastObject] != nil) {
-//             [(UIView *)[cell.contentView.subviews lastObject] removeFromSuperview];
-//         }
-    
     if (self.liveArray.count) {
         XJLiveModel *live = self.liveArray[indexPath.row];
         cell.live = live;

@@ -11,6 +11,7 @@
 #import "XJHotViewController.h"
 #import "XJTopView.h"
 #import "XJNewStarViewController.h"
+#import "XJSearchViewController.h"
 // 标题个数
 static int count = 3;
 @interface XJHomeViewController ()<UIScrollViewDelegate>
@@ -67,18 +68,28 @@ static int count = 3;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // 基本设置
     [self setup];
 }
 
 - (void)setup{
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    // 搜索
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"head_crown_24x24"] style:UIBarButtonItemStyleDone target:self action:@selector(rightItemClick)];
     
     // 设置顶部视图
     [self setupTopView];
 }
+
+- (void)leftItemClick{
+    // 移除顶部子控件
+    [_topView removeFromSuperview];
+    _topView = nil;
+    XJSearchViewController *searchVC = [[XJSearchViewController alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
+ }
 
 -(void)rightItemClick{
     
@@ -88,7 +99,7 @@ static int count = 3;
     NSURL *url = [NSURL URLWithString:@"http://live.9158.com/Rank/WeekRank?Random=10"];
     [web loadRequest:[NSURLRequest requestWithURL:url]];
 
-    webView.navigationItem.title = @"排行";
+    [webView.navigationItem setTitle:@"周消费榜"];
     [_topView removeFromSuperview];
     _topView = nil;
     [self.navigationController pushViewController:webView animated:YES];
@@ -101,6 +112,7 @@ static int count = 3;
         [self setupTopView];
     }
 }
+
 
 // 设置顶部视图
 - (void)setupTopView{
@@ -119,6 +131,7 @@ static int count = 3;
 
 #pragma mark - 代理方法
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
     int page = scrollView.contentOffset.x / XJScreenW + 0.5;
     CGFloat offsetX = scrollView.contentOffset.x / XJScreenW * (self.topView.xj_width * 0.5 - TopViewW * 0.5 - 20);
     self.topView.line.xj_x = offsetX + 20;

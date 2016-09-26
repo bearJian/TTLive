@@ -10,7 +10,7 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XJHotLiveCell" rowHeight="420" id="n2P-hU-D1V" customClass="XJHotLiveCell">
             <rect key="frame" x="0.0" y="0.0" width="345" height="420"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n2P-hU-D1V" id="e9I-YM-l20">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="center" tableViewCell="n2P-hU-D1V" id="e9I-YM-l20">
                 <rect key="frame" x="0.0" y="0.0" width="345" height="419"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -97,21 +97,21 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_43x22" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-SC-cXQ">
                         <rect key="frame" x="292" y="65" width="43" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="cgb-OX-eMA"/>
-                            <constraint firstAttribute="width" constant="43" id="ezK-Rd-Ynp"/>
+                            <constraint firstAttribute="height" constant="22" id="2MQ-5b-naE"/>
+                            <constraint firstAttribute="width" constant="43" id="rfT-GB-aDg"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.86491231715425532" green="0.86491231715425532" blue="0.86491231715425532" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstItem="N7b-SC-cXQ" firstAttribute="top" secondItem="t0X-Gh-zIM" secondAttribute="bottom" constant="10" id="0BD-jg-iHj"/>
                     <constraint firstAttribute="trailing" secondItem="Vdu-jw-52S" secondAttribute="trailing" id="0N9-My-jLd"/>
                     <constraint firstItem="Vdu-jw-52S" firstAttribute="leading" secondItem="e9I-YM-l20" secondAttribute="leading" id="9Xp-oO-MlJ"/>
                     <constraint firstAttribute="bottom" secondItem="Vdu-jw-52S" secondAttribute="bottom" constant="5" id="JjI-uo-a6g"/>
                     <constraint firstItem="t0X-Gh-zIM" firstAttribute="top" secondItem="e9I-YM-l20" secondAttribute="top" id="Q0C-LG-R5H"/>
+                    <constraint firstAttribute="trailing" secondItem="N7b-SC-cXQ" secondAttribute="trailing" constant="10" id="aVB-Ro-UEh"/>
                     <constraint firstItem="t0X-Gh-zIM" firstAttribute="leading" secondItem="e9I-YM-l20" secondAttribute="leading" id="fgT-9S-Yfa"/>
                     <constraint firstItem="Vdu-jw-52S" firstAttribute="top" secondItem="t0X-Gh-zIM" secondAttribute="bottom" id="fxW-UB-ydb"/>
-                    <constraint firstAttribute="trailing" secondItem="N7b-SC-cXQ" secondAttribute="trailing" constant="10" id="uuf-jN-jNP"/>
-                    <constraint firstItem="N7b-SC-cXQ" firstAttribute="top" secondItem="t0X-Gh-zIM" secondAttribute="bottom" constant="10" id="uyQ-ki-EoH"/>
                     <constraint firstAttribute="trailing" secondItem="t0X-Gh-zIM" secondAttribute="trailing" id="vV9-p8-5y2"/>
                 </constraints>
             </tableViewCellContentView>
@@ -123,7 +123,7 @@
                 <outlet property="seeCountL" destination="PGC-ws-TzH" id="D4y-r3-cRI"/>
                 <outlet property="startImage" destination="bTI-1S-Hp7" id="OYY-A9-PA6"/>
             </connections>
-            <point key="canvasLocation" x="504.5" y="279"/>
+            <point key="canvasLocation" x="354.5" y="-19"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -43,7 +43,7 @@
                                 <constraint firstAttribute="width" constant="40" id="VtQ-fL-aRm"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="关闭">
+                            <state key="normal" title="开启">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>

@@ -65,7 +65,7 @@
         [associate mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
             make.width.height.equalTo(@60);
-            make.top.equalTo(@(XJScreenH * 0.35));
+            make.top.equalTo(@(XJScreenH * 0.3));
         }];
         _associateView = associate;
     }

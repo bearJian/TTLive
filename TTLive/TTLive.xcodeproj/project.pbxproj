@@ -86,7 +86,6 @@
 		0BD8F7781D92A82500BD23AF /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F76C1D92A82500BD23AF /* libSocialWechat.a */; };
 		0BD8F7791D92A82500BD23AF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F76D1D92A82500BD23AF /* libWeChatSDK.a */; };
 		0BD8F77B1D92A86700BD23AF /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD8F77A1D92A86700BD23AF /* IJKMediaFramework.framework */; };
-		0BDAF7811D93AB980054F20A /* XJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */; };
 		0BDAF7841D93B01C0054F20A /* XJThirdLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7831D93B01C0054F20A /* XJThirdLogInView.m */; };
 		0BDAF7861D93C1730054F20A /* XJMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAF7851D93C1730054F20A /* XJMeViewController.storyboard */; };
 		0BDAF7891D93D8FC0054F20A /* XJCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAF7881D93D8FC0054F20A /* XJCell1.m */; };
@@ -98,6 +97,8 @@
 		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
 		0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */; };
 		0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FEA1D88406700FC3774 /* XJLiveModel.m */; };
+		0BFEE3EA1D978AF900A2CB0C /* XJSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFEE3E91D978AF900A2CB0C /* XJSearchViewController.m */; };
+		0BFEE3EE1D979C8F00A2CB0C /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFEE3ED1D979C8F00A2CB0C /* DXPopover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,8 +264,6 @@
 		0BD8F7701D92A82500BD23AF /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0BD8F7711D92A82500BD23AF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		0BD8F77A1D92A86700BD23AF /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
-		0BDAF77F1D93AB980054F20A /* XJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJRefreshFooter.h; sourceTree = "<group>"; };
-		0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJRefreshFooter.m; sourceTree = "<group>"; };
 		0BDAF7821D93B01C0054F20A /* XJThirdLogInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJThirdLogInView.h; sourceTree = "<group>"; };
 		0BDAF7831D93B01C0054F20A /* XJThirdLogInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJThirdLogInView.m; sourceTree = "<group>"; };
 		0BDAF7851D93C1730054F20A /* XJMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XJMeViewController.storyboard; sourceTree = "<group>"; };
@@ -282,6 +281,10 @@
 		0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJHotLiveCell.xib; sourceTree = "<group>"; };
 		0BF24FE91D88406700FC3774 /* XJLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLiveModel.h; sourceTree = "<group>"; };
 		0BF24FEA1D88406700FC3774 /* XJLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLiveModel.m; sourceTree = "<group>"; };
+		0BFEE3E81D978AF900A2CB0C /* XJSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJSearchViewController.h; sourceTree = "<group>"; };
+		0BFEE3E91D978AF900A2CB0C /* XJSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJSearchViewController.m; sourceTree = "<group>"; };
+		0BFEE3EC1D979C8F00A2CB0C /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		0BFEE3ED1D979C8F00A2CB0C /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		84A2758E855B6D2FD3E6742B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F3C95840A78277326BB1CC54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -476,6 +479,7 @@
 		0B4EDF281D8315DB00079231 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0BFEE3E71D978AB900A2CB0C /* Search */,
 				0B04EBC31D86727500E897AF /* XJHomeViewController.h */,
 				0B04EBC41D86727500E897AF /* XJHomeViewController.m */,
 			);
@@ -572,8 +576,6 @@
 			isa = PBXGroup;
 			children = (
 				0B4EDF5E1D8331CE00079231 /* PrefixHeader.h */,
-				0BDAF77F1D93AB980054F20A /* XJRefreshFooter.h */,
-				0BDAF7801D93AB980054F20A /* XJRefreshFooter.m */,
 				0B8C3C551D90F02E00284EE8 /* XJRefreshGifHeader.h */,
 				0B8C3C561D90F02E00284EE8 /* XJRefreshGifHeader.m */,
 				0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */,
@@ -629,6 +631,7 @@
 		0B4EDF3A1D8315DB00079231 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0BFEE3EB1D979C8F00A2CB0C /* DXPopover */,
 				0B4EDF3B1D8315DB00079231 /* Reachability.h */,
 				0B4EDF3C1D8315DB00079231 /* Reachability.m */,
 				0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */,
@@ -908,6 +911,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0BFEE3E71D978AB900A2CB0C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0BFEE3E81D978AF900A2CB0C /* XJSearchViewController.h */,
+				0BFEE3E91D978AF900A2CB0C /* XJSearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0BFEE3EB1D979C8F00A2CB0C /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				0BFEE3EC1D979C8F00A2CB0C /* DXPopover.h */,
+				0BFEE3ED1D979C8F00A2CB0C /* DXPopover.m */,
+			);
+			path = DXPopover;
+			sourceTree = "<group>";
+		};
 		2E1ED3DA3C3E9FEFD87D7B75 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1158,14 +1179,15 @@
 				0B72C0401D9168E30065C320 /* XJNewStarFlowLayout.m in Sources */,
 				0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */,
 				0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */,
+				0BFEE3EA1D978AF900A2CB0C /* XJSearchViewController.m in Sources */,
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
+				0BFEE3EE1D979C8F00A2CB0C /* DXPopover.m in Sources */,
 				0B50E2C11D8EEDAF00210B01 /* UIImageView+XJGif.m in Sources */,
 				0B4EDEF41D83150400079231 /* main.m in Sources */,
 				0BC367401D8455E10046B779 /* XJMainViewController.m in Sources */,
 				0BC367381D8402DF0046B779 /* UIView+XJExtention.m in Sources */,
-				0BDAF7811D93AB980054F20A /* XJRefreshFooter.m in Sources */,
 				0B31255B1D94E7D5009B537B /* XJScrollTextView.m in Sources */,
 				0BC3673D1D8452A80046B779 /* MBProgressHUD+XJ.m in Sources */,
 				0B50E2C41D8EEF4B00210B01 /* UIViewController+XJExtension.m in Sources */,
@@ -1349,7 +1371,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1387,7 +1409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

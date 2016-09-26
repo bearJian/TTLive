@@ -41,7 +41,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     // 刷新设置
     __weak typeof(self)weakSelf = self;
-    XJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+    XJRefreshGifHeader *header = [XJRefreshGifHeader headerWithRefreshingBlock:^{
         weakSelf.currentIndex++;
         if (weakSelf.currentIndex == weakSelf.lives.count) {
             weakSelf.currentIndex = 0;
