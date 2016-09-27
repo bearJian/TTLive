@@ -93,6 +93,9 @@
 		0BE0C65E1D891F6000618D7C /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65D1D891F6000618D7C /* login_video.mp4 */; };
 		0BE0C6601D891F7E00618D7C /* loginmovie1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */; };
 		0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */; };
+		0BF0369C1D9A9AC000CF3F0D /* XJUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0369B1D9A9AC000CF3F0D /* XJUserView.m */; };
+		0BF0369E1D9A9ACA00CF3F0D /* XJUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0369D1D9A9ACA00CF3F0D /* XJUserView.xib */; };
+		0BF036A31D9AB97700CF3F0D /* XJCareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF036A21D9AB97700CF3F0D /* XJCareData.m */; };
 		0BF24FDC1D88305B00FC3774 /* XJHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FD91D88305B00FC3774 /* XJHotViewController.m */; };
 		0BF24FE31D8833D900FC3774 /* XJHotLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF24FE11D8833D900FC3774 /* XJHotLiveCell.m */; };
 		0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF24FE21D8833D900FC3774 /* XJHotLiveCell.xib */; };
@@ -274,6 +277,12 @@
 		0BE0C65F1D891F7E00618D7C /* loginmovie1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie1.mp4; sourceTree = "<group>"; };
 		0BE0C6611D89290800618D7C /* UIImage+XJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XJExtension.h"; sourceTree = "<group>"; };
 		0BE0C6621D89290800618D7C /* UIImage+XJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XJExtension.m"; sourceTree = "<group>"; };
+		0BF0369A1D9A9AC000CF3F0D /* XJUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJUserView.h; sourceTree = "<group>"; };
+		0BF0369B1D9A9AC000CF3F0D /* XJUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJUserView.m; sourceTree = "<group>"; };
+		0BF0369D1D9A9ACA00CF3F0D /* XJUserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJUserView.xib; sourceTree = "<group>"; };
+		0BF036A01D9AB91200CF3F0D /* Single.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Single.h; sourceTree = "<group>"; };
+		0BF036A11D9AB97700CF3F0D /* XJCareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJCareData.h; sourceTree = "<group>"; };
+		0BF036A21D9AB97700CF3F0D /* XJCareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJCareData.m; sourceTree = "<group>"; };
 		0BF24FD81D88305B00FC3774 /* XJHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotViewController.h; sourceTree = "<group>"; };
 		0BF24FD91D88305B00FC3774 /* XJHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJHotViewController.m; sourceTree = "<group>"; };
 		0BF24FE01D8833D900FC3774 /* XJHotLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJHotLiveCell.h; sourceTree = "<group>"; };
@@ -632,6 +641,9 @@
 			isa = PBXGroup;
 			children = (
 				0BFEE3EB1D979C8F00A2CB0C /* DXPopover */,
+				0BF036A01D9AB91200CF3F0D /* Single.h */,
+				0BF036A11D9AB97700CF3F0D /* XJCareData.h */,
+				0BF036A21D9AB97700CF3F0D /* XJCareData.m */,
 				0B4EDF3B1D8315DB00079231 /* Reachability.h */,
 				0B4EDF3C1D8315DB00079231 /* Reachability.m */,
 				0B4EDF5B1D83244600079231 /* XJNetworkingTool.h */,
@@ -687,6 +699,9 @@
 				0B50E2B81D8E85F600210B01 /* XJHouseLiveCell.m */,
 				0B3125591D94E7D5009B537B /* XJScrollTextView.h */,
 				0B31255A1D94E7D5009B537B /* XJScrollTextView.m */,
+				0BF0369A1D9A9AC000CF3F0D /* XJUserView.h */,
+				0BF0369B1D9A9AC000CF3F0D /* XJUserView.m */,
+				0BF0369D1D9A9ACA00CF3F0D /* XJUserView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1085,6 +1100,7 @@
 				0BD8F74B1D92A80C00BD23AF /* UMSocialLocalizable.strings in Resources */,
 				0BC367461D8456D10046B779 /* danmu.plist in Resources */,
 				0BD8F7521D92A80C00BD23AF /* UMSLoginViewController.xib in Resources */,
+				0BF0369E1D9A9ACA00CF3F0D /* XJUserView.xib in Resources */,
 				0BF24FE41D8833D900FC3774 /* XJHotLiveCell.xib in Resources */,
 				0B5695A11D92A4E200DA1FEA /* user.plist in Resources */,
 				0B50E2B61D8E666200210B01 /* XJHouseTopView.xib in Resources */,
@@ -1176,6 +1192,7 @@
 				0B5F68821D86B15E00D673B8 /* XJTopView.m in Sources */,
 				0BE0C6631D89290800618D7C /* UIImage+XJExtension.m in Sources */,
 				0BF24FEB1D88406700FC3774 /* XJLiveModel.m in Sources */,
+				0BF036A31D9AB97700CF3F0D /* XJCareData.m in Sources */,
 				0B72C0401D9168E30065C320 /* XJNewStarFlowLayout.m in Sources */,
 				0B50E2AD1D8E604600210B01 /* XJUserModel.m in Sources */,
 				0B8C3C571D90F02E00284EE8 /* XJRefreshGifHeader.m in Sources */,
@@ -1183,6 +1200,7 @@
 				0B4EDF3D1D8315DB00079231 /* XJLoginViewController.m in Sources */,
 				0B4EDF5D1D83244600079231 /* XJNetworkingTool.m in Sources */,
 				0B4EDF3E1D8315DB00079231 /* Reachability.m in Sources */,
+				0BF0369C1D9A9AC000CF3F0D /* XJUserView.m in Sources */,
 				0BFEE3EE1D979C8F00A2CB0C /* DXPopover.m in Sources */,
 				0B50E2C11D8EEDAF00210B01 /* UIImageView+XJGif.m in Sources */,
 				0B4EDEF41D83150400079231 /* main.m in Sources */,

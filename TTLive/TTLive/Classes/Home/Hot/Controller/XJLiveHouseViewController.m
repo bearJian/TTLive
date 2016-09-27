@@ -11,9 +11,11 @@
 #import "XJHouseLiveCell.h"
 #import "XJFlowLayout.h"
 #import "XJRefreshGifHeader.h"
+#import "XJUserView.h"
 
 @interface XJLiveHouseViewController ()
-
+/** 用户信息 */
+@property (nonatomic, weak) XJUserView *userView;
 @end
 
 @implementation XJLiveHouseViewController
@@ -26,6 +28,32 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 
 -(void)dealloc{
     NSLog(@"直播间销毁了---------------");
+}
+
+- (XJUserView *)userView
+{
+    if (!_userView) {
+        XJUserView *userView = [XJUserView userView];
+        [self.collectionView addSubview:userView];
+        _userView = userView;
+        
+        [userView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(@0);
+            make.width.equalTo(@(XJScreenW));
+            make.height.equalTo(@(XJScreenH));
+        }];
+        userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        [userView setCloseBlock:^{
+            [UIView animateWithDuration:0.5 animations:^{
+                self.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            } completion:^(BOOL finished) {
+                [self.userView removeFromSuperview];
+                self.userView = nil;
+            }];
+        }];
+        
+    }
+    return _userView;
 }
 
 - (void)viewDidLoad {
@@ -62,14 +90,14 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 
 - (void)clickUser:(NSNotification *)notify
 {
-//    if (notify.userInfo[@"user"] != nil) {
-//        ALinUser *user = notify.userInfo[@"user"];
-//        self.userView.user = user;
-//        [UIView animateWithDuration:0.5 animations:^{
-//            self.userView.transform = CGAffineTransformIdentity;
-//        }];
-//    }
-    [MBProgressHUD showText:@"点击了观众"];
+    if (notify.userInfo[@"user"] != nil) {
+        XJUserModel *user = notify.userInfo[@"user"];
+        self.userView.user = user;
+        [self.userView getUserModal:user];
+        [UIView animateWithDuration:0.5 animations:^{
+            self.userView.transform = CGAffineTransformIdentity;
+        }];
+    }
 }
 
 #pragma mark <UICollectionViewDataSource>
