@@ -68,8 +68,7 @@ static NSString *IDHotCell = @"XJHotLiveCell";
         [self.tableView.mj_footer endRefreshing];
         // 数据转模型
         NSArray *array = [XJLiveModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
-        [array writeToFile:@"/Users/dear/Desktop/xj123.plist" atomically:YES];
-        NSLog(@"array+++++++++++:%@",responseObject);
+//        NSLog(@"array+++++++++++:%@",responseObject);
         if (array.count) {
             [self.liveArray addObjectsFromArray:array];
             // 刷新A

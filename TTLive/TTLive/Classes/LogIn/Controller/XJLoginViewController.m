@@ -138,8 +138,10 @@
     self.imageView.hidden = NO;
     
     [self.quickBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(@100);
-        make.right.equalTo(@-100);
+//        make.left.right.equalTo(@100);
+//        make.right.equalTo(@-100);
+        make.width.equalTo(@230);
+        make.centerX.equalTo(@0);
         make.bottom.equalTo(@-60);
         make.height.equalTo(@30);
     }];
