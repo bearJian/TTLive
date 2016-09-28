@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XJCareViewController : UIViewController
+@interface XJCareViewController : UICollectionViewController
 
 @end

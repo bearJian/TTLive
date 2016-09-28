@@ -9,8 +9,14 @@
 #import "XJUserModel.h"
 
 @implementation XJUserModel
+
+// 归档
+MJCodingImplementation
+
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{@"newStar":@"new"};
 }
+
+
 @end

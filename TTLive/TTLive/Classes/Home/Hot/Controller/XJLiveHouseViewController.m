@@ -7,12 +7,11 @@
 //
 
 #import "XJLiveHouseViewController.h"
-#import "XJUserModel.h"
 #import "XJHouseLiveCell.h"
 #import "XJFlowLayout.h"
 #import "XJRefreshGifHeader.h"
 #import "XJUserView.h"
-
+#import "XJUserModel.h"
 @interface XJLiveHouseViewController ()
 /** 用户信息 */
 @property (nonatomic, weak) XJUserView *userView;
@@ -43,12 +42,13 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
             make.height.equalTo(@(XJScreenH));
         }];
         userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        __weak typeof(self) weakSelf = self;
         [userView setCloseBlock:^{
             [UIView animateWithDuration:0.5 animations:^{
-                self.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+                weakSelf.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
             } completion:^(BOOL finished) {
-                [self.userView removeFromSuperview];
-                self.userView = nil;
+                [weakSelf.userView removeFromSuperview];
+                weakSelf.userView = nil;
             }];
         }];
         
@@ -64,7 +64,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     // Register cell classes
     [self.collectionView registerClass:[XJHouseLiveCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    // 监听通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotifyClickUser object:nil];
     
     // 刷新设置
@@ -91,9 +91,8 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 - (void)clickUser:(NSNotification *)notify
 {
     if (notify.userInfo[@"user"] != nil) {
-        XJUserModel *user = notify.userInfo[@"user"];
-        self.userView.user = user;
-        [self.userView getUserModal:user];
+        XJUserModel *userModel = notify.userInfo[@"user"];
+        self.userView.user = userModel;
         [UIView animateWithDuration:0.5 animations:^{
             self.userView.transform = CGAffineTransformIdentity;
         }];
@@ -101,8 +100,6 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 }
 
 #pragma mark <UICollectionViewDataSource>
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 1;
 }

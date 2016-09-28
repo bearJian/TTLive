@@ -114,9 +114,9 @@ static int randomNum = 0;
     self.nameLabel.textFont = [UIFont systemFontOfSize:13.f];
     self.scrollText = self.nameLabel;
     self.nameLabel.text = live.myname;
-    
     // 开始滚动
     [self.nameLabel startScroll];
+    
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人",live.allnum];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateNum) userInfo:nil repeats:YES];
     // 添加手势
@@ -158,11 +158,14 @@ static int randomNum = 0;
     
     if (tap.view == self.iconImage) {
         XJUserModel *user = [[XJUserModel alloc] init];
+        // 给userModel赋值
         user.nickname = self.live.myname;
         user.photo = self.live.bigpic;
+        user.flv = self.live.flv;
         // 发送通知
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyClickUser object:nil userInfo:@{@"user" : user}];
     }else{
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyClickUser object:nil userInfo:@{@"user" : self.audienceArray[tap.view.tag]}];
     }
 }

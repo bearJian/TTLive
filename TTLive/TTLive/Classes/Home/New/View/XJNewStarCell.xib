@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewStarCell" id="gTV-IL-0wX" customClass="XJNewStarCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="XJNewStarCell">
             <rect key="frame" x="0.0" y="0.0" width="180" height="183"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -66,7 +66,7 @@
                 <outlet property="starImage" destination="Sk2-Z8-Rjx" id="t2C-eN-4cu"/>
                 <outlet property="tagImage" destination="T70-Po-hfS" id="xLA-GQ-cbo"/>
             </connections>
-            <point key="canvasLocation" x="724" y="506.5"/>
+            <point key="canvasLocation" x="235" y="249.5"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -58,7 +58,7 @@ static int count = 3;
     [self.view addSubview:new.view];
     
     // 关注
-    XJCareViewController *care = [[UIStoryboard storyboardWithName:@"XJCareViewController" bundle:nil] instantiateInitialViewController];
+    XJCareViewController *care = [[XJCareViewController alloc] init];
     care.view.frame = [UIScreen mainScreen].bounds;
     care.view.xj_x = XJScreenW * 2;
     care.view.xj_height = height;

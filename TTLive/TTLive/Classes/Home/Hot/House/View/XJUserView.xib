@@ -14,7 +14,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caR-9R-GLp">
                     <rect key="frame" x="0.0" y="62" width="600" height="475"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-Uy-220">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-Uy-220">
                             <rect key="frame" x="565" y="20" width="15" height="22"/>
                             <state key="normal" image="user_close_15x15"/>
                             <connections>
@@ -30,41 +30,34 @@
                                 <action selector="reportBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="T0Q-4f-n4z"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="佟丽娅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsl-9w-Qw2">
-                            <rect key="frame" x="272" y="180" width="57" height="23"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="佟丽娅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsl-9w-Qw2">
+                            <rect key="frame" x="274" y="180" width="54" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果爱,请深爱;若不爱,请离开" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX1-ct-kFU">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="如果爱,请深爱;若不爱,请离开" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX1-ct-kFU">
                             <rect key="frame" x="0.0" y="223" width="600" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM9-zd-3c8">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM9-zd-3c8">
                             <rect key="frame" x="250" y="261" width="100" height="34"/>
                             <color key="backgroundColor" red="0.84705882349999995" green="0.16078431369999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="I0C-4f-g5L"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="+  关注">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <state key="selected" title="取消关注"/>
                             <connections>
                                 <action selector="careBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="z7d-8L-T6s"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTY-xc-VW3">
-                            <rect key="frame" x="250" y="50" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="100" id="0iG-Ct-z09"/>
-                                <constraint firstAttribute="height" constant="100" id="qOL-qf-siG"/>
-                            </constraints>
-                        </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-Xl-0zt">
-                            <rect key="frame" x="0.0" y="325" width="600" height="150"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-Xl-0zt">
+                            <rect key="frame" x="0.0" y="325" width="600" height="140"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-jk-2T8">
                                     <rect key="frame" x="0.0" y="90" width="149" height="44"/>
@@ -199,6 +192,13 @@
                                 <constraint firstItem="PUt-te-TZf" firstAttribute="top" secondItem="ru7-pS-9Do" secondAttribute="bottom" constant="10" id="w33-wn-qC8"/>
                             </constraints>
                         </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTY-xc-VW3">
+                            <rect key="frame" x="250" y="50" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="0iG-Ct-z09"/>
+                                <constraint firstAttribute="height" constant="100" id="qOL-qf-siG"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.86491231719999995" green="0.86491231719999995" blue="0.86491231719999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -236,6 +236,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="care" destination="rM9-zd-3c8" id="jsF-ao-Op1"/>
                 <outlet property="careNumLabel" destination="zVZ-nj-VYq" id="ImS-b6-UPH"/>
                 <outlet property="fanceNumLabel" destination="rXs-QE-wxg" id="xst-Hq-1Oh"/>
                 <outlet property="iconImage" destination="jTY-xc-VW3" id="aIt-gv-XTk"/>

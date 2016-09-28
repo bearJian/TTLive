@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Single.h"
-#import "XJUserModel.h"
+@class XJUserModel;
 
 @interface XJCareData : NSObject
+
 SingleH(CareData)
 
-@property (nonatomic, strong, readonly) NSMutableArray *allModels;
+@property (nonatomic, strong) NSMutableArray *allModels;
 
 /** 保存数据 */
 - (void)saveData:(XJUserModel *)userModel;

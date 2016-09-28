@@ -11,7 +11,7 @@
 #import "XJLiveModel.h"
 #import "XJHouseBottomView.h"
 #import "XJHousePreviewView.h"
-
+#import "XJUserModel.h"
 @interface XJHouseLiveCell()
 /**主播顶部栏*/
 @property (nonatomic, weak) XJHouseTopView *topView;

@@ -7,8 +7,9 @@
 //
 
 #import "XJCareData.h"
+#import "XJUserModel.h"
 
-#define XJData [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"allModel.pist"]
+#define XJData [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"allModel.plist"]
 
 @interface XJCareData(){
     
@@ -37,19 +38,19 @@ SingleM(CareData)
 
 /** 保存数据 */
 - (void)saveData:(XJUserModel *)userModel{
-    
+//    NSLog(@"%@",XJData);
     [self.allModels removeObject:userModel];
-    
     [self.allModels insertObject:userModel atIndex:0];
+    NSLog(@"allModels%@",self.allModels);
     // 写入
-    [NSKeyedArchiver archiveRootObject:self.allModels toFile:XJData];
+    [NSKeyedArchiver archiveRootObject:_allModels toFile:XJData];
 }
 
 /** 删除数据 */
 - (void)unsaveData:(XJUserModel *)userModel{
     // enumerateObjectsUsingBlock: 遍历字典,Value获取index,速度更快
     [[XJCareData shareCareData].allModels enumerateObjectsUsingBlock:^(XJUserModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+        NSLog(@"%@",obj);
         if ([userModel.flv isEqualToString:obj.flv]){
             
             [self.allModels removeObject:obj];

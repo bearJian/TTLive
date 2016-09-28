@@ -44,5 +44,4 @@
 #define kNotifyToHotVC @"kNotifyToHotVC"
 // 点击了用户
 #define kNotifyClickUser @"kNotifyClickUser"
-
 #endif /* PrefixHeader_h */

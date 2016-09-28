@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *careNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fanceNumLabel;
 @property (weak, nonatomic) IBOutlet UIView *userView;
-@property (nonatomic, strong) XJUserModel *userModel;
+@property (weak, nonatomic) IBOutlet UIButton *care;
 @end
 
 @implementation XJUserView
@@ -37,13 +37,7 @@
     self.userView.layer.masksToBounds = YES;
 }
 
-- (void)getUserModal:(XJUserModel *)userModal{
-    self.userModel = userModal;
-    NSLog(@"userModel++++++%@",self.userModel);
-}
-
 -(void)setUser:(XJUserModel *)user{
-    
     _user = user;
     self.nameLabel.text = user.nickname;
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:user.photo] options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
@@ -54,22 +48,14 @@
 }
 
 - (IBAction)careBtnClick:(UIButton *)sender {
-    
     sender.selected = !sender.selected;
     
     if (sender.selected){
-        NSLog(@"userModel++++++%@",self.userModel);
-        [[XJCareData shareCareData] saveData:_userModel];
+        [[XJCareData shareCareData] saveData:self.user];
         [MBProgressHUD showSuccess:@"关注成功"];
     }else{
-        if ([[XJCareData shareCareData].allModels isEqualToArray:self.allModel]){
-            
-            sender.selected = YES;
-            [MBProgressHUD showError:@"不能取消,请点击别的取消按钮"];
-        }else{
-            [[XJCareData shareCareData] unsaveData:self.userModel];
-            [MBProgressHUD showSuccess:@"取消关注成功"];
-        }
+        [[XJCareData shareCareData] unsaveData:self.user];
+        [MBProgressHUD showSuccess:@"取消关注成功"];
     }
 }
 

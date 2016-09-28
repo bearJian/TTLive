@@ -7,20 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class XJUserModel;
 
 @interface XJUserView : UIView
 
 + (instancetype)userView;
 
-- (void)getUserModal:(XJUserModel *)userModal;
-
 /** 用户信息 */
 @property (nonatomic, strong) XJUserModel *user;
 /** 点击关闭 */
 @property (nonatomic, copy) void (^closeBlock)();
-
-@property (nonatomic, strong) NSArray *allModel;
 
 @end

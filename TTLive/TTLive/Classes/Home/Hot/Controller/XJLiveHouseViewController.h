@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface XJLiveHouseViewController : UICollectionViewController
 /** 直播间 */
 @property (nonatomic, strong) NSArray *lives;
