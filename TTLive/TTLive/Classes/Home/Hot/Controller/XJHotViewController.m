@@ -118,8 +118,8 @@ static NSString *IDHotCell = @"XJHotLiveCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    // 直播间
     XJLiveHouseViewController *liveHouse = [[XJLiveHouseViewController alloc] init];
-    
     // 赋值
     liveHouse.lives = self.liveArray;
     liveHouse.currentIndex = indexPath.row;

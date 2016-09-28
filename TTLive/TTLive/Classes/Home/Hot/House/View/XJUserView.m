@@ -45,6 +45,14 @@
                 self.iconImage.image = [UIImage circleImage:image borderColor:[UIColor whiteColor] borderWidth:1];
             });
         }];
+    // 记录关注按钮状态
+    [[XJCareData shareCareData].allModels enumerateObjectsUsingBlock:^(XJUserModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if ([user.flv isEqualToString:obj.flv]){
+            
+            self.care.selected = YES;
+        }
+        }];
 }
 
 - (IBAction)careBtnClick:(UIButton *)sender {
@@ -53,7 +61,7 @@
     if (sender.selected){
         [[XJCareData shareCareData] saveData:self.user];
         [MBProgressHUD showSuccess:@"关注成功"];
-    }else{
+    }else {
         [[XJCareData shareCareData] unsaveData:self.user];
         [MBProgressHUD showSuccess:@"取消关注成功"];
     }

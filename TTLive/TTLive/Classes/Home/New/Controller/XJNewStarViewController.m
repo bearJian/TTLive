@@ -140,6 +140,7 @@ static NSString * const reuseIdentifier = @"NewStarCell";
     // 取出模型
     NSMutableArray *array = [NSMutableArray array];
     for (XJUserModel *user in self.starList) {
+        // 直播间模型
         XJLiveModel *liveModel = [[XJLiveModel alloc] init];
         liveModel.bigpic = user.photo;
         liveModel.smallpic = user.photo;

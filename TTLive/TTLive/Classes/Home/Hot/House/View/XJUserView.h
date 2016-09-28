@@ -17,5 +17,7 @@
 @property (nonatomic, strong) XJUserModel *user;
 /** 点击关闭 */
 @property (nonatomic, copy) void (^closeBlock)();
+/**<#注释#>*/
+@property (nonatomic, strong) NSArray *allModel;
 
 @end

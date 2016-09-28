@@ -25,5 +25,7 @@ static CGFloat margin = 10;
     self.collectionView.showsVerticalScrollIndicator = NO;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.alwaysBounceVertical = YES;
+    
+    self.sectionInset = UIEdgeInsetsMake(margin, margin, margin, margin);
 }
 @end

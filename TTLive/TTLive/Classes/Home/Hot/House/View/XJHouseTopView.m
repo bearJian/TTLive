@@ -162,6 +162,8 @@ static int randomNum = 0;
         user.nickname = self.live.myname;
         user.photo = self.live.bigpic;
         user.flv = self.live.flv;
+        user.position = self.live.gps;
+        user.newStar = self.live.starlevel;
         // 发送通知
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyClickUser object:nil userInfo:@{@"user" : user}];
     }else{

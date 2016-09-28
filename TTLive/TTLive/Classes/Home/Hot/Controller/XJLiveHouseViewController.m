@@ -74,6 +74,10 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
         if (weakSelf.currentIndex == weakSelf.lives.count) {
             weakSelf.currentIndex = 0;
         }
+        // 切换时,移除
+        [self.userView removeFromSuperview];
+        self.userView = nil;
+        
         [weakSelf.collectionView.mj_header endRefreshing];
         [weakSelf.collectionView reloadData];
     }];
@@ -110,7 +114,9 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     cell.parentVc = self;
     cell.live = self.lives[self.currentIndex];
-    
+    if (self.indexBlock) {
+        self.indexBlock(indexPath.row);
+    }
     NSUInteger index = self.currentIndex;
     if (self.currentIndex == self.lives.count) {
         index = 0;

@@ -11,6 +11,8 @@
 #import "XJNewStarCell.h"
 #import "XJCareData.h"
 #import "XJCareCoverView.h"
+#import "XJUserModel.h"
+#import "XJLiveModel.h"
 #import "XJLiveHouseViewController.h"
 @interface XJCareViewController ()
 
@@ -33,11 +35,9 @@ static NSString *reuseID = @"cell";
         
         XJCareCoverView *cover = [XJCareCoverView coverView];
         
-        cover.contentMode = UIViewContentModeScaleToFill;
-        
+//        cover.contentMode = UIViewContentModeScaleToFill;
         cover.frame = self.collectionView.bounds;
         [self.view insertSubview:cover aboveSubview:self.collectionView];
-        
         _coverView = cover;
     }
     return _coverView;
@@ -87,10 +87,24 @@ static NSString *reuseID = @"cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     XJLiveHouseViewController *userLive = [[XJLiveHouseViewController alloc] init];
-    
-    userLive.lives = self.allModels[indexPath.item];
-    
-//    userLive.allModels = self.allModels;
+    NSMutableArray *array = [NSMutableArray array];
+    for (XJUserModel *userModel in self.allModels) {
+        XJLiveModel *live = [[XJLiveModel alloc] init];
+        live.flv = userModel.flv;
+        live.bigpic = userModel.photo;
+        live.smallpic = userModel.photo;
+        live.gps = userModel.position;
+        live.myname = userModel.nickname;
+        live.allnum = arc4random_uniform(3000) + 300;
+        live.useridx = userModel.useridx;
+        [array addObject:live];
+    }
+    userLive.lives = array;
+    __block NSInteger currentIndex = 0;
+    [userLive setIndexBlock:^(NSInteger index) {
+        currentIndex = index;
+    }];
+    userLive.currentIndex = currentIndex;
     
     [self presentViewController:userLive animated:YES completion:nil];
 }
