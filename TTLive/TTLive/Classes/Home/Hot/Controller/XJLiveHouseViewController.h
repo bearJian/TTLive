@@ -12,6 +12,5 @@
 @property (nonatomic, strong) NSArray *lives;
 /** 当前的index */
 @property (nonatomic, assign) NSUInteger currentIndex;
-/**房间index*/
-@property (nonatomic, copy) void (^indexBlock)(NSInteger index);
+
 @end

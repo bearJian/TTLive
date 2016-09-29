@@ -14,6 +14,7 @@
 #import "XJUserModel.h"
 #import "XJLiveModel.h"
 #import "XJLiveHouseViewController.h"
+
 @interface XJCareViewController ()
 
 @property (nonatomic, weak) XJCareCoverView *coverView;
@@ -35,7 +36,7 @@ static NSString *reuseID = @"cell";
         
         XJCareCoverView *cover = [XJCareCoverView coverView];
         
-//        cover.contentMode = UIViewContentModeScaleToFill;
+        cover.contentMode = UIViewContentModeScaleToFill;
         cover.frame = self.collectionView.bounds;
         [self.view insertSubview:cover aboveSubview:self.collectionView];
         _coverView = cover;
@@ -97,15 +98,13 @@ static NSString *reuseID = @"cell";
         live.myname = userModel.nickname;
         live.allnum = arc4random_uniform(3000) + 300;
         live.useridx = userModel.useridx;
+        live.pos = userModel.liveIndex;
+        NSLog(@"%ld",live.pos);
         [array addObject:live];
     }
     userLive.lives = array;
-    __block NSInteger currentIndex = 0;
-    [userLive setIndexBlock:^(NSInteger index) {
-        currentIndex = index;
-    }];
-    userLive.currentIndex = currentIndex;
-    
+    userLive.currentIndex = indexPath.item;
+ 
     [self presentViewController:userLive animated:YES completion:nil];
 }
 

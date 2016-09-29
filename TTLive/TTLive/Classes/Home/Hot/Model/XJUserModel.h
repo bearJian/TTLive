@@ -29,5 +29,6 @@
 @property (nonatomic, assign) NSUInteger sex;
 /** 等级 */
 @property (nonatomic, assign) NSUInteger starlevel;
-
+/** 房间index */
+@property (nonatomic, assign) NSUInteger liveIndex;
 @end

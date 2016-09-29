@@ -96,6 +96,8 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 {
     if (notify.userInfo[@"user"] != nil) {
         XJUserModel *userModel = notify.userInfo[@"user"];
+        // 赋值房间index
+        userModel.liveIndex = self.currentIndex;
         self.userView.user = userModel;
         [UIView animateWithDuration:0.5 animations:^{
             self.userView.transform = CGAffineTransformIdentity;
@@ -114,14 +116,12 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     
     cell.parentVc = self;
     cell.live = self.lives[self.currentIndex];
-    if (self.indexBlock) {
-        self.indexBlock(indexPath.row);
-    }
+    NSLog(@"self.currentIndex%ld",self.currentIndex);
     NSUInteger index = self.currentIndex;
-    if (self.currentIndex == self.lives.count) {
+    if (self.currentIndex + 1 == self.lives.count) {
         index = 0;
     }else{
-        index += 1;
+        index ++;
     }
     cell.previewLive = self.lives[index];
     
