@@ -96,10 +96,8 @@ static NSString *reuseID = @"cell";
         live.smallpic = userModel.photo;
         live.gps = userModel.position;
         live.myname = userModel.nickname;
-        live.allnum = arc4random_uniform(3000) + 300;
         live.useridx = userModel.useridx;
-        live.pos = userModel.liveIndex;
-        NSLog(@"%ld",live.pos);
+        live.allnum = userModel.seeNum;
         [array addObject:live];
     }
     userLive.lives = array;

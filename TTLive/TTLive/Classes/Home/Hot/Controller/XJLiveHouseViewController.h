@@ -12,5 +12,6 @@
 @property (nonatomic, strong) NSArray *lives;
 /** 当前的index */
 @property (nonatomic, assign) NSUInteger currentIndex;
-
+/** 观看的人数 */
+@property (nonatomic, assign) NSUInteger seeCount;
 @end

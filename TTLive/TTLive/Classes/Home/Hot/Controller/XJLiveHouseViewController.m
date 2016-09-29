@@ -96,8 +96,6 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
 {
     if (notify.userInfo[@"user"] != nil) {
         XJUserModel *userModel = notify.userInfo[@"user"];
-        // 赋值房间index
-        userModel.liveIndex = self.currentIndex;
         self.userView.user = userModel;
         [UIView animateWithDuration:0.5 animations:^{
             self.userView.transform = CGAffineTransformIdentity;
@@ -118,7 +116,7 @@ static NSString * const reuseIdentifier = @"XJHouseLiveCell";
     cell.live = self.lives[self.currentIndex];
     NSLog(@"self.currentIndex%ld",self.currentIndex);
     NSUInteger index = self.currentIndex;
-    if (self.currentIndex + 1 == self.lives.count) {
+    if (self.currentIndex + 1 == self.lives.count) { // 最后一个直播间,预览为第一个直播间
         index = 0;
     }else{
         index ++;

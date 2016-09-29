@@ -23,7 +23,7 @@
 @property (nonatomic, copy) NSString *signatures;
 /** 星级 */
 @property (nonatomic, assign) NSUInteger starlevel;
-/** 朝阳群众数目 */
+/** 观看人数 */
 @property (nonatomic, assign) NSUInteger allnum;
 /** 这玩意未知 */
 @property (nonatomic, assign) NSUInteger lrCurrent;

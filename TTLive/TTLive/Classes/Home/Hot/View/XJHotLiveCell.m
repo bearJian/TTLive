@@ -8,6 +8,7 @@
 
 #import "XJHotLiveCell.h"
 #import "XJLiveModel.h"
+#import "XJUserModel.h"
 @interface XJHotLiveCell()
 /**头像*/
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
@@ -53,7 +54,6 @@
     self.startImage.image = live.starImage;
     self.startImage.hidden = !live.starlevel;
     // 观看人数
-    
     NSString *allNum = [NSString stringWithFormat:@"%ld人再观看", live.allnum];
     // 创建富文本
     NSRange range = [allNum rangeOfString:[NSString stringWithFormat:@"%ld", live.allnum]];

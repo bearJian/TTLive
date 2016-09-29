@@ -106,6 +106,7 @@ static int randomNum = 0;
 -(void)setLive:(XJLiveModel *)live{
     
     _live = live;
+    
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:live.smallpic] placeholderImage:[UIImage imageNamed:@"placeholder_head"]];
     //设置连续滚动
     self.nameLabel.textScrollMode = MyTextScrollContinuous;
@@ -118,6 +119,7 @@ static int randomNum = 0;
     [self.nameLabel startScroll];
     
     self.seeNumLabel.text = [NSString stringWithFormat:@"%ld人",live.allnum];
+    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateNum) userInfo:nil repeats:YES];
     // 添加手势
     [self.iconImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIocnImage:)]];
@@ -158,12 +160,13 @@ static int randomNum = 0;
     
     if (tap.view == self.iconImage) {
         XJUserModel *user = [[XJUserModel alloc] init];
-        // 给userModel赋值
+        // 给关注界面userModel赋值
         user.nickname = self.live.myname;
         user.photo = self.live.bigpic;
         user.flv = self.live.flv;
         user.position = self.live.gps;
         user.newStar = self.live.starlevel;
+        user.seeNum = self.live.allnum;
         // 发送通知
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotifyClickUser object:nil userInfo:@{@"user" : user}];
     }else{
