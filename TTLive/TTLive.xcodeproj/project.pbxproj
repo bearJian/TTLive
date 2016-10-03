@@ -1396,6 +1396,8 @@
 			baseConfigurationReference = F3C95840A78277326BB1CC54 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTLive/Classes/Frameworks/Share/TencentOpenAPI",
@@ -1425,6 +1427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1434,6 +1437,8 @@
 			baseConfigurationReference = 84A2758E855B6D2FD3E6742B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTLive/Classes/Frameworks/Share/TencentOpenAPI",
@@ -1463,6 +1468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dear.TTLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

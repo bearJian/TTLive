@@ -51,17 +51,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 隐藏导航条
     self.navigationController.navigationBar.hidden = YES;
     [self setup];
 }
 
 - (void)setup{
-    
+    // 设置圆角
     self.makeBeautifulBtn.layer.cornerRadius = self.makeBeautifulBtn.xj_height * 0.5;
     self.makeBeautifulBtn.layer.masksToBounds = YES;
     
     self.statusBtn.backgroundColor = KeyColor;
-    
+    // 设置圆角
     self.startLivingBtn.layer.cornerRadius = self.startLivingBtn.xj_height * 0.5;
     self.startLivingBtn.layer.masksToBounds = YES;
     
